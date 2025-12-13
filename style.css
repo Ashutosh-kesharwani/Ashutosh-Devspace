@@ -1,11 +1,36 @@
-*{
-    margin:0;
-    padding: 0;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Gilroy', sans-serif;
 }
-html,body{
+html, body{
     height: 100%;
     width: 100%;
 }
+main{
+  position: relative;
+  overflow: hidden;
+}
+.section{
+  height: 100vh;
+  width: 100%;
+  position: relative;
+ 
+}
+#section-1{
+  background-color: rgb(72, 72, 72);
+}
+#section-2{
+  background-color: rgb(189, 121, 121);
+}
+#section-3{
+  background-color: rgb(110, 4, 209);
+}
+
+
+
+
 
 
 
