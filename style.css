@@ -1,3 +1,4 @@
+
 * {
   margin: 0;
   padding: 0;
@@ -12,12 +13,11 @@ main{
   position: relative;
   overflow: hidden;
 }
-
-    #loader{
+#loader{
   height: 100vh;
   width: 100%;
-  position: relative;
-  /* background-color: aqua; */
+  z-index: 999;
+  position: fixed;
 }
 
 #loader-first{
@@ -30,14 +30,12 @@ main{
     justify-content: space-between;
     align-items: center;
     color: white;
-    padding: 2vh 0;
+    padding: 2vh 0 0 0;
 }
 .reveal{
-    /* background-color: red; */
     margin-bottom:1vh ;
 }
 .parent{
-    /* background-color: rgb(83, 83, 0); */
     display: block;
     overflow: hidden;
 }
@@ -118,14 +116,22 @@ main{
    background-color: #14CF93;
    position: absolute;
    bottom: 0;
+   z-index: 99;
 }
-#white{
+#gray{
    height: 0;
    width: 100%;
-   background-color: rgb(255, 255, 255);
+   background-color: #343434;
    position: absolute;
    bottom: 0;
+   z-index: 99;
 }
+
+/* ------------------------------------------------------------------------------------------------------ */
+
+
+
+/* /Section css  */
 
 .section{
   height: 100vh;
@@ -133,9 +139,263 @@ main{
   position: relative;
  
 }
+
+
 #section-1{
-  background-color: rgb(72, 72, 72);
+height: 100vh;
+/* background-color: rgba(208, 57, 57, 0.248); */
 }
+nav{
+    width: 100%;
+    padding:2.5vw 4vw 1.5vw 4vw;
+    /* background-color: red; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+nav h4 {
+  
+    font-weight: 700;
+    font-size: 1.2vw;
+    padding: 10px 20px;
+    border-radius: 25px;
+    border:0.5px solid rgb(149, 146, 146);
+    position: relative;
+    overflow: hidden;
+    z-index: 9;
+      transition: all ease 0.4s;
+}
+nav h4 a{
+      color: #14CF93;
+    text-decoration: none;
+    position: relative;
+    z-index: 9;
+}
+nav  h4::after{
+    content: "";
+    background-color: #14CF93;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    bottom: -100%;
+    left:0;
+    border-radius: 50%;
+    transition: all ease 0.3s;
+}
+/*Here dont add any space as tbhi usko pta chalega ki jispe hover ho rha hai <a> me uska hi after ki baat horhi hai*/
+nav  h4:hover::after{
+    bottom: 0%;
+    border-radius: 0; /*Isse vo hover hone pe upar aate hue dhikhenge */
+}
+nav  h4:hover a{
+color: rgb(0, 0, 0);
+}
+
+
+
+
+.row{
+    margin-top: 2.5vw;
+    margin-bottom: -2.3vw;
+    display: flex;
+  align-items: center;   
+  gap: 2vw;
+    width: 100%;
+    color: #333;
+    padding: 0 7vw;
+    line-height: 1;
+   
+    position: relative;
+}
+.row h1{
+    font-size: 10vw;
+    font-weight: 900;
+    color: #333;
+    /* font-family: 'Playfair Display', serif; */
+    font-style: italic;
+    text-transform: uppercase;
+   
+     /* font-family: 'Nothing You Could', cursive; */
+     /* background-color: yellow; */
+}
+
+
+
+
+
+#full{
+    letter-spacing: 2vw;
+     
+}
+#green-italic{
+    display: inline-block;
+    color: #14CF93;
+    font-weight: 700;
+     /* font-family: 'Playfair Display', serif; */
+     font-size: 11vw;
+     /* font-family: 'Kaushan Script', cursive; */
+      
+  
+ 
+}
+.row .text{
+    margin-top: 3vw;
+    /* margin-left: 1vw; */
+}
+.row .text h5{
+    opacity: .7;
+    font-size: 11px;
+    font-weight: 500;
+}
+
+.stack-heading {
+  height: 17vw;          /* ✅ EXACT as you asked */
+  width: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* background-color: yellow; */
+}
+
+.stack-heading svg {
+  height: 100%;
+  width: auto;
+  overflow: visible;
+}
+
+.stack-heading text {
+  font-family: 'Kaushan Script', cursive;
+  /* font-family: 'Nothing You Could', cursive; */
+  font-size: 11vw;
+  font-weight: 800;
+  font-style: italic;
+
+  
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  fill: transparent;
+  stroke: #14CF93;
+  stroke-width: 3;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+
+  /* 👇 THIS IS THE MAGIC */
+  stroke-dasharray: 2200;
+  stroke-dashoffset: 2200;
+
+  animation: paintDraw 2.3s cubic-bezier(0.65, 0, 0.35, 1) forwards,
+             fillIn 0.6s ease 1s forwards;
+  animation-play-state: paused;
+}
+
+@keyframes paintDraw {
+  0% {
+    stroke-dashoffset: 2200;
+    
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes fillIn {
+  from {
+    fill: transparent;
+  }
+  to {
+    fill: #14CF93;
+  }
+}
+
+
+#row2-h1{
+    /* font-family: 'Playfair Display', serif; */
+    margin-left: 8vw;
+    /* margin-top: -1vw; */
+    font-size: 8vw;
+    font-weight: 700;
+    /* text-align: center; */
+    /* background-color: red; */
+}
+
+
+.heading-wrap{
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+.heading-wrap.dark.stack .underline{
+  width: 90%;
+  height: 2vw;
+  margin-top: -5vw;
+  margin-left: 6vw;
+}
+.heading-wrap.dark .underline{
+  width: 100%;
+  height: 2vw;
+  margin-top: -3.5vw;
+}
+
+
+/* brush stroke */
+.underline path{
+  fill: none;
+  stroke-width: 5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+
+  stroke-dasharray: 500;
+  stroke-dashoffset: 500;
+
+  animation: paintUnderline 2.8s ease forwards;
+  animation-play-state: paused;
+}
+
+/* color control */
+.heading-wrap.green .underline path{
+  stroke: #14CF93;
+}
+
+.heading-wrap.dark .underline path{
+  stroke: #333;
+}
+
+/* animation */
+@keyframes paintUnderline{
+  to{
+    stroke-dashoffset: 0;
+  }
+}
+#down-arrow-container{
+  position: relative;
+  top:13%;
+  /* background-color: red; */
+  height: 3vw;
+}
+
+.down-arrow{
+  position: absolute;
+  left: 50%;
+  /* top:20%; */
+  /* top:2%; */
+  /* background-color: red; */
+  width: 3vw;
+  object-fit: cover;
+  object-position: calc();
+  height: 100%;
+  border-radius: 50%;
+}
+
+
+
+
+
+
 #section-2{
   background-color: rgb(189, 121, 121);
 }
