@@ -143,7 +143,8 @@ main{
 
 #section-1{
 height: 100vh;
-/* background-color: rgba(208, 57, 57, 0.248); */
+clip-path: inset(100% 0 0 0);
+/* background-color: rgba(208, 57, 57, 0.656); */
 }
 nav{
     width: 100%;
