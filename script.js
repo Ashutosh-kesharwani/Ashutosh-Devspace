@@ -1,23 +1,9 @@
 
-
 revealToSpan();
 valueSetters();
 loadingAnimation();
 
 
-
-
-/*
-we are creating this type of structure to every reveal class element:
-
-<h3 class="reveal">
-    <span class="parent">
-        <span class="child">
-        DESIGN PORTFOLIO
-        </span>
-    </span>
-</h3>
-*/
 
 
 
