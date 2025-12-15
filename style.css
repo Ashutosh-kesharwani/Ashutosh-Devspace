@@ -1,4 +1,3 @@
-
 * {
   margin: 0;
   padding: 0;
@@ -112,8 +111,6 @@ main{
         transform: rotate(360deg);
     }
 }
-
-
 #green{
    height: 0;
    width: 100%;
@@ -134,8 +131,6 @@ main{
 /* ------------------------------------------------------------------------------------------------------ */
 
 
-
-/* /Section css  */
 
 .section{
   height: 100vh;
@@ -195,10 +190,6 @@ nav  h4:hover::after{
 nav  h4:hover a{
 color: rgb(0, 0, 0);
 }
-
-
-
-
 .row{
     margin-top: 2.5vw;
     margin-bottom: -2.3vw;
@@ -223,11 +214,6 @@ color: rgb(0, 0, 0);
      /* font-family: 'Nothing You Could', cursive; */
      /* background-color: yellow; */
 }
-
-
-
-
-
 #full{
     letter-spacing: 2vw;
      
@@ -254,12 +240,11 @@ color: rgb(0, 0, 0);
 }
 
 .stack-heading {
-  height: 17vw;          /* ✅ EXACT as you asked */
+  height: 17vw;          
   width: auto;
   display: flex;
   align-items: center;
   justify-content: center;
-  /* background-color: yellow; */
 }
 
 .stack-heading svg {
@@ -270,7 +255,6 @@ color: rgb(0, 0, 0);
 
 .stack-heading text {
   font-family: 'Kaushan Script', cursive;
-  /* font-family: 'Nothing You Could', cursive; */
   font-size: 11vw;
   font-weight: 800;
   font-style: italic;
@@ -347,7 +331,6 @@ color: rgb(0, 0, 0);
 }
 
 
-/* brush stroke */
 .underline path{
   fill: none;
   stroke-width: 5;
@@ -360,8 +343,6 @@ color: rgb(0, 0, 0);
   animation: paintUnderline 2.8s ease forwards;
   animation-play-state: paused;
 }
-
-/* color control */
 .heading-wrap.green .underline path{
   stroke: #14CF93;
 }
@@ -397,10 +378,6 @@ color: rgb(0, 0, 0);
 }
 
 
-
-
-
-
 #section-2{
  background-color: #f5f5f5;
  height: 200vh;
@@ -423,10 +400,7 @@ color: rgb(0, 0, 0);
   gap: 10vw;
 
 }
-#section-2 #about-section #about-left{
-  /* width: 40%; */
-  /* background-color: #14a7cf; */
-}
+
 .about-heading {
   font-size: 2vw;
   line-height: 2.9vw;
@@ -475,13 +449,6 @@ color: rgb(0, 0, 0);
   /* background-color: pink; */
 }
 
-
-
-
-
-
-
-/* COMMON CARD STYLE */
 #section-2 #about-section #about-right .about-right-img-conatiner {
   width: 25vw;
   height: 30vw;
@@ -583,11 +550,6 @@ color: rgb(0, 0, 0);
   transform: scale(0.92) rotate(-25deg);
   opacity: 0.75;
 }
-
-
-
-/* --------------------------------------------------------------- */
-
 #section-2-part-2{
   height: 100vh;
   width: 100%;
@@ -736,13 +698,13 @@ font-size: 2vw;
 
 
 
-/* ---------------------------------------------------------------------------------------------- */
 
-
+/* Work Section */
 #section-3{
- background-color: #7a7a7a;
+ min-height: 70vh;
+ background-color: #e8e8e8;
 
 }
 #section-4{
- background-color: #3602f2;
+ background-color: #040011;
 }
