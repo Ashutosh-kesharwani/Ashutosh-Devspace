@@ -1,6 +1,6 @@
 locomotiveSmoothScroll();
 revealToSpan();
-valueSetters();
+// valueSetters();
 loadingAnimation();
 
 function locomotiveSmoothScroll() {
@@ -61,42 +61,42 @@ function valueSetters() {
 
 function loadingAnimation() {
   var tl = gsap.timeline();
-  tl.from("#loader-first .child span", {
-    x: "100%",
-    delay: 1,
-    stagger: 0.3,
-    ease: Power3.linear,
-    opacity: 0,
-  })
-    .to("#loader-first .parent .child", {
-      y: "-100%",
-      duration: 0.5,
-      ease: Expo.easeInOut,
-    })
-    .to("#loader-first", {
-      height: 0,
-      duration: 1.5,
-      ease: Expo.easeInOut,
-    })
-    .to("#green", {
-      height: "100%",
-      duration: 2,
-      delay: -2,
-      ease: Expo.easeInOut,
-    })
-    .to("#gray", {
-      height: "100%",
-      duration: 2,
-      delay: -1.7,
-      ease: Expo.easeInOut,
-    })
-    .to("#loader", {
-      height: 0,
-      opacity: 0,
-      duration: 1,
-      ease: Expo.easeInOut,
-    })
-    .to("#section-1", {
+//   tl.from("#loader-first .child span", {
+//     x: "100%",
+//     delay: 1,
+//     stagger: 0.3,
+//     ease: Power3.linear,
+//     opacity: 0,
+//   })
+//     .to("#loader-first .parent .child", {
+//       y: "-100%",
+//       duration: 0.5,
+//       ease: Expo.easeInOut,
+//     })
+//     .to("#loader-first", {
+//       height: 0,
+//       duration: 1.5,
+//       ease: Expo.easeInOut,
+//     })
+//     .to("#green", {
+//       height: "100%",
+//       duration: 2,
+//       delay: -2,
+//       ease: Expo.easeInOut,
+//     })
+//     .to("#gray", {
+//       height: "100%",
+//       duration: 2,
+//       delay: -1.7,
+//       ease: Expo.easeInOut,
+//     })
+//     .to("#loader", {
+//       height: 0,
+//       opacity: 0,
+//       duration: 1,
+//       ease: Expo.easeInOut,
+//     })
+    tl.to("#section-1", {
       clipPath: "inset(0% 0 0 0)",
       duration: 1.5,
       ease: "expo.out",
@@ -151,3 +151,30 @@ function startUnderlineAnimation() {
     elem.style.animationPlayState = "running";
   });
 }
+
+// ABOUT SECTION ANIMATION
+gsap.from("#section-2 .parent .child", {
+  y: 80,
+  opacity: 0,
+  duration: 1,
+  stagger: 0.15,
+  ease: "power4.out",
+  scrollTrigger: {
+    trigger: "#section-2",
+    scroller: "main", // locomotive
+    start: "top 70%"
+  }
+});
+// ABOUT SECTION ANIMATION
+gsap.from("#about-section .parent .child", {
+  y: 80,
+  opacity: 0,
+  duration: 1,
+  stagger: 0.15,
+  ease: "power4.out",
+  scrollTrigger: {
+    trigger: "#about-section",
+    scroller: "main",
+    start: "top 70%"
+  }
+});
