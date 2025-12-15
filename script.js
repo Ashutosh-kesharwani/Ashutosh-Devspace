@@ -1,6 +1,6 @@
 locomotiveSmoothScroll();
 revealToSpan();
-// valueSetters();
+valueSetters();
 loadingAnimation();
 
 function locomotiveSmoothScroll() {
@@ -61,41 +61,41 @@ function valueSetters() {
 
 function loadingAnimation() {
   var tl = gsap.timeline();
-//   tl.from("#loader-first .child span", {
-//     x: "100%",
-//     delay: 1,
-//     stagger: 0.3,
-//     ease: Power3.linear,
-//     opacity: 0,
-//   })
-//     .to("#loader-first .parent .child", {
-//       y: "-100%",
-//       duration: 0.5,
-//       ease: Expo.easeInOut,
-//     })
-//     .to("#loader-first", {
-//       height: 0,
-//       duration: 1.5,
-//       ease: Expo.easeInOut,
-//     })
-//     .to("#green", {
-//       height: "100%",
-//       duration: 2,
-//       delay: -2,
-//       ease: Expo.easeInOut,
-//     })
-//     .to("#gray", {
-//       height: "100%",
-//       duration: 2,
-//       delay: -1.7,
-//       ease: Expo.easeInOut,
-//     })
-//     .to("#loader", {
-//       height: 0,
-//       opacity: 0,
-//       duration: 1,
-//       ease: Expo.easeInOut,
-//     })
+  tl.from("#loader-first .child span", {
+    x: "100%",
+    delay: 1,
+    stagger: 0.3,
+    ease: Power3.linear,
+    opacity: 0,
+  })
+    .to("#loader-first .parent .child", {
+      y: "-100%",
+      duration: 0.5,
+      ease: Expo.easeInOut,
+    })
+    .to("#loader-first", {
+      height: 0,
+      duration: 1.5,
+      ease: Expo.easeInOut,
+    })
+    .to("#green", {
+      height: "100%",
+      duration: 2,
+      delay: -2,
+      ease: Expo.easeInOut,
+    })
+    .to("#gray", {
+      height: "100%",
+      duration: 2,
+      delay: -1.7,
+      ease: Expo.easeInOut,
+    })
+    .to("#loader", {
+      height: 0,
+      opacity: 0,
+      duration: 1,
+      ease: Expo.easeInOut,
+    })
     tl.to("#section-1", {
       clipPath: "inset(0% 0 0 0)",
       duration: 1.5,
@@ -146,7 +146,7 @@ function startSvgAnimation() {
 
 function startUnderlineAnimation() {
   let svgUnderline = document.querySelectorAll(".underline path");
-  console.log(svgUnderline);
+  // console.log(svgUnderline);
   svgUnderline.forEach((elem) => {
     elem.style.animationPlayState = "running";
   });

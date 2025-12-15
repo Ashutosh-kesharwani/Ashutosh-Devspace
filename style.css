@@ -20,7 +20,7 @@ main{
   position: fixed;
 
   /* Changed */
-  display: none;
+  /* display: none; */
 }
 
 #loader-first{
@@ -37,14 +37,15 @@ main{
 }
 .reveal{
     margin-bottom:1vh ;
+    display: inline-block;
 }
 .parent{
-    display: block;
+     display: inline-block;
     overflow: hidden;
 }
 .child{
     /* background-color: rgb(0, 83, 36); */
-    display: block;
+     display: inline-block;
     transform: translate(0,0);
 }
 #top-heading{
@@ -140,7 +141,7 @@ main{
   height: 100vh;
   width: 100%;
   position: relative;
- 
+ overflow-x: hidden;
 }
 
 
@@ -401,5 +402,190 @@ color: rgb(0, 0, 0);
 
 
 #section-2{
-  background-color: rgb(201, 173, 173);
+ background-color: #f5f5f5;
+ 
+}
+
+#section-2 #about-section{
+  height: 100%;
+  width: 100%;
+  padding: 5vw 0vw;
+  padding-left: 2vw;
+  /* background-color: red; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10vw;
+
+}
+#section-2 #about-section #about-left{
+  /* width: 40%; */
+  /* background-color: #14a7cf; */
+}
+.about-heading {
+  font-size: 2vw;
+  line-height: 2.9vw;
+  font-weight: 500;
+  color: #111;
+  max-width: 44vw;
+}
+
+/* Primary Accent — Name & Role */
+.about-heading .accent {
+  font-family: 'Kaushan Script', cursive;
+  color: #14CF93;
+  font-weight: 600;
+}
+
+/* Soft Accent — concepts */
+.about-heading .soft {
+  color: #333;
+  font-weight: 600;
+}
+
+/* Secondary Accent — platforms */
+.about-heading .accent-soft {
+  color: #14CF93;
+  font-weight: 500;
+}
+
+/* Final Statement — anchor line */
+#last-span-of-h1 {
+  font-weight: 700;
+  color: #000;
+  display: inline-block;
+  margin-top: 1vw;
+}
+
+
+#section-2 #about-section #about-right{
+  width: 40%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  perspective: 1200px;
+  height: 100px;
+  /* background-color: pink; */
+}
+
+
+
+
+
+
+
+/* COMMON CARD STYLE */
+#section-2 #about-section #about-right .about-right-img-conatiner {
+  width: 25vw;
+  height: 30vw;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  border-radius: 1.5vw;
+  background-size: cover;
+  background-position: center;
+
+  filter: grayscale(100%);
+
+  transform-origin: center center;
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+
+  transition:
+    transform 0.9s cubic-bezier(0.19, 1, 0.22, 1),
+    filter 0.6s ease;
+
+  will-change: transform;
+}
+
+/* CARD 1 — BACK */
+#section-2 #about-section #about-right
+.about-right-img-conatiner:nth-child(1) {
+  /* transform: translate3d(-75%, -70%, 0) rotate(-24deg) scale(0.93); */
+  transform: translate3d(-78%, -72%, 0) rotate(-28deg) scale(0.92);
+
+  z-index: 1;
+  background-image: url('assets/images/about-img-3.avif');
+}
+
+/* CARD 2 — MIDDLE */
+#section-2 #about-section #about-right
+.about-right-img-conatiner:nth-child(2) {
+  /* transform: translate3d(-68%, -64%, 0) rotate(-14deg) scale(0.96); */
+  transform: translate3d(-73%, -66%, 0) rotate(-18deg) scale(0.95);
+
+
+  z-index: 2;
+  background-image: url('assets/images/about-img-2.avif');
+}
+
+/* CARD 3 — FRONT / HERO */
+#section-2 #about-section #about-right
+.about-right-img-conatiner:nth-child(3) {
+   /* transform: translate3d(-54%, -58%, 0) rotate(-5deg) scale(1); */
+   transform: translate3d(-63%, -60%, 0) rotate(-10deg) scale(0.98);
+
+/* background-color: red; */
+  z-index: 3;
+  background-image: url('assets/images/about-img-3.avif');
+}
+#section-2 #about-section #about-right
+.about-right-img-conatiner:nth-child(4) {
+   /* transform: translate3d(-50%, -53%, 0) rotate(-5deg) scale(1); */
+   transform: translate3d(-51%, -50%, 0) rotate(0deg) scale(1);
+
+  z-index: 4;
+  background-image: url('assets/images/about-img-1.avif');
+}
+
+
+/* 🔥 HOVER — NO POSITION CHANGE (NO JITTER) */
+#section-2 #about-section #about-right
+.about-right-img-conatiner:nth-child(1):hover {
+  transform: translate3d(-52%, -56%, 0) rotate(0deg) scale(1.05);
+  filter: grayscale(0);
+  z-index: 10;
+}
+
+#section-2 #about-section #about-right
+.about-right-img-conatiner:nth-child(2):hover {
+  transform: translate3d(-54%, -52%, 0) rotate(0deg) scale(1.06);
+  filter: grayscale(0);
+  z-index: 10;
+}
+
+#section-2 #about-section #about-right
+.about-right-img-conatiner:nth-child(3):hover {
+  transform: translate3d(-46%, -48%, 0) rotate(1deg) scale(1.07);
+  filter: grayscale(0);
+  z-index: 10;
+}
+#section-2 #about-section #about-right
+.about-right-img-conatiner:nth-child(4):hover {
+  transform: translate3d(-42%, -44%, 0) rotate(1deg) scale(1.07);
+  filter: grayscale(0);
+  z-index: 10;
+}
+
+
+/* OPTIONAL — GROUP SYNC (SUBTLE PUSH BACK) */
+#section-2 #about-section #about-right:hover
+.about-right-img-conatiner:not(:hover) {
+  transform: scale(0.92) rotate(-25deg);
+  opacity: 0.75;
+}
+
+
+
+
+#section-3{
+ background-color: #7a7a7a;
+
+}
+#section-4{
+ background-color: #3602f2;
 }
