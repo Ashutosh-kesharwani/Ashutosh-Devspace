@@ -152,29 +152,3 @@ function startUnderlineAnimation() {
   });
 }
 
-// ABOUT SECTION ANIMATION
-gsap.from("#section-2 .parent .child", {
-  y: 80,
-  opacity: 0,
-  duration: 1,
-  stagger: 0.15,
-  ease: "power4.out",
-  scrollTrigger: {
-    trigger: "#section-2",
-    scroller: "main", // locomotive
-    start: "top 70%"
-  }
-});
-// ABOUT SECTION ANIMATION
-gsap.from("#about-section .parent .child", {
-  y: 80,
-  opacity: 0,
-  duration: 1,
-  stagger: 0.15,
-  ease: "power4.out",
-  scrollTrigger: {
-    trigger: "#about-section",
-    scroller: "main",
-    start: "top 70%"
-  }
-});
