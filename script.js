@@ -151,4 +151,15 @@ function startUnderlineAnimation() {
     elem.style.animationPlayState = "running";
   });
 }
-
+gsap.from(".value-item", {
+  opacity: 0,
+  y: 40,
+  duration: 1,
+  stagger: 0.15,
+  ease: "power3.out",
+  scrollTrigger: {
+    trigger: "#about-values",
+    scroller: "main",
+    start: "top 70%",
+  }
+});
