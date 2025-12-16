@@ -382,6 +382,9 @@ color: rgb(0, 0, 0);
 #section-2{
  background-color: #f5f5f5;
  height: 200vh;
+
+
+ /* display: none; */
  
 }
 #section-2-part-1{
@@ -703,7 +706,7 @@ font-size: 2vw;
 
 /* Work Section */
 #section-3{
- min-height: 300vh;
+ height: 400vh;
  background-color: #e8e8e8;
 position: relative;
 transition: background-color cubic-bezier(0.19, 1, 0.22, 1) 2s;
@@ -757,75 +760,159 @@ transition: background-color cubic-bezier(0.19, 1, 0.22, 1) 2s;
 
 #work-section-projects{
   width: 100%;
-  height: 220vh;
+  height: 330vh;
   position: relative;
   /* background-color: red; */
   position: relative;
   
 }
-#work-section-projects #project-row-1{
+#work-section-projects .project-rows{
   width: 100%;
   height: 110vh;
   position: relative;
-  /* background-color: rgb(14, 230, 111); */
   padding: 3vw 5vw;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 3vw 5vw;
+  /* background-color: gray; */
+  margin-bottom: 7vw;
+}
+#work-section-projects .project-rows.row-2{
+  justify-content: center;
+  /* background-color: red; */
+}
 
+#work-section-projects .projects {
+  position: relative;
+   overflow: hidden;
 }
 #work-section-projects .projects {
   position: relative;
-}
-#work-section-projects #project-row-1 #project-1{
-  width: 55%;
-  height: 105vh;
-  border-radius: 4vw;
-  background-color: #14CF93;
   overflow: hidden;
 }
 
-#work-section-projects #project-row-1 #project-1 img{
+/* overlay container */
+.project-details {
+  position: absolute;
+  bottom: 2vw;
+  left: 2vw;
+  width: 70%;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2vw;
+  /* background-color: red; */
+}
+
+/* top pills */
+.project-about {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1vw;
+  /* background-color: yellow; */
+}
+
+.project-about .pill {
+ width: 30%;
+  background: #fff;
+  padding: 0.6vw 1.4vw;
+  border-radius: 100px;
+  font-size: 0.9vw;
+  font-weight: 600;
+  white-space: nowrap;
+}
+.project-about .pill.desc{
+  width: 18vw;
+
+}
+
+/* bottom button */
+.project-button {
+  background: #fff;
+  border-radius: 100px;
+  padding: 1vw 1.5vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: fit-content;
+  gap: 2vw;
+}
+
+/* title */
+.project-button h2 {
+  font-size: 1.7vw;
+  font-weight: 700;
+  font-family: 'Nothing You Could', cursive;
+}
+
+/* arrow circle */
+.project-button .arrow {
+  width: 3vw;
+  height: 3vw;
+  border-radius: 50%;
+  border: 2px solid #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.project-button .arrow:hover {
+  background-color: #14CF93;
+  border: none;
+}
+.project-button i {
+  font-size: 1.4vw;
+}
+
+#work-section-projects .project-card-1{
+  width: 55%;
+  height: 105vh;
+  border-radius: 4vw;
+}
+#work-section-projects .project-card-2{
+    width: 35%;
+  height: 70vh;
+  border-radius: 3vw;
+}
+
+#work-section-projects .projects img{
   width: 105%;
   object-fit: cover;
   object-position: center;
   transition: filter cubic-bezier(0.19, 1, 0.22, 1) 2s;
-  
-}
-#work-section-projects #project-row-1 #project-2{
-  width: 35%;
-  height: 70vh;
-  border-radius: 4vw;
-  overflow: hidden;
-}
-#work-section-projects #project-row-1 #project-2 img{
-  width: 105%;
-  object-fit: cover;
-  object-position: center;
 }
 
-#cursor{
-  position: absolute;
-  width: 17vw;
+#cursor {
+  position: fixed;
   top: 0;
   left: 0;
-  z-index: 99999;
-  opacity: 0;
+  width: 17vw;
+  /* height: 20vw; */
   pointer-events: none;
-   transition: all linear 0.3s;
-   transform: translate(-50%,0%);
-  
- 
+  z-index: 999999;
+  opacity: 0;
+  transform: translate(-50%, -50%);
+  will-change: transform;
+  transition: all linear 0.3s;
 }
-#cursor>div{
- position: absolute;
- transition: all cubic-bezier(0.19, 1, 0.22, 1) 1s;
- opacity: 1;
- pointer-events: none;
- 
+.projects-cursor {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  opacity: 0;
+  transition: all cubic-bezier(0.19, 1, 0.22, 1) 1s;
 }
-#elem{
+.projects-cursor{
+  position: absolute;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.elem{
   width: 100%;
   position: relative;
    
@@ -850,7 +937,7 @@ transition: background-color cubic-bezier(0.19, 1, 0.22, 1) 2s;
  background-color: #fff;
 }
 
-#elem img{
+.elem img{
   width: 100%;
   opacity: 1;
   height: 20vh;
@@ -861,19 +948,19 @@ transition: background-color cubic-bezier(0.19, 1, 0.22, 1) 2s;
   border-radius: 20px;
   
 }
-#elem img:nth-child(2){
+.elem img:nth-child(2){
   animation-delay: 1s;
 }
-#elem img:nth-child(3){
+.elem img:nth-child(3){
   animation-delay: 2s;
 }
-#elem img:nth-child(4){
+.elem img:nth-child(4){
   animation-delay: 3s;
 }
-#elem img:nth-child(5){
+.elem img:nth-child(5){
   animation-delay: 4s;
 }
-#elem img:nth-child(6){
+.elem img:nth-child(6){
   animation-delay: 5s;
 }
 @keyframes anim {
@@ -911,6 +998,8 @@ transition: background-color cubic-bezier(0.19, 1, 0.22, 1) 2s;
 
 
 
+
+/* -------------------------------------------------------------------------------------------------------------------------- */
 
 
 
