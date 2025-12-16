@@ -2,6 +2,7 @@ locomotiveSmoothScroll();
 revealToSpan();
 valueSetters();
 loadingAnimation();
+cardShow();
 
 function locomotiveSmoothScroll() {
   gsap.registerPlugin(ScrollTrigger);
@@ -152,3 +153,48 @@ function startUnderlineAnimation() {
   });
 }
 
+
+
+
+function cardShow(){
+  let imagesArr= document.querySelectorAll('.projects');
+  // console.log(imagesArr);
+  imagesArr.forEach((elem)=>{
+    // create a flag var for remove image on mouseleave
+    let showingImage;
+    elem.addEventListener('mousemove',(dets)=>{
+
+      cursor.style.opacity = 1;
+      // console.log(dets.x);
+      // console.log("Hhhh");
+
+      // console.log(dets.target.dataset.index); ye hame btayga k kis image pe move kar rahe hai project wali
+
+      // now to cursor wale me jo just andar div hai jiski opacity css me 0 kiye hai uss div pe move ke liye 
+    /*console.log(
+      document.querySelector("#cursor").children[dets.target.dataset.index]);*/
+      
+   // to abb jis image pe mouse move tha uss image pe leave pe opacity 0 kardo cursor div ki 
+      showingImage=dets.target;
+      document.querySelector("#cursor").children[dets.target.dataset.index].style.opacity=1;
+      document.querySelector("#cursor").children[dets.target.dataset.index].style.transform=`translate(${dets.clientX}px,${dets.clientY}px)`;
+
+      showingImage.style.filter="grayscale(1)";
+      // console.log(document.querySelector("#section-3"));
+      
+      document.querySelector("#section-3").style.backgroundColor=`#${dets.target.dataset.bgcolor}`;
+      
+    })
+
+    elem.addEventListener('mouseleave',(dets)=>{
+
+
+      document.querySelector("#cursor").children[showingImage.dataset.index].style.opacity=0;
+      showingImage.style.filter="grayscale(0)";
+      
+      document.querySelector("#section-3").style.backgroundColor="#e8e8e8";
+     cursor.style.opacity = 0;
+    })
+  })
+  
+}
