@@ -1,4 +1,3 @@
-
 * {
   margin: 0;
   padding: 0;
@@ -112,8 +111,6 @@ main{
         transform: rotate(360deg);
     }
 }
-
-
 #green{
    height: 0;
    width: 100%;
@@ -135,8 +132,6 @@ main{
 
 
 
-/* /Section css  */
-
 .section{
   height: 100vh;
   width: 100%;
@@ -149,6 +144,7 @@ main{
 height: 100vh;
 clip-path: inset(100% 0 0 0);
 /* background-color: rgba(208, 57, 57, 0.656); */
+/* display: none; */
 }
 nav{
     width: 100%;
@@ -195,10 +191,6 @@ nav  h4:hover::after{
 nav  h4:hover a{
 color: rgb(0, 0, 0);
 }
-
-
-
-
 .row{
     margin-top: 2.5vw;
     margin-bottom: -2.3vw;
@@ -223,11 +215,6 @@ color: rgb(0, 0, 0);
      /* font-family: 'Nothing You Could', cursive; */
      /* background-color: yellow; */
 }
-
-
-
-
-
 #full{
     letter-spacing: 2vw;
      
@@ -254,12 +241,11 @@ color: rgb(0, 0, 0);
 }
 
 .stack-heading {
-  height: 17vw;          /* ✅ EXACT as you asked */
+  height: 17vw;          
   width: auto;
   display: flex;
   align-items: center;
   justify-content: center;
-  /* background-color: yellow; */
 }
 
 .stack-heading svg {
@@ -270,7 +256,6 @@ color: rgb(0, 0, 0);
 
 .stack-heading text {
   font-family: 'Kaushan Script', cursive;
-  /* font-family: 'Nothing You Could', cursive; */
   font-size: 11vw;
   font-weight: 800;
   font-style: italic;
@@ -347,7 +332,6 @@ color: rgb(0, 0, 0);
 }
 
 
-/* brush stroke */
 .underline path{
   fill: none;
   stroke-width: 5;
@@ -360,8 +344,6 @@ color: rgb(0, 0, 0);
   animation: paintUnderline 2.8s ease forwards;
   animation-play-state: paused;
 }
-
-/* color control */
 .heading-wrap.green .underline path{
   stroke: #14CF93;
 }
@@ -397,13 +379,12 @@ color: rgb(0, 0, 0);
 }
 
 
-
-
-
-
 #section-2{
  background-color: #f5f5f5;
  height: 200vh;
+
+
+ /* display: none; */
  
 }
 #section-2-part-1{
@@ -423,10 +404,7 @@ color: rgb(0, 0, 0);
   gap: 10vw;
 
 }
-#section-2 #about-section #about-left{
-  /* width: 40%; */
-  /* background-color: #14a7cf; */
-}
+
 .about-heading {
   font-size: 2vw;
   line-height: 2.9vw;
@@ -475,13 +453,6 @@ color: rgb(0, 0, 0);
   /* background-color: pink; */
 }
 
-
-
-
-
-
-
-/* COMMON CARD STYLE */
 #section-2 #about-section #about-right .about-right-img-conatiner {
   width: 25vw;
   height: 30vw;
@@ -583,11 +554,6 @@ color: rgb(0, 0, 0);
   transform: scale(0.92) rotate(-25deg);
   opacity: 0.75;
 }
-
-
-
-/* --------------------------------------------------------------- */
-
 #section-2-part-2{
   height: 100vh;
   width: 100%;
@@ -654,6 +620,7 @@ color: rgb(0, 0, 0);
 /* VALUES GRID */
 .values-list {
   margin-top: 5vw;
+  margin-bottom: 5vw;
 }
 .values-list-row {
   display: flex;
@@ -736,13 +703,306 @@ font-size: 2vw;
 
 
 
-/* ---------------------------------------------------------------------------------------------- */
 
-
+/* Work Section */
 #section-3{
- background-color: #7a7a7a;
+ height: 400vh;
+ background-color: #e8e8e8;
+position: relative;
+transition: background-color cubic-bezier(0.19, 1, 0.22, 1) 2s;
+}
+
+
+
+
+#work-section-row{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  padding: 2vw;
+  gap:3vw;
+  position: relative;
+  /* background-color: rebeccapurple; */
+}
+
+#work-section-row h1{
+  font-family: 'Kaushan Script', cursive;
+  font-size: 3.6vw;
+  font-weight: 800;
+  display: inline-block;
+  color: #14CF93;
+  position: relative;
+}
+
+#work-section-row h1::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -0.9vw;
+  width: 70%;
+  height: 0.3vw;
+  background: linear-gradient(90deg, #000000, transparent);
+}
+#work-section-row  p {
+  font-size: 1.2vw;
+  font-weight: 900;
+  text-align: center;
+  color: #282727c3;
+}
+#work-section-row  p span {
+  font-weight: 700;
+}
+
+
+
+
+#work-section-projects{
+  width: 100%;
+  height: 330vh;
+  position: relative;
+  /* background-color: red; */
+  position: relative;
+  
+}
+#work-section-projects .project-rows{
+  width: 100%;
+  height: 110vh;
+  position: relative;
+  padding: 3vw 5vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* background-color: gray; */
+  margin-bottom: 7vw;
+}
+#work-section-projects .project-rows.row-2{
+  justify-content: center;
+  /* background-color: red; */
+}
+
+#work-section-projects .projects {
+  position: relative;
+   overflow: hidden;
+}
+#work-section-projects .projects {
+  position: relative;
+  overflow: hidden;
+}
+
+/* overlay container */
+.project-details {
+  position: absolute;
+  bottom: 2vw;
+  left: 2vw;
+  width: 70%;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2vw;
+  /* background-color: red; */
+}
+
+/* top pills */
+.project-about {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1vw;
+  /* background-color: yellow; */
+}
+
+.project-about .pill {
+ width: 30%;
+  background: #fff;
+  padding: 0.6vw 1.4vw;
+  border-radius: 100px;
+  font-size: 0.9vw;
+  font-weight: 600;
+  white-space: nowrap;
+}
+.project-about .pill.desc{
+  width: 18vw;
 
 }
+
+/* bottom button */
+.project-button {
+  background: #fff;
+  border-radius: 100px;
+  padding: 1vw 1.5vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: fit-content;
+  gap: 2vw;
+}
+
+/* title */
+.project-button h2 {
+  font-size: 1.7vw;
+  font-weight: 700;
+  font-family: 'Nothing You Could', cursive;
+}
+
+/* arrow circle */
+.project-button .arrow {
+  width: 3vw;
+  height: 3vw;
+  border-radius: 50%;
+  border: 2px solid #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.project-button .arrow:hover {
+  background-color: #14CF93;
+  border: none;
+}
+.project-button i {
+  font-size: 1.4vw;
+}
+
+#work-section-projects .project-card-1{
+  width: 55%;
+  height: 105vh;
+  border-radius: 4vw;
+}
+#work-section-projects .project-card-2{
+    width: 35%;
+  height: 70vh;
+  border-radius: 3vw;
+}
+
+#work-section-projects .projects img{
+  width: 105%;
+  object-fit: cover;
+  object-position: center;
+  transition: filter cubic-bezier(0.19, 1, 0.22, 1) 2s;
+}
+
+#cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 17vw;
+  /* height: 20vw; */
+  pointer-events: none;
+  z-index: 999999;
+  opacity: 0;
+  transform: translate(-50%, -50%);
+  will-change: transform;
+  transition: all linear 0.3s;
+}
+.projects-cursor {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  opacity: 0;
+  transition: all cubic-bezier(0.19, 1, 0.22, 1) 1s;
+}
+.projects-cursor{
+  position: absolute;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.elem{
+  width: 100%;
+  position: relative;
+   
+  
+}
+#cursor .crow{
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+  padding: .7vw;
+}
+.crow .ccircle{
+  width: 2vw;
+  height: 2vw;
+  border: 2px solid #fff;
+  border-radius: 50%;
+}
+.crow .ccapsule{
+ padding: .7vw 3vw;
+ border-radius: 100px;
+ background-color: #fff;
+}
+
+.elem img{
+  width: 100%;
+  opacity: 1;
+  height: 20vh;
+  object-fit: cover;
+  object-position: center;
+  animation: anim 4s linear  infinite  ;
+  position: absolute;
+  border-radius: 20px;
+  
+}
+.elem img:nth-child(2){
+  animation-delay: 1s;
+}
+.elem img:nth-child(3){
+  animation-delay: 2s;
+}
+.elem img:nth-child(4){
+  animation-delay: 3s;
+}
+.elem img:nth-child(5){
+  animation-delay: 4s;
+}
+.elem img:nth-child(6){
+  animation-delay: 5s;
+}
+@keyframes anim {
+  0%{
+    opacity: 1;
+  }
+  20%{
+    opacity: 1;
+  }
+  21%{
+    opacity: 0;
+  }
+  40%{
+    opacity: 0;
+  }
+  60%{
+    opacity: 0;
+  }
+  80%{
+    opacity: 1;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* -------------------------------------------------------------------------------------------------------------------------- */
+
+
+
 #section-4{
- background-color: #3602f2;
+ background-color: #040011;
 }
