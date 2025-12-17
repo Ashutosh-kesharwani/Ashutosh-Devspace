@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Process Section – Premium Portfolio</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,500&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<!-- Remix Icons -->
+<link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+
+<!-- GSAP -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+<style>
+:root{
+  --bg:#0b0b0b;
+  --fg:#ffffff;
+  --muted:#8a8a8a;
+  --accent:#14cf93;
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  background:var(--bg);
+  color:var(--fg);
+  font-family:'Inter', sans-serif;
+  overflow-x:hidden;
+}
+
+/* =========================
+   PROCESS SECTION
+========================= */
+.process{
+  min-height:100vh;
+  padding:8vw 6vw;
+  display:flex;
+  gap:6vw;
+}
+
+/* LEFT BIG TITLE */
+.process-left{
+  width:40%;
+  position:sticky;
+  top:15vh;
+  height:fit-content;
+}
+
+.process-left h1{
+  font-size:6vw;
+  line-height:1;
+  font-weight:700;
+}
+
+.process-left h1 span{
+  font-family:'Playfair Display', serif;
+  font-style:italic;
+  font-weight:500;
+  color:var(--accent);
+}
+
+.process-left p{
+  margin-top:2vw;
+  font-size:1vw;
+  color:var(--muted);
+  max-width:80%;
+}
+
+/* RIGHT STEPS */
+.process-right{
+  width:60%;
+  display:flex;
+  flex-direction:column;
+  gap:4vw;
+}
+
+.step{
+  position:relative;
+  padding:3vw;
+  border-radius:2vw;
+  background:rgba(255,255,255,0.03);
+  backdrop-filter:blur(20px);
+  overflow:hidden;
+  cursor:pointer;
+}
+
+/* Progress Line */
+.step::before{
+  content:"";
+  position:absolute;
+  left:0;
+  top:0;
+  width:4px;
+  height:0%;
+  background:var(--accent);
+}
+
+/* Step Number */
+.step span{
+  font-size:0.9vw;
+  color:var(--muted);
+  letter-spacing:2px;
+}
+
+/* Step Title */
+.step h2{
+  font-size:2.4vw;
+  margin:1vw 0;
+  display:flex;
+  align-items:center;
+  gap:1vw;
+}
+
+.step h2 i{
+  font-size:2vw;
+  color:var(--accent);
+}
+
+/* Step Text */
+.step p{
+  font-size:1vw;
+  color:#cfcfcf;
+  width:80%;
+}
+
+/* Hover Effect */
+.step:hover{
+  background:rgba(20,207,147,0.08);
+}
+
+/* Floating Cursor Effect */
+.step::after{
+  content:"";
+  position:absolute;
+  width:200px;
+  height:200px;
+  background:radial-gradient(circle, rgba(20,207,147,0.15), transparent 60%);
+  top:var(--y);
+  left:var(--x);
+  transform:translate(-50%,-50%);
+  opacity:0;
+  transition:opacity 0.3s;
+}
+
+.step:hover::after{
+  opacity:1;
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+  .process{
+    flex-direction:column;
+  }
+  .process-left, .process-right{
+    width:100%;
+  }
+  .process-left h1{
+    font-size:12vw;
+  }
+  .step h2{
+    font-size:6vw;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<section class="process">
+
+  <!-- LEFT -->
+  <div class="process-left">
+    <h1>My <span>Process</span></h1>
+    <p>
+      A refined workflow crafted to transform ideas into
+      meaningful digital experiences — blending strategy,
+      design & technology.
+    </p>
+  </div>
+
+  <!-- RIGHT -->
+  <div class="process-right">
+
+    <div class="step">
+      <span>STEP 01</span>
+      <h2><i class="ri-search-line"></i> Discover</h2>
+      <p>Deep research, problem identification and understanding user psychology.</p>
+    </div>
+
+    <div class="step">
+      <span>STEP 02</span>
+      <h2><i class="ri-pencil-ruler-2-line"></i> Design</h2>
+      <p>Wireframes, UI systems and visual storytelling with strong typography.</p>
+    </div>
+
+    <div class="step">
+      <span>STEP 03</span>
+      <h2><i class="ri-code-s-slash-line"></i> Develop</h2>
+      <p>High-performance code with animations, scalability and clean architecture.</p>
+    </div>
+
+    <div class="step">
+      <span>STEP 04</span>
+      <h2><i class="ri-rocket-line"></i> Deliver</h2>
+      <p>Testing, optimization and launching a polished digital product.</p>
+    </div>
+
+  </div>
+</section>
+
+<script>
+gsap.registerPlugin(ScrollTrigger);
+
+/* STEP REVEAL */
+gsap.utils.toArray(".step").forEach((step)=>{
+  gsap.from(step,{
+    y:120,
+    opacity:0,
+    duration:1.2,
+    ease:"power4.out",
+    scrollTrigger:{
+      trigger:step,
+      start:"top 85%"
+    }
+  });
+
+  gsap.to(step,{
+    "--progress":"100%",
+    scrollTrigger:{
+      trigger:step,
+      start:"top center",
+      scrub:1
+    }
+  });
+});
+
+/* PROGRESS LINE */
+gsap.utils.toArray(".step").forEach((step)=>{
+  gsap.to(step.querySelector("::before"),{});
+});
+
+/* MAGNETIC HOVER */
+document.querySelectorAll(".step").forEach(step=>{
+  step.addEventListener("mousemove",(e)=>{
+    const rect = step.getBoundingClientRect();
+    step.style.setProperty("--x", `${e.clientX - rect.left}px`);
+    step.style.setProperty("--y", `${e.clientY - rect.top}px`);
+  });
+});
+</script>
+
+</body>
+</html>

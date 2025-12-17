@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Process Section – Next Level</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;1,600&display=swap" rel="stylesheet">
+
+  <!-- Remix Icon -->
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+
+  <!-- GSAP -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+  <style>
+    :root {
+      --bg: #0b0b0b;
+      --muted: #8a8a8a;
+      --accent: #14cf93;
+      --glass: rgba(255,255,255,0.06);
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      background: var(--bg);
+      color: #fff;
+      font-family: 'Inter', sans-serif;
+      overflow-x: hidden;
+    }
+
+    /* ===== PROCESS SECTION ===== */
+    .process-section {
+      min-height: 100vh;
+      padding: 8vw 6vw;
+      display: grid;
+      grid-template-columns: 30% 70%;
+      gap: 4vw;
+      position: relative;
+    }
+
+    /* ===== LEFT VISUAL ===== */
+    .process-visual {
+      position: sticky;
+      top: 20%;
+      height: 60vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .orb {
+      width: 260px;
+      height: 260px;
+      border-radius: 50%;
+      background: radial-gradient(circle at 30% 30%, #14cf93, #0b0b0b 70%);
+      filter: blur(10px);
+      position: absolute;
+    }
+
+    .orb-ring {
+      width: 340px;
+      height: 340px;
+      border-radius: 50%;
+      border: 1px dashed rgba(255,255,255,0.2);
+      position: absolute;
+    }
+
+    .floating-text {
+      position: absolute;
+      font-size: 0.75rem;
+      letter-spacing: 0.2em;
+      color: var(--muted);
+      text-transform: uppercase;
+    }
+
+    /* ===== RIGHT CONTENT ===== */
+    .process-content h2 {
+      font-size: clamp(2.5rem, 4vw, 4.2rem);
+      font-family: 'Playfair Display', serif;
+      margin-bottom: 1vw;
+    }
+
+    .process-content p.intro {
+      max-width: 420px;
+      color: var(--muted);
+      margin-bottom: 4vw;
+      line-height: 1.6;
+    }
+
+    .process-steps {
+      display: flex;
+      flex-direction: column;
+      gap: 2.5vw;
+    }
+
+    .step {
+      background: linear-gradient(135deg, rgba(255,255,255,0.08), rgba(255,255,255,0.02));
+      border: 1px solid rgba(255,255,255,0.08);
+      backdrop-filter: blur(14px);
+      border-radius: 20px;
+      padding: 2.5vw 3vw;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+      cursor: pointer;
+    }
+
+    .step::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at var(--x) var(--y), rgba(20,207,147,0.25), transparent 60%);
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+
+    .step:hover::after { opacity: 1; }
+
+    .step-left h3 {
+      font-size: 1.4rem;
+      margin-bottom: 0.5vw;
+    }
+
+    .step-left span {
+      font-size: 0.8rem;
+      color: var(--accent);
+      letter-spacing: 0.15em;
+    }
+
+    .step-right {
+      font-size: 2.2rem;
+      opacity: 0.4;
+      transition: transform 0.4s ease, opacity 0.4s;
+    }
+
+    .step:hover .step-right {
+      transform: rotate(-15deg) scale(1.2);
+      opacity: 1;
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 900px) {
+      .process-section {
+        grid-template-columns: 1fr;
+      }
+      .process-visual {
+        position: relative;
+        height: 40vh;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <section class="process-section">
+
+    <!-- LEFT VISUAL -->
+    <div class="process-visual">
+      <div class="orb"></div>
+      <div class="orb-ring"></div>
+      <div class="floating-text">PROCESS</div>
+    </div>
+
+    <!-- RIGHT CONTENT -->
+    <div class="process-content">
+      <h2>How I Build Digital Experiences</h2>
+      <p class="intro">
+        A structured yet creative workflow inspired by top-tier design studios
+        and modern engineering principles.
+      </p>
+
+      <div class="process-steps">
+        <div class="step">
+          <div class="step-left">
+            <span>01</span>
+            <h3>Research & Strategy</h3>
+          </div>
+          <div class="step-right"><i class="ri-search-eye-line"></i></div>
+        </div>
+
+        <div class="step">
+          <div class="step-left">
+            <span>02</span>
+            <h3>UX Thinking</h3>
+          </div>
+          <div class="step-right"><i class="ri-layout-4-line"></i></div>
+        </div>
+
+        <div class="step">
+          <div class="step-left">
+            <span>03</span>
+            <h3>Visual Design</h3>
+          </div>
+          <div class="step-right"><i class="ri-brush-4-line"></i></div>
+        </div>
+
+        <div class="step">
+          <div class="step-left">
+            <span>04</span>
+            <h3>Development & Motion</h3>
+          </div>
+          <div class="step-right"><i class="ri-code-s-slash-line"></i></div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <script>
+    gsap.registerPlugin(ScrollTrigger);
+
+    /* Orb breathing animation */
+    gsap.to('.orb', {
+      scale: 1.15,
+      duration: 3,
+      repeat: -1,
+      yoyo: true,
+      ease: 'power1.inOut'
+    });
+
+    gsap.to('.orb-ring', {
+      rotate: 360,
+      duration: 20,
+      repeat: -1,
+      ease: 'linear'
+    });
+
+    /* Steps reveal */
+    gsap.from('.step', {
+      y: 80,
+      opacity: 0,
+      stagger: 0.15,
+      duration: 1.2,
+      ease: 'power4.out',
+      scrollTrigger: {
+        trigger: '.process-steps',
+        start: 'top 80%'
+      }
+    });
+
+    /* Magnetic hover */
+    document.querySelectorAll('.step').forEach(step => {
+      step.addEventListener('mousemove', e => {
+        const rect = step.getBoundingClientRect();
+        step.style.setProperty('--x', e.clientX - rect.left + 'px');
+        step.style.setProperty('--y', e.clientY - rect.top + 'px');
+      });
+    });
+  </script>
+
+</body>
+</html>
+2
