@@ -3,15 +3,18 @@ revealToSpan();
 valueSetters();
 loadingAnimation();
 cardShow();
-window.addEventListener("load", () => {
-  locoScroll.update();
-});
-imagesLoaded("main", () => {
-  locoScroll.update();
-});
-window.addEventListener("resize", () => {
-  locoScroll.update();
-});
+particleAnimation();
+countNumberPoints();
+
+// window.addEventListener("load", () => {
+//   locoScroll.update();
+// });
+// imagesLoaded("main", () => {
+//   locoScroll.update();
+// });
+// window.addEventListener("resize", () => {
+//   locoScroll.update();
+// });
 
 function locomotiveSmoothScroll() {
   gsap.registerPlugin(ScrollTrigger);
@@ -242,5 +245,147 @@ function cardShow() {
 /* ===== SECTION 4 JS ===== */
 /* =========================
    GSAP + SWIPER HORIZONTAL SCROLL
-   abhi banana hai 
+   abhi banana hai section 5 wla swiper yha pe bhi daal do
 ========================= */
+
+
+
+/* ===== SECTION 5 Achievement ===== */
+/* =========================
+  
+========================= */
+
+
+function particlesAnimation(){
+  gsap.registerPlugin(ScrollTrigger);
+
+
+
+gsap.to(".cdss-globe", {
+  rotate: 360,
+  ease:"power1.out" ,
+  scrollTrigger:{
+    trigger: "#section-5",
+    scroller: "[data-scroll-container]",
+    start: "top bottom",
+    end: "bottom top",
+    scrub: 1
+  }
+});
+}
+
+
+
+const caseSwiper = new Swiper(".caseSwiper", {
+  slidesPerView: "auto",
+  spaceBetween: 40,
+  freeMode: true,
+  grabCursor: true,
+  mousewheel: {
+    forceToAxis: true,
+  },
+  scrollbar: {
+    el: ".swiper-scrollbar",
+    draggable: true,
+  },
+});
+
+
+// Count-up numbers
+
+function countNumberPoints(){
+  const counts = document.querySelectorAll(".count");
+
+  counts.forEach(el => {
+    const target = +el.dataset.target;
+
+    gsap.fromTo(el,
+      { innerText: 0 },
+      {
+        innerText: target,
+        duration: 2,
+        ease: "power1.out",
+        roundProps: "innerText",
+        scrollTrigger: {
+          trigger: el,
+          scroller: "[data-scroll-container]", // 🔥 THIS WAS MISSING
+          start: "top 80%",
+          once: true
+        }
+      }
+    );
+  });
+}
+
+
+
+
+// Floating particles
+function particleAnimation(){
+  
+gsap.registerPlugin(ScrollTrigger);
+
+const section = document.querySelector("#section-5");
+const container = section.querySelector(".particles-container");
+
+const bounds = section.getBoundingClientRect();
+const particleCount = 500;
+
+for(let i = 0; i < particleCount; i++){
+  const p = document.createElement("div");
+  p.classList.add("particle");
+
+  // depth
+  const r = Math.random();
+  if(r < 0.33) p.classList.add("small");
+  else if(r < 0.66) p.classList.add("medium");
+  else p.classList.add("large");
+
+  container.appendChild(p);
+
+  // section-based positioning
+  gsap.set(p,{
+    x: gsap.utils.random(0, bounds.width),
+    y: gsap.utils.random(0, bounds.height),
+  });
+
+  // floating motion
+  gsap.to(p,{
+    x: "+=" + gsap.utils.random(-120,120),
+    y: "-=" + gsap.utils.random(150,350),
+    duration: gsap.utils.random(8,14),
+    repeat: -1,
+    yoyo: true,
+    ease: "sine.inOut",
+    delay: gsap.utils.random(0,4)
+  });
+
+  // subtle rotation
+  gsap.to(p,{
+    rotation: gsap.utils.random(-180,180),
+    duration: gsap.utils.random(12,20),
+    repeat: -1,
+    ease: "none"
+  });
+}
+
+/* 🔥 Scroll-based parallax */
+gsap.to(".particle",{
+  yPercent: -25,
+  ease: "none",
+  scrollTrigger:{
+    trigger: "#section-5",
+    start: "top bottom",
+    end: "bottom top",
+    scrub: 1
+  }
+});
+
+
+}
+
+
+
+
+
+

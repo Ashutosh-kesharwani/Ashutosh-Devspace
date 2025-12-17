@@ -1,1 +1,14 @@
 test.txt
+0.god-level.html
+1.final.html
+1.ultra.html
+2.most-advace.html
+3.advancedProxess.html
+4.test.html
+5.t.html
+
+# Ignore test files
+test.txt
+
+# Ignore experimental HTML files all html files
+*.html 
