@@ -165,89 +165,6 @@ function startUnderlineAnimation() {
 
 
 
-// function cardShow(){
-//   let imagesArr= document.querySelectorAll('.projects');
-//   // console.log(imagesArr);
-//   imagesArr.forEach((elem)=>{
-//     // create a flag var for remove image on mouseleave
-//     let showingImage;
-//     elem.addEventListener('mousemove',(dets)=>{
-//         showingImage=dets.target;
-//   //  console.log(showingImage);
-   
-//       cursor.style.opacity = 1;
-//       // console.log(dets.x);
-//       // console.log("Hhhh");
-
-//       // console.log(dets.target.dataset.index); ye hame btayga k kis image pe move kar rahe hai project wali
-
-//       // now to cursor wale me jo just andar div hai jiski opacity css me 0 kiye hai uss div pe move ke liye 
-//     console.log(
-//       document.querySelector("#cursor").children[dets.target.dataset.index]);
-      
-//    // to abb jis image pe mouse move tha uss image pe leave pe opacity 0 kardo cursor div ki 
-    
-//       document.querySelector("#cursor").children[dets.target.dataset.index].style.opacity=1;
-//       document.querySelector("#cursor").children[dets.target.dataset.index].style.transform=`translate(${dets.clientX}px,${dets.clientY}px)`;
-
-//       showingImage.style.filter="grayscale(1)";
-//       // console.log(document.querySelector("#section-3"));
-      
-//       document.querySelector("#section-3").style.backgroundColor=`#${dets.target.dataset.bgcolor}`;
-      
-//     })
-
-//     elem.addEventListener('mouseleave',(dets)=>{
-
-
-//       document.querySelector("#cursor").children[showingImage.dataset.index].style.opacity=0;
-//       showingImage.style.filter="grayscale(0)";
-      
-//       document.querySelector("#section-3").style.backgroundColor="#e8e8e8";
-//      cursor.style.opacity = 0;
-//     })
-//   })
-  
-// }
-
-// function cardShow() {
-//   const projects = document.querySelectorAll(".projects");
-//   const cursor = document.querySelector("#cursor");
-//   const cursorItems = document.querySelectorAll(".projects-cursor");
-//   const section = document.querySelector("#section-3");
-
-//   projects.forEach(project => {
-
-//     project.addEventListener("mousemove", (e) => {
-//       const index = project.dataset.index;
-
-//       cursor.style.opacity = 1;
-//       cursor.style.left = e.clientX + "px";
-//       cursor.style.top = e.clientY + "px";
-
-//       cursorItems.forEach(item => item.style.opacity = 0);
-//       cursorItems[index].style.opacity = 1;
-
-//       const img = project.querySelector("img");
-//       section.style.backgroundColor = `#${img.dataset.bgcolor}`;
-//       img.style.filter = "grayscale(1)";
-//     });
-
-//     project.addEventListener("mouseleave", () => {
-//       cursor.style.opacity = 0;
-//       cursorItems.forEach(item => item.style.opacity = 0);
-
-//       const img = project.querySelector("img");
-//       img.style.filter = "grayscale(0)";
-//       section.style.backgroundColor = "#e8e8e8";
-//     });
-
-//   });
-// }
-
-// cardShow();
-
-
 
 function cardShow() {
   const projects = document.querySelectorAll(".projects");
@@ -322,5 +239,8 @@ function cardShow() {
 
 
 
-
-
+/* ===== SECTION 4 JS ===== */
+/* =========================
+   GSAP + SWIPER HORIZONTAL SCROLL
+   abhi banana hai 
+========================= */

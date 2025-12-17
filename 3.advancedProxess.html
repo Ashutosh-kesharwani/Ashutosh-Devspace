@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Process – Advanced Portfolio</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,500&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<!-- Icons -->
+<link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+
+<!-- GSAP -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+<style>
+:root{
+  --bg:#0b0b0b;
+  --fg:#ffffff;
+  --muted:#8a8a8a;
+  --accent:#14cf93;
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  background:var(--bg);
+  color:var(--fg);
+  font-family:'Inter', sans-serif;
+  overflow-x:hidden;
+}
+
+/* =========================
+   PROCESS SECTION
+========================= */
+.process{
+  min-height:200vh;
+  padding:8vw 6vw;
+  display:flex;
+  gap:6vw;
+}
+
+/* =========================
+   LEFT VISUAL SPINE
+========================= */
+.process-left{
+  width:35%;
+  position:sticky;
+  top:10vh;
+  height:80vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.spine{
+  position:relative;
+  width:100%;
+  height:100%;
+}
+
+/* Vertical Line */
+.spine-line{
+  position:absolute;
+  left:50%;
+  top:0;
+  width:2px;
+  height:100%;
+  background:linear-gradient(
+    to bottom,
+    transparent,
+    var(--accent),
+    transparent
+  );
+  transform:translateX(-50%);
+}
+
+/* Floating Words */
+.spine-word{
+  position:absolute;
+  left:50%;
+  transform:translateX(-50%);
+  font-size:1vw;
+  letter-spacing:3px;
+  color:var(--muted);
+  opacity:0.6;
+}
+
+.spine-word.big{
+  font-size:5vw;
+  font-weight:700;
+  opacity:0.08;
+  white-space:nowrap;
+}
+
+/* =========================
+   RIGHT PROCESS CARDS
+========================= */
+.process-right{
+  width:65%;
+  display:flex;
+  flex-direction:column;
+  gap:6vw;
+  padding-top:10vw;
+}
+
+.step{
+  position:relative;
+  padding:3.5vw;
+  border-radius:2.2vw;
+  background:rgba(255,255,255,0.04);
+  backdrop-filter:blur(25px);
+  overflow:hidden;
+  cursor:pointer;
+  width:80%;
+}
+
+/* Offset layout */
+.step:nth-child(even){
+  margin-left:auto;
+}
+
+/* Accent glow line */
+.step::before{
+  content:"";
+  position:absolute;
+  left:0;
+  top:0;
+  width:4px;
+  height:0%;
+  background:var(--accent);
+}
+
+/* Cursor glow */
+.step::after{
+  content:"";
+  position:absolute;
+  width:280px;
+  height:280px;
+  background:radial-gradient(circle, rgba(20,207,147,0.25), transparent 60%);
+  top:var(--y);
+  left:var(--x);
+  transform:translate(-50%,-50%);
+  opacity:0;
+  transition:opacity .3s;
+}
+
+.step:hover::after{
+  opacity:1;
+}
+
+/* Step content */
+.step span{
+  font-size:.9vw;
+  color:var(--muted);
+  letter-spacing:2px;
+}
+
+.step h2{
+  font-size:2.6vw;
+  margin:1vw 0;
+  display:flex;
+  align-items:center;
+  gap:1vw;
+}
+
+.step h2 i{
+  color:var(--accent);
+}
+
+.step p{
+  font-size:1vw;
+  color:#cfcfcf;
+  width:80%;
+}
+
+/* Hover lift */
+.step:hover{
+  transform:translateY(-10px) scale(1.02);
+  transition:all .4s ease;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media(max-width:768px){
+  .process{
+    flex-direction:column;
+  }
+  .process-left,.process-right{
+    width:100%;
+  }
+  .step{
+    width:100%;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<section class="process">
+
+  <!-- LEFT VISUAL -->
+  <div class="process-left">
+    <div class="spine">
+      <div class="spine-line"></div>
+
+      <div class="spine-word big" style="top:10%">PROCESS</div>
+      <div class="spine-word" style="top:30%">DISCOVER</div>
+      <div class="spine-word" style="top:45%">DESIGN</div>
+      <div class="spine-word" style="top:60%">DEVELOP</div>
+      <div class="spine-word" style="top:75%">DELIVER</div>
+    </div>
+  </div>
+
+  <!-- RIGHT CONTENT -->
+  <div class="process-right">
+
+    <div class="step">
+      <span>STEP 01</span>
+      <h2><i class="ri-search-line"></i> Discover</h2>
+      <p>Understanding the problem, users and business through deep research.</p>
+    </div>
+
+    <div class="step">
+      <span>STEP 02</span>
+      <h2><i class="ri-pencil-ruler-2-line"></i> Design</h2>
+      <p>Visual systems, interaction design and typographic storytelling.</p>
+    </div>
+
+    <div class="step">
+      <span>STEP 03</span>
+      <h2><i class="ri-code-s-slash-line"></i> Develop</h2>
+      <p>Clean, scalable code with smooth animations and performance focus.</p>
+    </div>
+
+    <div class="step">
+      <span>STEP 04</span>
+      <h2><i class="ri-rocket-line"></i> Deliver</h2>
+      <p>Testing, refinement and launching a polished digital experience.</p>
+    </div>
+
+  </div>
+</section>
+
+<script>
+gsap.registerPlugin(ScrollTrigger);
+
+/* STEP REVEAL */
+gsap.utils.toArray(".step").forEach(step=>{
+  gsap.from(step,{
+    y:150,
+    opacity:0,
+    duration:1.3,
+    ease:"power4.out",
+    scrollTrigger:{
+      trigger:step,
+      start:"top 85%"
+    }
+  });
+
+  gsap.to(step,{
+    scrollTrigger:{
+      trigger:step,
+      start:"top center",
+      scrub:1
+    },
+    onUpdate:self=>{
+      step.style.setProperty("--progress",`${self.progress*100}%`)
+    }
+  });
+});
+
+/* Spine line animation */
+gsap.from(".spine-line",{
+  scaleY:0,
+  transformOrigin:"top",
+  scrollTrigger:{
+    trigger:".process",
+    start:"top top",
+    end:"bottom bottom",
+    scrub:1
+  }
+});
+
+/* Floating words parallax */
+gsap.utils.toArray(".spine-word").forEach((word,i)=>{
+  gsap.to(word,{
+    y:-100,
+    scrollTrigger:{
+      trigger:".process",
+      scrub:1
+    }
+  });
+});
+
+/* Cursor glow */
+document.querySelectorAll(".step").forEach(step=>{
+  step.addEventListener("mousemove",e=>{
+    const r=step.getBoundingClientRect();
+    step.style.setProperty("--x",`${e.clientX-r.left}px`);
+    step.style.setProperty("--y",`${e.clientY-r.top}px`);
+  });
+});
+</script>
+
+</body>
+</html>
