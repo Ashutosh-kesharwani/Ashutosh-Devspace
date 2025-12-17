@@ -5,6 +5,9 @@ loadingAnimation();
 cardShow();
 particleAnimation();
 countNumberPoints();
+swiperAnimationOnCards();
+section6Animation();
+// guitarHorizontalString();
 
 // window.addEventListener("load", () => {
 //   locoScroll.update();
@@ -276,7 +279,8 @@ gsap.to(".cdss-globe", {
 
 
 
-const caseSwiper = new Swiper(".caseSwiper", {
+function swiperAnimationOnCards(){
+  const caseSwiper = new Swiper(".caseSwiper", {
   slidesPerView: "auto",
   spaceBetween: 40,
   freeMode: true,
@@ -289,6 +293,7 @@ const caseSwiper = new Swiper(".caseSwiper", {
     draggable: true,
   },
 });
+}
 
 
 // Count-up numbers
@@ -388,4 +393,137 @@ gsap.to(".particle",{
 
 
 
+/* ========================= */
+/* SECTION 6 — GSAP REVEALS */
+/* ========================= */
 
+function section6Animation() {
+  gsap.utils.toArray("#section-6 .reveal").forEach((el, i) => {
+    gsap.from(el, {
+      y: 60,
+      opacity: 0,
+      duration: 1.1,
+      ease: "power3.out",
+      delay: i * 0.08,
+      scrollTrigger: {
+        trigger: el,
+        start: "top 85%",
+        scroller: "[data-scroll-container]", // IMPORTANT for Locomotive
+      }
+    });
+  });
+}
+
+
+
+
+
+
+/* ============================= */
+/* GUITAR STRING – REAL PHYSICS */
+/* ============================= */
+
+function guitarHorizontalStrings() {
+  const zones = document.querySelectorAll(".interactive-horizontal-string");
+
+  zones.forEach(zone => {
+    const strings = zone.querySelectorAll(".h-string");
+
+    strings.forEach(string => {
+      const baseY = Number(string.dataset.base);
+      const main = string.querySelector(".h-string-main");
+      const glow = string.querySelector(".h-string-glow");
+
+      let currentY = baseY;
+      let velocity = 0;
+
+      const tension = 0.12;
+      const damping = 0.85;
+      const maxPull = 80;
+
+      function animate() {
+        velocity += (baseY - currentY) * tension;
+        velocity *= damping;
+        currentY += velocity;
+
+        const d = `M 0 ${baseY} Q 500 ${currentY} 1000 ${baseY}`;
+        main.setAttribute("d", d);
+        glow.setAttribute("d", d);
+
+        glow.style.opacity = Math.min(1, Math.abs(velocity) / 12);
+
+        requestAnimationFrame(animate);
+      }
+
+      animate();
+
+      zone.addEventListener("mousemove", e => {
+        const rect = zone.getBoundingClientRect();
+        const y = e.clientY - rect.top;
+        const pull = Math.max(-maxPull, Math.min(maxPull, y - baseY));
+        currentY = baseY + pull;
+      });
+
+      zone.addEventListener("mouseleave", () => {
+        velocity += 26;
+      });
+    });
+  });
+}
+
+guitarHorizontalStrings();
+
+
+
+
+
+
+
+function guitarVerticalStrings() {
+  const stringZones = document.querySelectorAll(".interactive-vertical-string");
+
+  stringZones.forEach(zone => {
+    const index = zone.dataset.stringIndex;
+    const mainString = zone.querySelector(".v-string-main");
+    const glowString = zone.querySelector(".v-string-glow");
+
+    if (!mainString || !glowString) return;
+
+    let baseX = 100;
+    let currentX = 100;
+    let velocity = 0;
+
+    const tension = 0.1;
+    const damping = 0.85;
+    const maxPull = 90;
+
+    function animateString() {
+      velocity += (baseX - currentX) * tension;
+      velocity *= damping;
+      currentX += velocity;
+
+      const d = `M 100 0 Q ${currentX} 500 100 1000`;
+      mainString.setAttribute("d", d);
+      glowString.setAttribute("d", d);
+
+      glowString.style.opacity = Math.min(1, Math.abs(velocity) / 10);
+
+      requestAnimationFrame(animateString);
+    }
+
+    animateString();
+
+    zone.addEventListener("mousemove", (e) => {
+      const rect = zone.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const pull = Math.max(-maxPull, Math.min(maxPull, x - baseX));
+      currentX = baseX + pull;
+    });
+
+    zone.addEventListener("mouseleave", () => {
+      velocity += 28; // vibration kick
+    });
+  });
+}
+
+guitarVerticalStrings();
