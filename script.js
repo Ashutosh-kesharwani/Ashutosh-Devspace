@@ -9,6 +9,13 @@ swiperAnimationOnCards();
 section6Animation();
 guitarHorizontalStrings()
 guitarVerticalStrings();
+decisionsReveal();
+decisionsDividerReveal();
+marqueeAnimation();
+
+
+
+
 // window.addEventListener("load", () => {
 //   locoScroll.update();
 // });
@@ -245,18 +252,7 @@ function cardShow() {
 
 
 
-/* ===== SECTION 4 JS ===== */
-/* =========================
-   GSAP + SWIPER HORIZONTAL SCROLL
-   abhi banana hai section 5 wla swiper yha pe bhi daal do
-========================= */
 
-
-
-/* ===== SECTION 5 Achievement ===== */
-/* =========================
-  
-========================= */
 
 
 function particlesAnimation(){
@@ -296,7 +292,7 @@ function swiperAnimationOnCards(){
 }
 
 
-// Count-up numbers
+
 
 
 
@@ -475,13 +471,6 @@ function guitarHorizontalStrings() {
 }
 
 
-
-
-
-
-
-
-
 function guitarVerticalStrings() {
   const stringZones = document.querySelectorAll(".interactive-vertical-string");
 
@@ -528,5 +517,102 @@ function guitarVerticalStrings() {
     });
   });
 }
+
+
+function decisionsReveal() {
+
+  // SAFETY: run only if section exists
+  if (!document.querySelector(".decisions-section")) return;
+
+  // Initial states
+  gsap.set(".decision-item", { opacity: 0, y: 40 });
+  gsap.set(".decisions-title span", { opacity: 0, y: 20 });
+  gsap.set(".decisions-closing", { opacity: 0, y: 20 });
+
+  // Timeline for manifesto-style reveal
+  const tl = gsap.timeline({
+    scrollTrigger: {
+      trigger: ".decisions-section",
+      scroller: "[data-scroll-container]", // 🔥 THIS WAS MISSING
+      start: "top 70%",
+    }
+  });
+
+  tl.to(".decisions-title span", {
+    opacity: 1,
+    y: 0,
+    duration: 0.9,
+    ease: "power3.out",
+  })
+
+  .to(".decision-item", {
+    opacity: 1,
+    y: 0,
+    duration: 0.9,
+    ease: "power3.out",
+    stagger: 0.15,
+  }, "-=0.3")
+
+  .to(".decisions-closing", {
+    opacity: 1,
+    y: 0,
+    duration: 0.8,
+    ease: "power3.out",
+  }, "-=0.2");
+}
+function decisionsDividerReveal() {
+
+  if (!document.querySelector(".decisions-divider")) return;
+
+  gsap.from(".decisions-divider path", {
+    strokeDasharray: 1000,
+    strokeDashoffset: 1000,
+    duration: 1.5,
+    ease: "power2.out",
+    scrollTrigger: {
+      trigger: ".decisions-divider",
+      scroller: "[data-scroll-container]", // 🔥 REQUIRED
+      start: "top 85%",
+    }
+  });
+}
+function marqueeAnimation() {
+  let currentTween;
+
+  window.addEventListener("wheel", function (dets) {
+    // kill previous animation (smoothness ka main reason)
+    if (currentTween) currentTween.kill();
+
+    if (dets.deltaY > 0) {
+      currentTween = gsap.to(".decisions-marquee", {
+        x: "-200%",
+        repeat: -1,
+        duration: 3,        // 🔥 faster than before
+        ease: "linear"
+      });
+
+      gsap.to(".decisions-marquee img", {
+        rotate: 180,
+        duration: 0.4,
+        ease: "power3.out"
+      });
+    } else {
+      currentTween = gsap.to(".decisions-marquee", {
+        x: "0%",
+        repeat: -1,
+        duration: 3,
+        ease: "linear"
+      });
+
+      gsap.to(".decisions-marquee img", {
+        rotate: 0,
+        duration: 0.4,
+        ease: "power3.out"
+      });
+    }
+  });
+}
+
+
 
 
