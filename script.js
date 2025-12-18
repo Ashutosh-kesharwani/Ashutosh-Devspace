@@ -1,7 +1,10 @@
-locomotiveSmoothScroll();
+
 revealToSpan();
 valueSetters();
 loadingAnimation();
+
+locomotiveSmoothScroll();
+navScrollAnimation();
 cardShow();
 particleAnimation();
 countNumberPoints();
@@ -83,81 +86,155 @@ function valueSetters() {
 }
 
 function loadingAnimation() {
-  var tl = gsap.timeline();
+  const tl = gsap.timeline({
+    defaults: { ease: "expo.out" }
+  });
+
+
   tl.from("#loader-first .child span", {
-    x: "100%",
-    delay: 1,
-    stagger: 0.3,
-    ease: Power3.linear,
+  x: "120%",
+  opacity: 0,
+  scale:0.1,
+  filter: "blur(10px)",   // 👈 YAHAN ADD KARO
+  delay: 0.8,
+  stagger: {
+    each: 0.18,
+    ease: "power2.out"
+  },
+  duration: 1.2,
+  ease: "expo.out",
+  onComplete: () => {
+    gsap.set("#loader-first .child span", { filter: "blur(0px)" });
+  }
+})
+
+
+
+  .to("#loader-first .parent .child", {
+    y: "-100%",
+    duration: 0.7,
+    ease: "expo.inOut"
+  }, "+=0.1")
+
+
+  .to("#loader-first", {
+    height: 0,
+    duration: 1.4,
+    ease: "expo.inOut"
+  }, "-=0.3")
+
+
+  .to("#green", {
+    height: "100%",
+    duration: 1.8,
+    ease: "expo.inOut"
+  }, "-=1.2")
+
+
+  .to("#gray", {
+    height: "100%",
+    duration: 1.8,
+    ease: "expo.inOut"
+  }, "-=1.5")
+
+
+  .to("#loader", {
+    height: 0,
     opacity: 0,
-  })
-    .to("#loader-first .parent .child", {
-      y: "-100%",
-      duration: 0.5,
-      ease: Expo.easeInOut,
-    })
-    .to("#loader-first", {
-      height: 0,
-      duration: 1.5,
-      ease: Expo.easeInOut,
-    })
-    .to("#green", {
-      height: "100%",
-      duration: 2,
-      delay: -2,
-      ease: Expo.easeInOut,
-    })
-    .to("#gray", {
-      height: "100%",
-      duration: 2,
-      delay: -1.7,
-      ease: Expo.easeInOut,
-    })
-    .to("#loader", {
-      height: 0,
-      opacity: 0,
-      duration: 1,
-      ease: Expo.easeInOut,
-    })
-    tl.to("#section-1", {
-      clipPath: "inset(0% 0 0 0)",
-      duration: 1.5,
-      ease: "expo.out",
-      onComplete: function () {
-        animateHomePage();
-      },
-    });
+    duration: 1,
+    ease: "expo.inOut"
+  }, "-=0.8")
+
+
+  .to("#section-1", {
+    clipPath: "inset(0% 0% 0% 0%)",
+    duration: 1.2,
+    ease: "expo.out",
+    onComplete: () => {
+  animateHomePage();
+
 }
 
-function animateHomePage() {
-  var tl = gsap.timeline();
-  tl.to("nav h4", {
-    y: 0,
-    opacity: 1,
-    stagger: 0.3,
-    ease: Expo.easeInOut,
-  });
-  tl.to("#section-1 .parent .child", {
-    y: 0,
-    opacity: 1,
-    stagger: 0.5,
-    ease: Expo.easeInOut,
-    onComplete: function () {
-      startSvgAnimation();
-      startUnderlineAnimation();
-    },
-  });
-  tl.to(".down-arrow", {
-    y: 0,
-    opacity: 1,
-    stagger: 0.5,
-    ease: Expo.easeInOut,
-    onComplete: function () {
-      startSvgAnimation();
-      startUnderlineAnimation();
-    },
-  });
+  }, "-=0.9");
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function animateHomePage() {
+  const tl = gsap.timeline({
+    defaults: {
+      ease: "power3.out",
+      duration: 1
+    }
+  });
+
+  // NAV – subtle reveal
+  tl.fromTo("nav h4",
+    { y: 30, opacity: 0 },
+    {
+      y: 0,
+      opacity: 1,
+      stagger: 0.08,
+      duration: 0.8
+    }
+  )
+
+  // HERO TEXT – luxury float
+  .fromTo("#section-1 .parent .child",
+    {
+      y: 80,
+      opacity: 0,
+      filter: "blur(8px)"
+    },
+    {
+      y: 0,
+      opacity: 1,
+      filter: "blur(0px)",
+      stagger: 0.25,
+      duration: 1.3
+    },
+    "-=0.3" // overlap with nav
+  )
+
+  // SVG underline + stack text (sync)
+  .add(() => {
+    startSvgAnimation();
+  }, "-=0.6")
+
+  // DOWN ARROW – gentle call to action
+  .fromTo(".down-arrow",
+    {
+      y: 40,
+      opacity: 0
+    },
+    {
+      y: 0,
+      opacity: 1,
+      duration: 0.9,
+      ease: "expo.out"
+    },
+    "-=0.4"
+  );
+}
+
 
 function startSvgAnimation() {
   let svgText = document.querySelectorAll(".stack-heading text");
@@ -167,13 +244,30 @@ function startSvgAnimation() {
   });
 }
 
-function startUnderlineAnimation() {
-  let svgUnderline = document.querySelectorAll(".underline path");
-  // console.log(svgUnderline);
-  svgUnderline.forEach((elem) => {
-    elem.style.animationPlayState = "running";
-  });
+
+function navScrollAnimation(){
+  gsap.to("nav", {
+  height: "15vh",
+  backgroundColor: "rgba(20, 20, 20, 0.55)",
+  backdropFilter: "blur(10px)",
+  boxShadow: "0 8px 30px rgba(0,0,0,0.35)",
+  ease: "power3.out",
+  scrollTrigger: {
+    trigger: "body",
+    scroller: "main",
+    start: "top top",
+    end: "top+=120",
+    scrub: 0.6,
+  }
+});
+
 }
+
+
+
+
+
+
 
 
 
