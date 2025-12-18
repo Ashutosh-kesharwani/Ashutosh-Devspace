@@ -7,8 +7,8 @@ particleAnimation();
 countNumberPoints();
 swiperAnimationOnCards();
 section6Animation();
-// guitarHorizontalString();
-
+guitarHorizontalStrings()
+guitarVerticalStrings();
 // window.addEventListener("load", () => {
 //   locoScroll.update();
 // });
@@ -298,6 +298,9 @@ function swiperAnimationOnCards(){
 
 // Count-up numbers
 
+
+
+
 function countNumberPoints(){
   const counts = document.querySelectorAll(".count");
 
@@ -471,7 +474,7 @@ function guitarHorizontalStrings() {
   });
 }
 
-guitarHorizontalStrings();
+
 
 
 
@@ -526,4 +529,4 @@ function guitarVerticalStrings() {
   });
 }
 
-guitarVerticalStrings();
+

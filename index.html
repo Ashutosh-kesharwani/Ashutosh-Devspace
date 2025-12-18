@@ -119,7 +119,7 @@
       </div>
 
       <div id="section-2-part-2">
-        <div id="about-values">]
+        <div id="about-values">
           <div class="values-wrapper">
 
             <div id="header">
@@ -383,17 +383,14 @@
     <section class="workflow section-4" id="section-4">
 
       <div class="workflow-header reveal">
-        <h2>How I <span>Craft</span> Experiences</h2>
+        <h2 class="page-title">Craft,<span class="highlight">Polish</span>, <span class="highlight">Elevate.</span></h2>
         <p>
-          A thoughtful balance of strategy, aesthetics and engineering —
+          A thoughtful balance of strategy, aesthetics  <br>and engineering —
           focused on clarity, emotion and performance.
         </p>
       </div>
 
-      <!-- SVG TIMELINE -->
-      <svg class="timeline-svg" width="3" viewBox="0 0 4 800">
-        <path id="linePath" d="M2 40 L2 830" />
-      </svg>
+     
 
       <!-- PROCESS CARDS -->
       <div class="workflow-grid">
@@ -423,38 +420,89 @@
       </div>
 
       <!-- SWIPER VISUAL -->
-      <div class="workflow-visual">
-        <div class="swiper workflowSwiper">
-          <div class="swiper-wrapper">
+     <div class="case-cards-section">
+  <div class="swiper caseSwiper">
+    <div class="swiper-wrapper">
 
-            <div class="swiper-slide">
-              <h3>Human-Centered Thinking</h3>
-              <i class="ri-user-heart-line"></i>
-            </div>
-
-            <div class="swiper-slide">
-              <h3>Motion with Purpose</h3>
-              <i class="ri-magic-line"></i>
-            </div>
-
-            <div class="swiper-slide">
-              <h3>Clean Architecture</h3>
-              <i class="ri-code-s-slash-line"></i>
-            </div>
-
-            <div class="swiper-slide">
-              <h3>Performance First</h3>
-              <i class="ri-speed-line"></i>
-            </div>
-
-            <div class="swiper-slide">
-              <h3>Detail Obsession</h3>
-              <i class="ri-focus-3-line"></i>
-            </div>
-
-          </div>
+      <div class="swiper-slide">
+        <div class="workflow-card">
+          <h3>Human-Centered Thinking</h3>
+        <i class="ri-user-heart-line"></i>
         </div>
       </div>
+
+      <div class="swiper-slide">
+       <div class="workflow-card">
+           <h3>Motion with <br> Purpose</h3>
+        <i class="ri-magic-line"></i>
+        </div>
+      </div>
+
+      <div class="swiper-slide">
+       <div class="workflow-card">
+            <h3>Clean   <br> Architecture</h3>
+        <i class="ri-code-s-slash-line"></i>
+        </div>
+      </div>
+
+      <div class="swiper-slide">
+         <div class="workflow-card">
+          <h3>Performance <br> First</h3>
+        <i class="ri-speed-line"></i>
+        </div>
+      </div>
+
+      <div class="swiper-slide">
+      <div class="workflow-card">
+           <h3>Detail <br> Obsession</h3>
+        <i class="ri-focus-3-line"></i>
+        </div>
+      </div>
+
+    </div>
+
+
+    <div class="swiper-scrollbar"></div>
+  </div>
+</div>
+
+  <div class="interactive-horizontal-string " >
+  <svg viewBox="0 0 1000 200" preserveAspectRatio="none">
+
+    <defs>
+      <linearGradient id="stringGradientH" x1="0%" y1="0%" x2="100%" y2="0%">
+        <stop offset="0%" stop-color="#14CF93" stop-opacity="0"/>
+        <stop offset="50%" stop-color="#14CF93" stop-opacity="1"/>
+        <stop offset="100%" stop-color="#14CF93" stop-opacity="0"/>
+      </linearGradient>
+
+      <filter id="stringGlowH">
+        <feGaussianBlur stdDeviation="10" result="blur"/>
+        <feMerge>
+          <feMergeNode in="blur"/>
+          <feMergeNode in="SourceGraphic"/>
+        </feMerge>
+      </filter>
+    </defs>
+
+    <!-- STRING 1 -->
+    <g class="h-string" data-base="60">
+      <path class="h-string-glow"
+        d="M 0 60 Q 500 60 1000 60"
+        stroke="url(#stringGradientH)"
+        stroke-width="8"
+        fill="none"
+        filter="url(#stringGlowH)"
+        opacity="0.6"/>
+      <path class="h-string-main"
+        d="M 0 60 Q 500 60 1000 60"
+        stroke="#fff"
+        stroke-width="2"
+        fill="none"/>
+    </g>
+  </svg>
+      </div>  
+
 
     </section>
 
@@ -658,11 +706,6 @@
 
               </div>
             </div>
-
-
-
-
-            <!-- add 2 more cards -->
           </div>
 
           <!-- Optional -->
@@ -675,6 +718,7 @@
 
     </section>
 
+        <!-- Section:6 Professional Context  -->
     <section class="professional-context section-6" id="section-6">
 
   

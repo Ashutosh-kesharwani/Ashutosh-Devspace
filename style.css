@@ -373,7 +373,7 @@ nav h4:hover a {
 .interactive-horizontal-string {
   width: 100%;
   /* height: 20vh; */
-  margin-top: 3vw;
+  /* margin-top: 1vw; */
   position: relative;
   cursor: grab;
   pointer-events: auto;
@@ -394,13 +394,7 @@ nav h4:hover a {
 .interactive-horizontal-string.light path {
   stroke:#14CF93; /* any color */
 }
-.interactive-horizontal-string .string-main {
-  stroke: #ffffff;
-}
 
-.interactive-horizontal-string .string-glow {
-  stroke: #14CF93;
-}
 
 /* ============================= */
 /* INTERACTIVE VERTICAL STRING   */
@@ -1022,6 +1016,38 @@ nav h4:hover a {
 }
 
 /* -------------------------------------------------------------------------------------------------------------------------- */
+/* Generic code for swiper js slid CSS */
+.case-cards-section {
+  width: 100%;
+  padding: 6vw 0;
+  /* background: #0d0d11; */
+  /* background-color: slateblue; */
+}
+
+/* MUST */
+.caseSwiper {
+  width: 100%;
+  overflow: hidden;
+  /* background-color: red; */
+  height: 50vh;
+}
+
+/* MUST */
+.caseSwiper .swiper-wrapper {
+  display: flex;
+  flex-direction: row;
+  /* background-color: rgb(39, 39, 0); */
+}
+
+/* MUST */
+.caseSwiper .swiper-slide {
+  width: auto;
+  flex-shrink: 0;
+  padding: 2vw;
+  
+}
+
+
 
 /* ===== SECTION 4 : WORKFLOW ===== */
 /* =========================
@@ -1029,12 +1055,14 @@ nav h4:hover a {
 ========================= */
 
 .workflow {
-  padding: 9vw 6vw;
+  padding: 7vw 8vw 0vw 8vw;
   background-color: #0b0b0e;
   color: #f5f5f5;
   position: relative;
   overflow: hidden;
   /* display: none; */
+  /* background-color: red; */
+  /* height: 90vh; */
 }
 
 /* =========================
@@ -1042,19 +1070,31 @@ nav h4:hover a {
 ========================= */
 
 .workflow-header {
-  max-width: 60%;
+  width: 100%;
   margin-bottom: 7vw;
+  /* background-color: red; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
 }
 
-.workflow-header h2 {
+
+.page-title {
   font-size: 5vw;
-  line-height: 1;
+  text-align: center;
+  margin-bottom: 1.5vw;
 }
 
-.workflow-header h2 span {
-  font-family: "Playfair Display", serif;
-  font-style: italic;
+.highlight {
   color: #14cf93;
+  background: linear-gradient(90deg, #14cf93, #1affb0);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  /* font-family: 'Kaushan Script', cursive; */
+  /* font-family: 'Gilroy', sans-serif; */
+  font-family: "Nothing You Could", cursive;
 }
 
 .workflow-header p {
@@ -1064,24 +1104,8 @@ nav h4:hover a {
   line-height: 1.7;
 }
 
-/* =========================
-   SVG TIMELINE
-========================= */
 
-.timeline-svg {
-  position: absolute;
-  left: 50%;
-  top: 10vw;
-  transform: translateX(-50%);
-  height: 65%;
-  pointer-events: none;
-}
 
-#linePath {
-  stroke: #14cf93;
-  stroke-width: 2;
-  fill: none;
-}
 
 /* =========================
    PROCESS GRID
@@ -1147,41 +1171,18 @@ nav h4:hover a {
    WORKFLOW SWIPER
 ========================= */
 
-.workflow-visual {
-  width: 100%;
-  margin-top: 10vw;
-  position: relative;
-  /* background-color: rgb(94, 94, 3); */
-  overflow: hidden;
-}
 
-.workflowSwiper {
-  width: 100%;
-  overflow: hidden;
-  cursor: grab;
-  /* background-color: red; */
-}
-
-.workflowSwiper:active {
-  cursor: grabbing;
-}
-
-.workflowSwiper .swiper-wrapper {
-  align-items: center;
-  display: flex;
-  flex-direction: row;
-}
 
 /* SLIDES */
-.workflowSwiper .swiper-slide {
-  width: 50vw;
-  height: 20vw;
-  padding: 2.8vw;
-  border-radius: 1.6vw;
+.swiper-slide .workflow-card {
+  width: 25vw;
+  /* height: 20vw; */
+  padding: 3vw;
+  border-radius: 2vw;
 
   background: linear-gradient(
     135deg,
-    rgba(20, 207, 147, 0.18),
+    rgba(5, 212, 147, 0.18),
     rgba(12, 12, 16, 0.9)
   );
 
@@ -1190,42 +1191,33 @@ nav h4:hover a {
 
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  align-items: center;
+  gap: 2vw;
 
-  opacity: 0.35;
+  opacity: 0.5;
   transform: scale(0.82);
 
-  transition: transform 0.65s cubic-bezier(0.19, 1, 0.22, 1),
-    box-shadow 0.6s ease, opacity 0.6s ease;
+  
 }
 
-.workflowSwiper .swiper-slide h3 {
-  font-size: 1.4vw;
+.swiper-slide .workflow-card  h3 {
+  font-size: 1.7vw;
   font-weight: 600;
+  text-align: center;
 }
 
-.workflowSwiper .swiper-slide i {
-  font-size: 3vw;
+.swiper-slide .workflow-card  i {
+  font-size: 2vw;
   color: #14cf93;
   align-self: flex-end;
 }
 
-/* ACTIVE SLIDE */
-.workflowSwiper .swiper-slide-active {
+/* ACTIVE */
+.swiper-slide .workflow-card:active  {
   opacity: 1;
   transform: scale(1.08);
   box-shadow: 0 30px 90px rgba(20, 207, 147, 0.4);
 }
-
-/* PREV / NEXT */
-.workflowSwiper .swiper-slide-prev,
-.workflowSwiper .swiper-slide-next {
-  opacity: 0.6;
-  transform: scale(0.92);
-  filter: blur(0.4px);
-}
-
-
 
 /* SECTION 5: CASE STUDY */
 
@@ -1250,21 +1242,7 @@ nav h4:hover a {
   /* background-color: red; */
   padding-top: 2vw;
 }
-.page-title {
-  font-size: 5vw;
-  text-align: center;
-  margin-bottom: 1.5vw;
-}
 
-.highlight {
-  color: #14cf93;
-  background: linear-gradient(90deg, #14cf93, #1affb0);
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  /* font-family: 'Kaushan Script', cursive; */
-  /* font-family: 'Gilroy', sans-serif; */
-  font-family: "Nothing You Could", cursive;
-}
 
 .page-subtitle {
   font-size: 1.5vw;
@@ -1456,37 +1434,7 @@ nav h4:hover a {
   from{ transform: scale(0.9); opacity: 0.6; }
   to{ transform: scale(1.4); opacity: 1; }
 }
-.case-cards-section {
-  width: 100%;
-  padding: 6vw 0;
-  /* background: #0d0d11; */
-  /* background-color: slateblue; */
-}
 
-/* MUST */
-.caseSwiper {
-  width: 100%;
-  overflow: hidden;
-  /* background-color: red; */
-  height: 50vh;
-}
-
-/* MUST */
-.caseSwiper .swiper-wrapper {
-  display: flex;
-  flex-direction: row;
-  /* background-color: yellow; */
-    width: 30vw;
-  height: 40vh;
-}
-
-/* MUST */
-.caseSwiper .swiper-slide {
-  width: auto;
-  flex-shrink: 0;
-  padding: 2vw;
-  
-}
 /* FORCE SQUARE CARD */
 .case-card {
   width: 480px;
@@ -1572,20 +1520,6 @@ nav h4:hover a {
   opacity: 1;
   transform: translateY(0);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 /* /Section -6  */
