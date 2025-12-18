@@ -119,8 +119,7 @@
       </div>
 
       <div id="section-2-part-2">
-        <div id="svgline"></div>
-        <section id="about-values">
+        <div id="about-values">]
           <div class="values-wrapper">
 
             <div id="header">
@@ -182,16 +181,60 @@
                   </div>
                 </div>
 
+
+   
+
               </div>
 
 
 
 
             </div>
-            <div id="svgline"></div>
 
-        </section>
+            
+        </div>     
+      </div>
+      
 
+
+       <div id="section2-line">
+        <div class="interactive-horizontal-string light" >
+  <svg viewBox="0 0 1000 200" preserveAspectRatio="none">
+
+    <defs>
+      <linearGradient id="stringGradientH" x1="0%" y1="0%" x2="100%" y2="0%">
+        <stop offset="0%" stop-color="#14CF93" stop-opacity="0"/>
+        <stop offset="50%" stop-color="#14CF93" stop-opacity="1"/>
+        <stop offset="100%" stop-color="#14CF93" stop-opacity="0"/>
+      </linearGradient>
+
+      <filter id="stringGlowH">
+        <feGaussianBlur stdDeviation="10" result="blur"/>
+        <feMerge>
+          <feMergeNode in="blur"/>
+          <feMergeNode in="SourceGraphic"/>
+        </feMerge>
+      </filter>
+    </defs>
+
+    <!-- STRING 1 -->
+    <g class="h-string" data-base="60">
+      <path class="h-string-glow"
+        d="M 0 60 Q 500 60 1000 60"
+        stroke="url(#stringGradientH)"
+        stroke-width="8"
+        fill="none"
+        filter="url(#stringGlowH)"
+        opacity="0.6"/>
+      <path class="h-string-main"
+        d="M 0 60 Q 500 60 1000 60"
+        stroke="#fff"
+        stroke-width="2"
+        fill="none"/>
+    </g>
+  </svg>
+      </div>  
+       </div> 
       </div>
     </section>
 
@@ -634,18 +677,7 @@
 
     <section class="professional-context section-6" id="section-6">
 
-  <!-- BACKGROUND PARTICLE SYSTEM -->
-<!-- <div class="bg-particles">
-  <svg id="shooting-stars" viewBox="0 0 1000 600" preserveAspectRatio="none">
-    <defs>
-      <linearGradient id="starGradient" x1="0" y1="0" x2="1" y2="1">
-        <stop offset="0%" stop-color="#14CF93" stop-opacity="0"/>
-        <stop offset="40%" stop-color="#14CF93" stop-opacity="0.4"/>
-        <stop offset="100%" stop-color="#14CF93" stop-opacity="1"/>
-      </linearGradient>
-    </defs>
-  </svg>
-</div> -->
+  
 
 
   <!-- SECTION HEADER -->
@@ -816,7 +848,7 @@
 
  
 
-<!-- INTERACTIVE GUITAR STRING -->
+<!-- INTERACTIVE GUITAR STRING  HORIZONTAL-->
 <div class="interactive-horizontal-string" data-horizontal>
   <svg viewBox="0 0 1000 200" preserveAspectRatio="none">
 
