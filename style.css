@@ -8,6 +8,7 @@ html,
 body {
   height: 100%;
   width: 100%;
+  overflow: hidden;
 }
 main {
   position: relative;
@@ -19,7 +20,6 @@ main {
   width: 100%;
   z-index: 999;
   position: fixed;
-
   /* Changed */
   /* display: none; */
 }
@@ -34,11 +34,12 @@ main {
   justify-content: space-between;
   align-items: center;
   color: white;
-  padding: 2vh 0 0 0;
+  padding: 2vh;
 }
 .reveal {
   margin-bottom: 1vh;
   display: inline-block;
+  /* background-color:yellow; */
 }
 .parent {
   display: inline-block;
@@ -49,52 +50,78 @@ main {
   display: inline-block;
   transform: translate(0, 0);
 }
+
+
+
 #top-heading {
   display: flex;
   align-items: center;
   flex-direction: column;
 }
+#top-heading,
+#top-heading h3,
+#top-heading h3 span {
+  font-family: 'Nothing You Could', cursive;
+  font-weight: 400;  
+}
 #top-heading h3 {
-  font-size: 1vw;
-  font-weight: 300;
+  font-size: 1.1vw;
+  font-weight: 400;
   text-transform: uppercase;
   text-align: center;
   letter-spacing: 0.1vw;
+  
+   
 }
+#top-heading h3 .cross{
+  color: #14cf93;
+  font-weight: 900;
+}
+
 #top-heading #copyright {
   color: #14cf93;
-  font-weight: 700;
+  font-weight: 900;
+  font-size: 1.2vw;
+}
+.hero-title {
+  text-align: center;
+  line-height: 1.05;
+  letter-spacing: -0.04em;
+  font-family: 'Gilroy', sans-serif;
 }
 
-#loader-first h1 {
-  font-size: 4vw;
+/* FIRST NAME – POWER */
+.hero-title .fname {
+  display: block;
+  font-size: clamp(3.8rem, 8vw, 6.5rem);
   font-weight: 900;
-  text-align: center;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
-  letter-spacing: 0.1vw;
-  /* background-color: red; */
-  width: 100%;
+}
+
+/* LAST NAME – PERSONALITY */
+.hero-title .lname {
+  display: block;
+  margin-top: -0.6vw;
+  font-size: clamp(3rem, 6vw, 5rem);
+  font-weight: 700;
+  color: #14cf93;
+  font-family: 'Kaushan Script', cursive;
+}
+
+/* IS A – SUBTLE & PREMIUM */
+.hero-title .descriptor {
   display: flex;
   justify-content: center;
-  align-items: center;
+  gap: 1.2rem;
+  margin-top: 1vw;
+  font-size: clamp(0.9rem, 1.7vw, 1.8rem);
+  font-family: 'Nothing You Could', cursive;
+  letter-spacing: 0.45em;
+  opacity: 0.6;
 }
 
-#loader-first h1 .green-text {
-  color: #14cf93;
-  display: inline-block;
-  font-family: "Playfair Display", serif;
-  font-style: italic;
-  text-transform: lowercase;
-  font-weight: 700;
-}
-#loader-first h1 .italic {
-  display: inline-block;
-  font-family: "Playfair Display", serif;
-  font-style: italic;
-  text-transform: lowercase;
-  font-weight: 700;
-  margin-left: 1.3vw;
-}
+
 #loader-first h2 i {
   display: inline-block;
   color: #14cf93;
@@ -128,27 +155,14 @@ main {
 }
 
 /* ------------------------------------------------------------------------------------------------------ */
-
-.section {
-  height: 100vh;
-  width: 100%;
-  position: relative;
-  overflow-x: hidden;
-}
-
-#section-1 {
-  height: 100vh;
-  clip-path: inset(100% 0 0 0);
-  /* background-color: rgba(208, 57, 57, 0.656); */
-  /* display: none; */
-}
 nav {
-  width: 100%;
-  padding: 2.5vw 4vw 1.5vw 4vw;
-  /* background-color: red; */
+  padding: 2vw 4vw ;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: fixed;
+  z-index: 999;
+ width: 100%;
 }
 nav h4 {
   font-weight: 700;
@@ -182,58 +196,83 @@ nav h4::after {
 nav h4:hover::after {
   bottom: 0%;
   border-radius: 0; /*Isse vo hover hone pe upar aate hue dhikhenge */
+  
 }
 nav h4:hover a {
   color: rgb(0, 0, 0);
+ 
+  
 }
-.row {
-  margin-top: 2.5vw;
-  margin-bottom: -2.3vw;
-  display: flex;
-  align-items: center;
-  gap: 2vw;
+
+
+
+.section {
+  height: 100vh;
   width: 100%;
-  color: #333;
-  padding: 0 7vw;
-  line-height: 1;
-
   position: relative;
+  overflow: hidden;
 }
-.row h1 {
-  font-size: 10vw;
-  font-weight: 900;
-  color: #333;
-  /* font-family: 'Playfair Display', serif; */
-  font-style: italic;
-  text-transform: uppercase;
 
-  /* font-family: 'Nothing You Could', cursive; */
+/* ================= HERO SECTION ================= */
+/* ================= SECTION BASE ================= */
+
+.section {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+#section-1 {
+  height: 120vh;
+  padding-top: 20vh;
+}
+
+/* ================= ROW LAYOUT ================= */
+
+.row {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
   /* background-color: yellow; */
 }
-#full {
-  letter-spacing: 2vw;
-}
-#green-italic {
-  display: inline-block;
-  color: #14cf93;
-  font-weight: 700;
-  /* font-family: 'Playfair Display', serif; */
-  font-size: 11vw;
-  /* font-family: 'Kaushan Script', cursive; */
-}
-.row .text {
-  margin-top: 3vw;
-  /* margin-left: 1vw; */
-}
-.row .text h5 {
-  opacity: 0.7;
-  font-size: 11px;
-  font-weight: 500;
+
+/* ================= TEXT ROWS ================= */
+
+.row-text h1 {
+  font-family: "Gilroy", sans-serif;
+  font-weight: 900;
+  text-transform: uppercase;
+  color: #111;
+  line-height: 1;
+  letter-spacing: 0.12em;
+  text-align: center;
 }
 
-.stack-heading {
-  height: 17vw;
-  width: auto;
+/* FULL STACK */
+#full-stack {
+  font-size: 11vw;
+}
+
+/* DEVELOPER */
+#developer {
+  font-size: 9.5vw;
+}
+
+/* ================= SVG ROW ================= */
+
+.row-svg {
+display: flex;
+justify-content: space-evenly;
+align-items: center;
+flex-direction: row;
+align-content: flex-end;
+/* background-color: #333; */
+}
+
+/* SVG HOLDER */
+.stack-heading.uiux {
+  height: 18vw;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -245,33 +284,38 @@ nav h4:hover a {
   overflow: visible;
 }
 
-.stack-heading text {
-  font-family: "Kaushan Script", cursive;
-  font-size: 11vw;
+/* SVG TEXT */
+.stack-heading.uiux text {
+  /* font-family: "Kaushan Script", cursive; */
+     font-family: 'Nothing You Could', cursive;
+  font-size: 10vw;
   font-weight: 800;
   font-style: italic;
 
-  stroke-linecap: round;
-  stroke-linejoin: round;
   fill: transparent;
   stroke: #14cf93;
   stroke-width: 3;
   stroke-linecap: round;
   stroke-linejoin: round;
 
-  /* 👇 THIS IS THE MAGIC */
   stroke-dasharray: 2200;
   stroke-dashoffset: 2200;
 
   animation: paintDraw 2.3s cubic-bezier(0.65, 0, 0.35, 1) forwards,
-    fillIn 0.6s ease 1s forwards;
+             fillIn 0.6s ease 1s forwards;
   animation-play-state: paused;
 }
+
+/* ================= UNDERLINE ================= */
+
+
+
+
+/* ================= ANIMATIONS ================= */
 
 @keyframes paintDraw {
   0% {
     stroke-dashoffset: 2200;
-
     opacity: 0;
   }
   10% {
@@ -283,87 +327,43 @@ nav h4:hover a {
 }
 
 @keyframes fillIn {
-  from {
-    fill: transparent;
-  }
-  to {
-    fill: #14cf93;
-  }
+  from { fill: transparent; }
+  to   { fill: #14cf93; }
 }
 
-#row2-h1 {
-  /* font-family: 'Playfair Display', serif; */
-  margin-left: 8vw;
-  /* margin-top: -1vw; */
-  font-size: 8vw;
-  font-weight: 700;
-  /* text-align: center; */
-  /* background-color: red; */
-}
-
-.heading-wrap {
-  display: inline-flex;
-  flex-direction: column;
-  align-items: center;
-  position: relative;
-}
-.heading-wrap.dark.stack .underline {
-  width: 90%;
-  height: 2vw;
-  margin-top: -5vw;
-  margin-left: 6vw;
-}
-.heading-wrap.dark .underline {
-  width: 100%;
-  height: 2vw;
-  margin-top: -3.5vw;
-}
-
-.underline path {
-  fill: none;
-  stroke-width: 5;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-
-  stroke-dasharray: 500;
-  stroke-dashoffset: 500;
-
-  animation: paintUnderline 2.8s ease forwards;
-  animation-play-state: paused;
-}
-.heading-wrap.green .underline path {
-  stroke: #14cf93;
-}
-
-.heading-wrap.dark .underline path {
-  stroke: #333;
-}
-
-/* animation */
 @keyframes paintUnderline {
   to {
     stroke-dashoffset: 0;
   }
 }
+
+/* ================= DOWN ARROW ================= */
+
 #down-arrow-container {
-  position: relative;
-  top: 13%;
-  /* background-color: red; */
-  height: 3vw;
+  position: absolute;
+  bottom: 6vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 .down-arrow {
-  position: absolute;
-  left: 50%;
-  /* top:20%; */
-  /* top:2%; */
-  /* background-color: red; */
-  width: 3vw;
-  object-fit: cover;
-  object-position: calc();
-  height: 100%;
-  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  object-fit: contain;
 }
+
+
+
+
+
+
+/* ================= DOWN ARROW ================= */
+
+
+
+
+
 
 
 /* ============================= */
