@@ -1928,9 +1928,188 @@ nav h4:hover a {
 
 
 
-#section-footer{
-   height: 100vh;
-   background-color: #111;
+
+
+/* ================================
+   FINAL FOOTER — PHILOSOPHY CLOSE
+================================ */
+
+.final-footer {
+  padding: 10vw 8vw 6vw;
+  background: #0b0d10;
+  color: #e6e6e6;
+  position: relative;
+  overflow: hidden;
 }
+
+/* subtle depth */
+.final-footer::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(
+      circle at 30% 20%,
+      rgba(255,255,255,0.04),
+      transparent 45%
+    );
+  pointer-events: none;
+}
+
+/* ================================
+   PRIMARY STATEMENT
+================================ */
+
+.footer-statement {
+  max-width: 900px;
+}
+
+.footer-thought {
+  font-size: clamp(3rem, 6vw, 5.5rem);
+  line-height: 1.05;
+  font-weight: 550;
+  letter-spacing: -0.04em;
+}
+
+/* ================================
+   MICRO MANIFESTO
+================================ */
+
+.footer-principles {
+  margin-top: 3.5vw;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2.5rem;
+}
+
+.footer-principles p {
+  font-size: 0.95rem;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.55);
+}
+
+/* ================================
+   MARQUEE
+================================ */
+
+.footer-marquee {
+  margin: 6vw 0 4vw;
+  display: flex;
+  overflow: hidden;
+  position: relative;
+  border-top: 1px solid rgba(255,255,255,0.08);
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+/* fade edges */
+.footer-marquee::before,
+.footer-marquee::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 120px;
+  height: 100%;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.footer-marquee::before {
+  left: 0;
+  background: linear-gradient(
+    to right,
+    #0b0d10 20%,
+    transparent
+  );
+}
+
+.footer-marquee::after {
+  right: 0;
+  background: linear-gradient(
+    to left,
+    #0b0d10 20%,
+    transparent
+  );
+}
+
+.marquee-track {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  gap: 3vw;
+  padding: 2.5vw 0;
+  animation: footer-marquee 28s linear infinite;
+}
+
+.footer-marquee:hover .marquee-track {
+  animation-play-state: paused;
+}
+
+.marquee-track span {
+  font-size: 1.1rem;
+  letter-spacing: 0.01em;
+  white-space: nowrap;
+  color: rgba(255,255,255,0.75);
+}
+
+.marquee-track img {
+  height: 1.2rem;
+  opacity: 0.6;
+}
+
+/* animation */
+@keyframes footer-marquee {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+/* ================================
+   IDENTITY STRIP
+================================ */
+
+.footer-identity {
+  margin-top: 6vw;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.identity-name {
+  font-size: 0.95rem;
+  letter-spacing: 0.01em;
+  color: rgba(255,255,255,0.85);
+}
+
+.identity-meta {
+  font-size: 0.85rem;
+  letter-spacing: 0.02em;
+  color: rgba(255,255,255,0.45);
+}
+
+/* ================================
+   RESPONSIVE TUNING
+================================ */
+
+@media (max-width: 768px) {
+  .final-footer {
+    padding: 14vw 6vw 10vw;
+  }
+
+  .footer-principles {
+    gap: 1.5rem;
+  }
+
+  .footer-marquee::before,
+  .footer-marquee::after {
+    width: 60px;
+  }
+}
+
+
+
 
 
