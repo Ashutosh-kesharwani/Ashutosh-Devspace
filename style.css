@@ -1229,6 +1229,8 @@ nav h4:hover a {
   position: relative;
   overflow: hidden;
 
+  /* display: none; */
+
 }
 .hero-section {
   position: relative;
@@ -1534,6 +1536,7 @@ nav h4:hover a {
   background: #0b0b0e;
   color: #e5e7eb;
   position: relative;
+  /* display: none; */
 }
 
 /* ---------- HEADER ---------- */
@@ -1659,6 +1662,275 @@ nav h4:hover a {
 
 
 
+/* ================================
+   DECISIONS SECTION — MANIFESTO
+================================ */
 
+.decisions-section {
+  padding: 5vw 8vw;
+  background-color: #0b0d10;
+  color: #e6e6e6;
+  position: relative;
+  overflow: hidden;
+  height: 220vh;
+}
+
+/* subtle depth */
+.decisions-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    circle at 20% 20%,
+    rgba(255,255,255,0.04),
+    transparent 40%
+  );
+  pointer-events: none;
+}
+
+/* ================================
+   HEADER
+================================ */
+
+.decisions-header {
+  display: flex;
+  justify-content: center;
+  gap: 4rem;
+  height: 50vh;
+  margin-bottom: 6rem;
+  width: 100%;
+}
+
+.decisions-header-content,
+.decisions-visual {
+  width: 50%;
+}
+
+.decisions-visual {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.decisions-visual video {
+  height: 70%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 50%;
+}
+
+.decisions-title {
+  font-size: clamp(3rem, 6vw, 6rem);
+  line-height: 1.05;
+  font-weight: 700;
+  letter-spacing: -0.04em;
+}
+
+.decisions-title span {
+  display: block;
+  font-weight: 300;
+  opacity: 0.75;
+}
+
+.decisions-subtitle {
+  margin-top: 4rem;
+  max-width: 520px;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: rgba(255,255,255,0.65);
+}
+
+/* ================================
+   DECISIONS GRID
+================================ */
+
+.decisions-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 4vw 6vw;
+}
+
+/* ================================
+   ITEM
+================================ */
+
+.decision-item {
+  position: relative;
+  padding-left: 2.5rem;
+  transition: transform 0.4s ease;
+}
+
+.decision-item::before {
+  content: "—";
+  position: absolute;
+  left: 0;
+  top: 0.2rem;
+  font-size: 1.5rem;
+  color: rgba(255,255,255,0.25);
+}
+
+.decision-item:hover {
+  transform: translateY(-4px);
+}
+
+/* title */
+.decision-title {
+  display: inline-block;
+  position: relative;
+  margin-bottom: 0.8rem;
+  font-size: 1.5rem;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+}
+
+/* underline */
+.decision-title::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    rgba(255,255,255,0.6),
+    rgba(20,207,147,0.9)
+  );
+  transition: width 0.4s ease;
+}
+
+/* hover effects */
+.decision-item:hover .decision-title {
+  text-shadow: 0 0 12px rgba(20,207,147,0.15);
+}
+
+.decision-item:hover .decision-title::after {
+  width: 100%;
+}
+
+/* text blocks */
+.decision-why,
+.decision-impact {
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.decision-why {
+  color: rgba(255,255,255,0.6);
+  margin-bottom: 0.5rem;
+}
+
+.decision-impact {
+  color: rgba(255,255,255,0.85);
+}
+
+/* ================================
+   DIVIDER
+================================ */
+
+.decisions-divider {
+  margin: 6vw 4vw;
+}
+
+.decisions-divider svg {
+  width: 100%;
+  height: 60px;
+}
+
+.decisions-divider svg path {
+  stroke: #14CF93;
+}
+
+/* ================================
+   FOOTER
+================================ */
+
+/* .decisions-footer-marquee {
+  border-top: 1px solid rgba(255,255,255,0.08);
+  padding: 3vw 0;
+  overflow: hidden;
+  background-color: red;
+} */
+
+.decisions-footer-marquee {
+  position: relative;
+  padding: 3vw 0;
+  overflow: hidden;
+  background-color: #0b0d10;
+}
+
+/* LEFT FADE */
+.decisions-footer-marquee::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 120px;
+  height: 100%;
+  pointer-events: none;
+  background: linear-gradient(
+    to right,
+    rgba(20,207,147,0.35),
+    rgba(20,207,147,0)
+  );
+  filter: blur(60px);
+}
+
+/* RIGHT FADE */
+.decisions-footer-marquee::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 120px;
+  height: 100%;
+  pointer-events: none;
+  background: linear-gradient(
+    to left,
+    rgba(20,207,147,0.35),
+    rgba(20,207,147,0)
+  );
+  filter: blur(60px);
+}
+
+
+.decisions-marquee-track {
+  display: flex;
+  gap: 4vw;
+  /* background-color: yellow; */
+}
+
+.decisions-marquee {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  gap: 2vw;
+  transform: translateX(-100%);
+  /* background-color: blue; */
+}
+
+.decisions-marquee h2{
+  font-size: 3.2vw;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: rgba(255,255,255,0.9);
+}
+.decisions-marquee h2 span {
+  color: #14CF93;
+   font-family: 'Nothing You Could', cursive;
+}
+
+.decisions-marquee img {
+   height: 4vw;
+}
+
+
+
+
+#section-footer{
+   height: 100vh;
+   background-color: #111;
+}
 
 
