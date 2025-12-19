@@ -83,6 +83,8 @@ function valueSetters() {
   gsap.set("nav h4", { y: "-100%", opacity: 0 });
   gsap.set("#section-1 .parent .child", { y: "100%" });
   gsap.set(".down-arrow", { y: "100%", opacity: 0 });
+  // gsap.set(".values-wrapper #header .reveal", { y: 0 });
+  
 }
 
 function loadingAnimation() {
@@ -159,25 +161,6 @@ function loadingAnimation() {
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 function animateHomePage() {
   const tl = gsap.timeline({
     defaults: {
@@ -247,7 +230,7 @@ function startSvgAnimation() {
 
 function navScrollAnimation(){
   gsap.to("nav", {
-  height: "15vh",
+  height: "12vh",
   backgroundColor: "rgba(20, 20, 20, 0.55)",
   backdropFilter: "blur(10px)",
   boxShadow: "0 8px 30px rgba(0,0,0,0.35)",
@@ -264,10 +247,29 @@ function navScrollAnimation(){
 }
 
 
+aboutValuesAnimation();
+
+
+function aboutValuesAnimation(){
 
 
 
-
+ gsap.utils.toArray(".generic.reveal").forEach((el, i) => {
+    gsap.from(el, {
+      y: 90,
+      opacity: 0,
+      scale:0.9,
+      duration: 0.8,
+      ease: "power3.out",
+      delay: i * 0.05,
+      scrollTrigger: {
+        trigger: el,
+        start: "top 85%",
+        scroller: "[data-scroll-container]", // IMPORTANT for Locomotive
+      }
+    });
+  });
+}
 
 
 
@@ -621,7 +623,7 @@ function decisionsReveal() {
   // Initial states
   gsap.set(".decision-item", { opacity: 0, y: 40 });
   gsap.set(".decisions-title span", { opacity: 0, y: 20 });
-  gsap.set(".decisions-closing", { opacity: 0, y: 20 });
+  
 
   // Timeline for manifesto-style reveal
   const tl = gsap.timeline({
@@ -646,13 +648,6 @@ function decisionsReveal() {
     ease: "power3.out",
     stagger: 0.15,
   }, "-=0.3")
-
-  .to(".decisions-closing", {
-    opacity: 1,
-    y: 0,
-    duration: 0.8,
-    ease: "power3.out",
-  }, "-=0.2");
 }
 function decisionsDividerReveal() {
 
