@@ -21,7 +21,7 @@ main {
   z-index: 999;
   position: fixed;
   /* Changed */
-  /* display: none; */
+  display: none;
 }
 
 #loader-first {
@@ -156,13 +156,14 @@ main {
 
 /* ------------------------------------------------------------------------------------------------------ */
 nav {
-  padding: 2vw 4vw ;
+  padding: 1vw 4vw ;
   display: flex;
   justify-content: space-between;
   align-items: center;
   position: fixed;
   z-index: 99;
  width: 100%;
+ /* background-color: red; */
 }
 nav h4 {
   font-weight: 700;
@@ -226,6 +227,7 @@ nav h4:hover a {
 #section-1 {
   height: 120vh;
   padding-top: 20vh;
+  display: none;
 }
 
 /* ================= ROW LAYOUT ================= */
@@ -427,26 +429,24 @@ align-content: flex-end;
 
 #section-2 {
   background-color: #f5f5f5;
-  height: 240vh;
-  /* background-color: #0cc206; */
-
+  height: 220vh;
   /* display: none; */
+  
 }
 #section-2-part-1 {
   height: 100vh;
   width: 100%;
-  /* background-color: red; */
 }
 #section-2 #about-section {
   height: 100%;
   width: 100%;
-  padding: 5vw 0vw;
-  padding-left: 2vw;
-  /* background-color: red; */
+
+  padding-left: 3vw;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 10vw;
+  padding-top: 5vw;
 }
 
 .about-heading {
@@ -493,12 +493,12 @@ align-content: flex-end;
   position: relative;
   perspective: 1200px;
   height: 100px;
-  /* background-color: pink; */
+
 }
 
 #section-2 #about-section #about-right .about-right-img-conatiner {
   width: 25vw;
-  height: 30vw;
+  height: 28vw;
 
   position: absolute;
   top: 50%;
@@ -520,16 +520,9 @@ align-content: flex-end;
 }
 
 /* CARD 1 — BACK */
-#section-2 #about-section #about-right .about-right-img-conatiner:nth-child(1) {
-  /* transform: translate3d(-75%, -70%, 0) rotate(-24deg) scale(0.93); */
-  transform: translate3d(-78%, -72%, 0) rotate(-28deg) scale(0.92);
-
-  z-index: 1;
-  background-image: url("assets/images/about-img-3.avif");
-}
 
 /* CARD 2 — MIDDLE */
-#section-2 #about-section #about-right .about-right-img-conatiner:nth-child(2) {
+#section-2 #about-section #about-right .about-right-img-conatiner:nth-child(1) {
   /* transform: translate3d(-68%, -64%, 0) rotate(-14deg) scale(0.96); */
   transform: translate3d(-73%, -66%, 0) rotate(-18deg) scale(0.95);
 
@@ -538,7 +531,7 @@ align-content: flex-end;
 }
 
 /* CARD 3 — FRONT / HERO */
-#section-2 #about-section #about-right .about-right-img-conatiner:nth-child(3) {
+#section-2 #about-section #about-right .about-right-img-conatiner:nth-child(2) {
   /* transform: translate3d(-54%, -58%, 0) rotate(-5deg) scale(1); */
   transform: translate3d(-63%, -60%, 0) rotate(-10deg) scale(0.98);
 
@@ -546,7 +539,7 @@ align-content: flex-end;
   z-index: 3;
   background-image: url("assets/images/about-img-3.avif");
 }
-#section-2 #about-section #about-right .about-right-img-conatiner:nth-child(4) {
+#section-2 #about-section #about-right .about-right-img-conatiner:nth-child(3) {
   /* transform: translate3d(-50%, -53%, 0) rotate(-5deg) scale(1); */
   transform: translate3d(-51%, -50%, 0) rotate(0deg) scale(1);
 
@@ -555,19 +548,12 @@ align-content: flex-end;
 }
 
 /* 🔥 HOVER — NO POSITION CHANGE (NO JITTER) */
-#section-2
-  #about-section
-  #about-right
-  .about-right-img-conatiner:nth-child(1):hover {
-  transform: translate3d(-52%, -56%, 0) rotate(0deg) scale(1.05);
-  filter: grayscale(0);
-  z-index: 10;
-}
+
 
 #section-2
   #about-section
   #about-right
-  .about-right-img-conatiner:nth-child(2):hover {
+  .about-right-img-conatiner:nth-child(1):hover {
   transform: translate3d(-54%, -52%, 0) rotate(0deg) scale(1.06);
   filter: grayscale(0);
   z-index: 10;
@@ -576,7 +562,7 @@ align-content: flex-end;
 #section-2
   #about-section
   #about-right
-  .about-right-img-conatiner:nth-child(3):hover {
+  .about-right-img-conatiner:nth-child(2):hover {
   transform: translate3d(-46%, -48%, 0) rotate(1deg) scale(1.07);
   filter: grayscale(0);
   z-index: 10;
@@ -584,7 +570,7 @@ align-content: flex-end;
 #section-2
   #about-section
   #about-right
-  .about-right-img-conatiner:nth-child(4):hover {
+  .about-right-img-conatiner:nth-child(3):hover {
   transform: translate3d(-42%, -44%, 0) rotate(1deg) scale(1.07);
   filter: grayscale(0);
   z-index: 10;
@@ -608,46 +594,52 @@ align-content: flex-end;
 
 #about-values {
    padding: 2vw 0vw;
-
-  /* background-color: #f9f9f9; */
-  
-  overflow: hidden;
 }
-
-.values-wrapper {
-  margin: 0 auto;
-}
-#header {
+.header {
+  position: relative;
   width: 100%;
+  color: white;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  font-family: "Kaushan Script", cursive;
+  text-align: center;
 }
-#about-values #header h2 {
-  font-family: "Kaushan Script", cursive;
-  font-size: 3.2vw;
+
+.header h2 {
+  position: relative; /* 🔥 IMPORTANT */
+  font-size: 5vw;
   font-weight: 800;
-  display: inline-block;
-  color: #14cf93;
-  position: relative;
+  line-height: 1.1;
 }
-#about-values #header h2::after {
+.generic.reveal {
+     font-family: 'Nothing You Could', cursive;
+     display: inline-block;   
+  vertical-align: middle;  
+  color: #14cf93;
+}
+.header h2 span {
+  font-family: 'Nothing You Could', cursive;
+  }
+
+
+.header h2::after {
   content: "";
   position: absolute;
-  left: 0;
+  left:37%;
+  transform: translateX(-50%);
   bottom: -0.6vw;
   width: 70%;
   height: 0.3vw;
   background: linear-gradient(90deg, #14CF93, transparent);
 }
-#about-values #header p {
+
+.header p {
   font-size: 1.2vw;
   font-weight: 500;
   text-align: center;
 }
-#about-values #header p span {
+.header p span {
   font-weight: 700;
 }
 
@@ -659,20 +651,18 @@ align-content: flex-end;
   line-height: 1.8vw;
 }
 
-/* VALUES GRID */
-.values-list {
-  margin-top: 5vw;
-  margin-bottom: 5vw;
-}
+
 .values-list-row {
   display: flex;
   gap: 2vw;
   padding: 0 4vw;
   justify-content: space-between;
   flex-wrap: wrap;
+  margin-top: 5vw;
+ 
 }
 
-/* VALUE ITEM */
+
 .value-item-card {
   height: 20vw;
   width: 20vw;
@@ -746,15 +736,18 @@ align-content: flex-end;
    /* background-color: goldenrod; */
    height: 20vh;
 }
+
+
+
 /* Work Section */
 #section-3 {
   height: 400vh;
   background-color: #e8e8e8;
   position: relative;
   transition: background-color cubic-bezier(0.19, 1, 0.22, 1) 2s;
-  /* display: none; */
+  display: none;
 }
-#work-section-row {
+.header {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -766,33 +759,13 @@ align-content: flex-end;
   /* background-color: rebeccapurple; */
 }
 
-#work-section-row h1 {
-  font-family: "Kaushan Script", cursive;
-  font-size: 3.6vw;
-  font-weight: 800;
-  display: inline-block;
-  color: #14cf93;
-  position: relative;
-}
 
-#work-section-row h1::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -0.9vw;
-  width: 70%;
-  height: 0.3vw;
-  background: linear-gradient(90deg, #000000, transparent);
-}
-#work-section-row p {
-  font-size: 1.2vw;
-  font-weight: 900;
-  text-align: center;
-  color: #282727c3;
-}
-#work-section-row p span {
+
+#section-3 .header p {
+  color: #111;
   font-weight: 700;
 }
+
 #work-section-projects {
   width: 100%;
   height: 330vh;
@@ -813,7 +786,6 @@ align-content: flex-end;
 }
 #work-section-projects .project-rows.row-2 {
   justify-content: center;
-  /* background-color: red; */
 }
 
 #work-section-projects .projects {
@@ -1022,15 +994,12 @@ align-content: flex-end;
 .case-cards-section {
   width: 100%;
   padding: 6vw 0;
-  /* background: #0d0d11; */
-  /* background-color: slateblue; */
 }
 
 /* MUST */
 .caseSwiper {
   width: 100%;
   overflow: hidden;
-  /* background-color: red; */
   height: 50vh;
 }
 
@@ -1056,68 +1025,30 @@ align-content: flex-end;
    WORKFLOW / SECTION-4
 ========================= */
 
-.workflow {
+#section-4 {
   padding: 7vw 8vw 0vw 8vw;
   background-color: #0b0b0e;
   color: #f5f5f5;
   position: relative;
   overflow: hidden;
-  /* display: none; */
-  /* background-color: red; */
-  /* height: 90vh; */
 }
-
-/* =========================
-   HEADER
-========================= */
-
-.workflow-header {
-  width: 100%;
-  margin-bottom: 7vw;
-  /* background-color: red; */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+#section-4 .header p {
+  font-size: 1.2vw;
+  font-weight: 500;
   text-align: center;
 }
-
-
-.page-title {
-  font-size: 5vw;
-  text-align: center;
-  margin-bottom: 1.5vw;
+#section-4 .header p span {
+  font-weight: 700;
+  color: #c2c2c2;
+  margin-top: 1vw;
 }
-
-.highlight {
-  color: #14cf93;
-  background: linear-gradient(90deg, #14cf93, #1affb0);
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  /* font-family: 'Kaushan Script', cursive; */
-  /* font-family: 'Gilroy', sans-serif; */
-  font-family: "Nothing You Could", cursive;
-}
-
-.workflow-header p {
-  margin-top: 2vw;
-  font-size: 1.1vw;
-  color: #a1a1aa;
-  line-height: 1.7;
-}
-
-
-
-
-/* =========================
-   PROCESS GRID
-========================= */
 
 .workflow-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 5vw;
   position: relative;
+  margin-top: 3vw;
 }
 
 .card {
@@ -1152,7 +1083,6 @@ align-content: flex-end;
 }
 
 .card small {
-  font-family: "JetBrains Mono", monospace;
   color: #14cf93;
   letter-spacing: 0.2em;
   font-size: 0.85vw;
