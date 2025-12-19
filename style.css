@@ -161,7 +161,7 @@ nav {
   justify-content: space-between;
   align-items: center;
   position: fixed;
-  z-index: 999;
+  z-index: 99;
  width: 100%;
 }
 nav h4 {
@@ -252,11 +252,13 @@ nav h4:hover a {
 /* FULL STACK */
 #full-stack {
   font-size: 11vw;
+  /* background-color: red; */
 }
 
 /* DEVELOPER */
 #developer {
   font-size: 9.5vw;
+  /* background-color: #14CF93; */
 }
 
 /* ================= SVG ROW ================= */
@@ -272,7 +274,7 @@ align-content: flex-end;
 
 /* SVG HOLDER */
 .stack-heading.uiux {
-  height: 18vw;
+  height: 16vw;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -289,8 +291,8 @@ align-content: flex-end;
   /* font-family: "Kaushan Script", cursive; */
      font-family: 'Nothing You Could', cursive;
   font-size: 10vw;
-  font-weight: 800;
-  font-style: italic;
+  font-weight: 900;
+  /* font-style: italic; */
 
   fill: transparent;
   stroke: #14cf93;
