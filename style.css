@@ -21,7 +21,7 @@ main {
   z-index: 999;
   position: fixed;
   /* Changed */
-  display: none;
+  /* display: none; */
 }
 
 #loader-first {
@@ -227,7 +227,7 @@ nav h4:hover a {
 #section-1 {
   height: 120vh;
   padding-top: 20vh;
-  display: none;
+  /* display: none; */
 }
 
 /* ================= ROW LAYOUT ================= */
@@ -745,7 +745,7 @@ align-content: flex-end;
   background-color: #e8e8e8;
   position: relative;
   transition: background-color cubic-bezier(0.19, 1, 0.22, 1) 2s;
-  display: none;
+  /* display: none; */
 }
 .header {
   display: flex;
