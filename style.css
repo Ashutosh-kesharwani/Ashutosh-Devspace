@@ -20,7 +20,7 @@ main {
   z-index: 999;
   position: fixed;
   /* Changed */
-  display: none;
+  /* display: none; */
 }
 
 #loader-first {
@@ -216,7 +216,7 @@ nav h4:hover a {
 #section-1 {
   height: 120vh;
   padding-top: 20vh;
-  display: none;
+  /* display: none; */
 }
 
 /* ================= ROW LAYOUT ================= */
@@ -406,7 +406,7 @@ nav h4:hover a {
 #section-2 {
   background-color: #f5f5f5;
   height: 220vh;
-  display: none;
+  /* display: none; */
 }
 #section-2-part-1 {
   height: 100vh;
@@ -672,7 +672,7 @@ nav h4:hover a {
   opacity: 1;
 }
 .value-item-card:hover {
-  transform: rotate3d(-1, 1, 0, 20deg);
+  transform: rotate3d(-1, 1, 0, 15deg);
 }
 
 .value-item-card-overlay span {
@@ -710,7 +710,7 @@ nav h4:hover a {
   background-color: #e8e8e8;
   position: relative;
   transition: background-color cubic-bezier(0.19, 1, 0.22, 1) 2s;
-  display: none;
+  /* display: none; */
 }
 
 .header {
@@ -1015,7 +1015,7 @@ nav h4:hover a {
   color: #f5f5f5;
   position: relative;
   overflow: hidden;
-  display: none;
+  /* display: none; */
 }
 #section-4 .header p {
   font-size: 1.2vw;
@@ -1141,7 +1141,7 @@ nav h4:hover a {
   color: #f5f5f5;
   position: relative;
   overflow: hidden;
-  display: none;
+  /* display: none; */
 }
 .hero-section {
   position: relative;
@@ -1827,172 +1827,200 @@ nav h4:hover a {
   height: 4vw;
 }
 
-/* ================================
-   FINAL FOOTER — PHILOSOPHY CLOSE
+
+/* ===============================
+   FINAL FOOTER
+================================ */
+/* ===============================
+   FINAL FOOTER
 ================================ */
 
-.final-footer {
-  padding: 10vw 8vw 6vw;
-  background: #0b0d10;
-  color: #e6e6e6;
+.footer-final{
   position: relative;
-  overflow: hidden;
-}
-
-/* subtle depth */
-.final-footer::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(
-    circle at 30% 20%,
-    rgba(255, 255, 255, 0.04),
-    transparent 45%
-  );
-  pointer-events: none;
-}
-
-/* ================================
-   PRIMARY STATEMENT
-================================ */
-
-.footer-statement {
-  max-width: 900px;
-}
-
-.footer-thought {
-  font-size: clamp(3rem, 6vw, 5.5rem);
-  line-height: 1.05;
-  font-weight: 550;
-  letter-spacing: -0.04em;
-}
-
-/* ================================
-   MICRO MANIFESTO
-================================ */
-
-.footer-principles {
-  margin-top: 3.5vw;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2.5rem;
-}
-
-.footer-principles p {
-  font-size: 0.95rem;
-  letter-spacing: 0.02em;
-  text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.55);
-}
-
-/* ================================
-   MARQUEE
-================================ */
-
-.footer-marquee {
-  margin: 6vw 0 4vw;
-  display: flex;
-  overflow: hidden;
-  position: relative;
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-}
-
-/* fade edges */
-.footer-marquee::before,
-.footer-marquee::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  width: 120px;
-  height: 100%;
-  z-index: 2;
-  pointer-events: none;
-}
-
-.footer-marquee::before {
-  left: 0;
-  background: linear-gradient(to right, #0b0d10 20%, transparent);
-}
-
-.footer-marquee::after {
-  right: 0;
-  background: linear-gradient(to left, #0b0d10 20%, transparent);
-}
-
-.marquee-track {
-  flex-shrink: 0;
+  min-height: 100vh;
+  padding: 6vw;
   display: flex;
   align-items: center;
-  gap: 3vw;
-  padding: 2.5vw 0;
-  animation: footer-marquee 28s linear infinite;
+  justify-content: center;
+  overflow: hidden;
+  background: #0b0b0e;
+  color: white;
 }
 
-.footer-marquee:hover .marquee-track {
-  animation-play-state: paused;
+/* ---------- Background ---------- */
+.footer-bg{
+  position:absolute;
+  inset:0;
+  z-index:0;
+  pointer-events:none;
+  overflow:hidden;
+
+  --gx: 50%;
+  --gy: 50%;
+  --glow: 0.9;
+
+  background:
+    radial-gradient(
+      circle at 50% 40%,
+      rgba(20,207,147,0.18),
+      rgba(11,11,14,0.9) 65%
+    );
 }
 
-.marquee-track span {
-  font-size: 1.1rem;
-  letter-spacing: 0.01em;
-  white-space: nowrap;
-  color: rgba(255, 255, 255, 0.75);
+/* Depth vignette */
+.footer-bg::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:
+    radial-gradient(
+      circle at center,
+      rgba(255,255,255,0.04),
+      rgba(11,11,14,0.85) 65%
+    );
 }
 
-.marquee-track img {
-  height: 1.2rem;
-  opacity: 0.6;
+/* Glow orbs */
+.footer-bg::after{
+  content:"";
+  position:absolute;
+  inset:-30%;
+  background:
+    radial-gradient(
+      circle at var(--gx) var(--gy),
+      rgba(20,207,147,0.28),
+      transparent 45%
+    ),
+    radial-gradient(
+      circle at calc(100% - var(--gx)) calc(100% - var(--gy)),
+      rgba(20,207,147,0.18),
+      transparent 55%
+    );
+  filter: blur(140px);
+  opacity:0.85;
 }
 
-/* animation */
-@keyframes footer-marquee {
-  from {
-    transform: translateX(0%);
-  }
-  to {
-    transform: translateX(-100%);
-  }
+/* Noise film (WORKING VERSION) */
+.footer-bg::before{
+  background-image:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.7' numOctaves='1'/%3E%3C/filter%3E%3Crect width='120' height='120' filter='url(%23n)' opacity='0.15'/%3E%3C/svg%3E"),
+    radial-gradient(
+      circle at center,
+      rgba(255,255,255,0.04),
+      rgba(11,11,14,0.85) 65%
+    );
+  mix-blend-mode: soft-light;
 }
 
-/* ================================
-   IDENTITY STRIP
-================================ */
-
-.footer-identity {
-  margin-top: 6vw;
-  display: flex;
-  flex-direction: column;
-  gap: 0.4rem;
+/* ---------- Content ---------- */
+.footer-inner{
+  position:relative;
+  z-index:2;
+  max-width:1400px;
+  width:100%;
+  text-align:center;
 }
 
-.identity-name {
-  font-size: 0.95rem;
-  letter-spacing: 0.01em;
-  color: rgba(255, 255, 255, 0.85);
+/* Typography */
+.footer-structure-text{
+  font-size:clamp(2.4rem,16vw,5.2rem);
+  letter-spacing:-0.045em;
+  opacity:.85;
+  margin-bottom:.8vw;
+  
 }
 
-.identity-meta {
-  font-size: 0.85rem;
-  letter-spacing: 0.02em;
-  color: rgba(255, 255, 255, 0.45);
+.footer-hero-text{
+  font-size:clamp(3.4rem,8vw,7.8rem);
+  font-weight:900;
+  letter-spacing:-.06em;
+  color:#14CF93;
+  margin-bottom:2.2vw;
 }
 
-/* ================================
-   RESPONSIVE TUNING
-================================ */
 
-@media (max-width: 768px) {
-  .final-footer {
-    padding: 14vw 6vw 10vw;
-  }
+/* Intent line */
+.intent-line-wrapper{
+  display:flex;
+  justify-content:center;
+  margin-bottom:2.6vw;
+}
 
-  .footer-principles {
-    gap: 1.5rem;
-  }
+.intent-line{
+  width:0%;
+  height:1px;
+  background:linear-gradient(90deg,transparent,#14CF93,transparent);
+  box-shadow:0 0 10px rgba(20,207,147,.4);
+}
 
-  .footer-marquee::before,
-  .footer-marquee::after {
-    width: 60px;
-  }
+/* Identity */
+.footer-identity{margin-bottom:3vw}
+.footer-name{font-size:1.45rem;font-weight:600}
+.footer-name span{
+  font-family: 'Nothing You Could', cursive;
+  color: #14CF93;
+}
+.footer-role{
+  font-size:1rem;
+  color:#bcbcbc;
+  font-family:"Nothing You Could", cursive;
+  letter-spacing:.06em;
+}
+
+/* Links */
+.footer-actions-list{
+  display:flex;
+  justify-content:center;
+  gap:3vw;
+  list-style:none;
+  margin-bottom:2.6vw;
+}
+
+.footer-actions-list a{
+  color:#fff;
+  text-decoration:none;
+  position:relative;
+  padding-bottom:6px;
+  font-weight: 700;
+  font-size: 1rem;
+}
+.footer-actions-list a i{
+  color:#14CF93;
+  font-weight: 900;
+  font-size: 1.2rem;
+}
+
+.footer-actions-list a::after{
+  content:"";
+  position:absolute;
+  left:50%;
+  bottom:0;
+  width:0%;
+  height:1px;
+  background:linear-gradient(90deg,transparent,#14CF93,transparent);
+  transform:translateX(-50%);
+  transition:.4s ease;
+}
+
+.footer-actions-list a:hover::after{width:100%}
+
+/* Closure */
+.footer-closure-text{
+  font-size:1rem;
+  color:#b1b5bd;
+  letter-spacing:.08em;
+  text-transform: uppercase;
+}
+.footer-closure-text i{
+  font-size:1.2rem;
+  color:#14CF93;
+}
+
+.footer-meta{
+  position:absolute;
+  bottom:2vw;
+  width:100%;
+  text-align:center;
+  font-size:.9rem;
+  color:#6b7280;
 }
