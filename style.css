@@ -13,7 +13,6 @@ body {
 main {
   position: relative;
   overflow: hidden;
- 
 }
 #loader {
   height: 100vh;
@@ -51,8 +50,6 @@ main {
   transform: translate(0, 0);
 }
 
-
-
 #top-heading {
   display: flex;
   align-items: center;
@@ -61,8 +58,8 @@ main {
 #top-heading,
 #top-heading h3,
 #top-heading h3 span {
-  font-family: 'Nothing You Could', cursive;
-  font-weight: 400;  
+  font-family: "Nothing You Could", cursive;
+  font-weight: 400;
 }
 #top-heading h3 {
   font-size: 1.1vw;
@@ -70,10 +67,8 @@ main {
   text-transform: uppercase;
   text-align: center;
   letter-spacing: 0.1vw;
-  
-   
 }
-#top-heading h3 .cross{
+#top-heading h3 .cross {
   color: #14cf93;
   font-weight: 900;
 }
@@ -87,7 +82,7 @@ main {
   text-align: center;
   line-height: 1.05;
   letter-spacing: -0.04em;
-  font-family: 'Gilroy', sans-serif;
+  font-family: "Gilroy", sans-serif;
 }
 
 /* FIRST NAME – POWER */
@@ -106,7 +101,7 @@ main {
   font-size: clamp(3rem, 6vw, 5rem);
   font-weight: 700;
   color: #14cf93;
-  font-family: 'Kaushan Script', cursive;
+  font-family: "Kaushan Script", cursive;
 }
 
 /* IS A – SUBTLE & PREMIUM */
@@ -116,11 +111,10 @@ main {
   gap: 1.2rem;
   margin-top: 1vw;
   font-size: clamp(0.9rem, 1.7vw, 1.8rem);
-  font-family: 'Nothing You Could', cursive;
+  font-family: "Nothing You Could", cursive;
   letter-spacing: 0.45em;
   opacity: 0.6;
 }
-
 
 #loader-first h2 i {
   display: inline-block;
@@ -156,14 +150,14 @@ main {
 
 /* ------------------------------------------------------------------------------------------------------ */
 nav {
-  padding: 1vw 4vw ;
+  padding: 1vw 4vw;
   display: flex;
   justify-content: space-between;
   align-items: center;
   position: fixed;
   z-index: 99;
- width: 100%;
- /* background-color: red; */
+  width: 100%;
+  /* background-color: red; */
 }
 nav h4 {
   font-weight: 700;
@@ -197,15 +191,10 @@ nav h4::after {
 nav h4:hover::after {
   bottom: 0%;
   border-radius: 0; /*Isse vo hover hone pe upar aate hue dhikhenge */
-  
 }
 nav h4:hover a {
   color: rgb(0, 0, 0);
- 
-  
 }
-
-
 
 .section {
   height: 100vh;
@@ -266,12 +255,12 @@ nav h4:hover a {
 /* ================= SVG ROW ================= */
 
 .row-svg {
-display: flex;
-justify-content: space-evenly;
-align-items: center;
-flex-direction: row;
-align-content: flex-end;
-/* background-color: #333; */
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: row;
+  align-content: flex-end;
+  /* background-color: #333; */
 }
 
 /* SVG HOLDER */
@@ -291,7 +280,7 @@ align-content: flex-end;
 /* SVG TEXT */
 .stack-heading.uiux text {
   /* font-family: "Kaushan Script", cursive; */
-     font-family: 'Nothing You Could', cursive;
+  font-family: "Nothing You Could", cursive;
   font-size: 10vw;
   font-weight: 900;
   /* font-style: italic; */
@@ -306,14 +295,11 @@ align-content: flex-end;
   stroke-dashoffset: 2200;
 
   animation: paintDraw 2.3s cubic-bezier(0.65, 0, 0.35, 1) forwards,
-             fillIn 0.6s ease 1s forwards;
+    fillIn 0.6s ease 1s forwards;
   animation-play-state: paused;
 }
 
 /* ================= UNDERLINE ================= */
-
-
-
 
 /* ================= ANIMATIONS ================= */
 
@@ -331,8 +317,12 @@ align-content: flex-end;
 }
 
 @keyframes fillIn {
-  from { fill: transparent; }
-  to   { fill: #14cf93; }
+  from {
+    fill: transparent;
+  }
+  to {
+    fill: #14cf93;
+  }
 }
 
 @keyframes paintUnderline {
@@ -357,18 +347,7 @@ align-content: flex-end;
   object-fit: contain;
 }
 
-
-
-
-
-
 /* ================= DOWN ARROW ================= */
-
-
-
-
-
-
 
 /* ============================= */
 /* INTERACTIVE HORIZONTAL STRING  */
@@ -396,9 +375,8 @@ align-content: flex-end;
 }
 
 .interactive-horizontal-string.light path {
-  stroke:#14CF93; /* any color */
+  stroke: #14cf93; /* any color */
 }
-
 
 /* ============================= */
 /* INTERACTIVE VERTICAL STRING   */
@@ -425,13 +403,10 @@ align-content: flex-end;
   display: block;
 }
 
-
-
 #section-2 {
   background-color: #f5f5f5;
   height: 220vh;
   display: none;
-  
 }
 #section-2-part-1 {
   height: 100vh;
@@ -493,7 +468,6 @@ align-content: flex-end;
   position: relative;
   perspective: 1200px;
   height: 100px;
-
 }
 
 #section-2 #about-section #about-right .about-right-img-conatiner {
@@ -549,7 +523,6 @@ align-content: flex-end;
 
 /* 🔥 HOVER — NO POSITION CHANGE (NO JITTER) */
 
-
 #section-2
   #about-section
   #about-right
@@ -588,12 +561,11 @@ align-content: flex-end;
   height: 140vh;
   width: 100%;
   /* background-color: #5406c2; */
-    background-color: #0b0b0e;
- 
+  background-color: #0b0b0e;
 }
 
 #about-values {
-   padding: 2vw 0vw;
+  padding: 2vw 0vw;
 }
 .header {
   position: relative;
@@ -611,28 +583,26 @@ align-content: flex-end;
   font-size: 5vw;
   font-weight: 800;
   line-height: 1.1;
-  
 }
 .generic.reveal {
-     font-family: 'Nothing You Could', cursive;
-     display: inline-block;   
-  vertical-align: middle;  
+  font-family: "Nothing You Could", cursive;
+  display: inline-block;
+  vertical-align: middle;
   color: #14cf93;
 }
 .header h2 span {
-  font-family: 'Nothing You Could', cursive;
-  }
-
+  font-family: "Nothing You Could", cursive;
+}
 
 .header h2::after {
   content: "";
   position: absolute;
-  left:37%;
+  left: 37%;
   transform: translateX(-50%);
   bottom: -0.6vw;
   width: 70%;
   height: 0.3vw;
-  background: linear-gradient(90deg, #14CF93, transparent);
+  background: linear-gradient(90deg, #14cf93, transparent);
 }
 
 .header p {
@@ -652,7 +622,6 @@ align-content: flex-end;
   line-height: 1.8vw;
 }
 
-
 .values-list-row {
   display: flex;
   gap: 2vw;
@@ -660,9 +629,7 @@ align-content: flex-end;
   justify-content: space-between;
   flex-wrap: wrap;
   margin-top: 5vw;
- 
 }
-
 
 .value-item-card {
   height: 20vw;
@@ -731,14 +698,11 @@ align-content: flex-end;
   text-align: center;
 }
 
-
-#section2-line{
-   padding: 0vw 6vw;
-   /* background-color: goldenrod; */
-   height: 20vh;
+#section2-line {
+  padding: 0vw 6vw;
+  /* background-color: goldenrod; */
+  height: 20vh;
 }
-
-
 
 /* Work Section */
 #section-3 {
@@ -747,7 +711,6 @@ align-content: flex-end;
   position: relative;
   transition: background-color cubic-bezier(0.19, 1, 0.22, 1) 2s;
   display: none;
-  
 }
 
 .header {
@@ -771,9 +734,7 @@ align-content: flex-end;
   text-transform: uppercase;
   color: #111;
 }
-.scroll-whisper  i{
-  
-
+.scroll-whisper i {
   font-size: 1.5vw;
   color: #111;
 }
@@ -782,7 +743,7 @@ align-content: flex-end;
   font-size: 1.3vw;
   opacity: 0.85;
   white-space: nowrap;
-   color: #111;
+  color: #111;
   font-weight: 900;
 }
 
@@ -790,7 +751,6 @@ align-content: flex-end;
   display: inline-block;
   opacity: 0;
 }
-
 
 #work-section-projects {
   width: 100%;
@@ -807,7 +767,6 @@ align-content: flex-end;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 7vw;
-  
 }
 #work-section-projects .project-rows.row-2 {
   justify-content: center;
@@ -854,7 +813,6 @@ align-content: flex-end;
   width: 18vw;
 }
 
-
 /* bottom button */
 .project-button {
   background: #fff;
@@ -890,7 +848,7 @@ align-content: flex-end;
   display: flex;
   align-items: center;
   justify-content: center;
-   transition: all 0.5s ease;
+  transition: all 0.5s ease;
 }
 .project-button .arrow:hover {
   background-color: #14cf93;
@@ -1023,7 +981,6 @@ align-content: flex-end;
 /* Generic code for swiper js slid CSS */
 .case-cards-section {
   width: 100%;
-  padding: 6vw 0;
 }
 
 /* MUST */
@@ -1045,10 +1002,7 @@ align-content: flex-end;
   width: auto;
   flex-shrink: 0;
   padding: 2vw;
-  
 }
-
-
 
 /* ===== SECTION 4 : WORKFLOW ===== */
 /* =========================
@@ -1061,6 +1015,7 @@ align-content: flex-end;
   color: #f5f5f5;
   position: relative;
   overflow: hidden;
+  display: none;
 }
 #section-4 .header p {
   font-size: 1.2vw;
@@ -1133,8 +1088,6 @@ align-content: flex-end;
    WORKFLOW SWIPER
 ========================= */
 
-
-
 /* SLIDES */
 .swiper-slide .workflow-card {
   width: 25vw;
@@ -1158,24 +1111,22 @@ align-content: flex-end;
 
   opacity: 0.5;
   transform: scale(0.82);
-
-  
 }
 
-.swiper-slide .workflow-card  h3 {
+.swiper-slide .workflow-card h3 {
   font-size: 1.7vw;
   font-weight: 600;
   text-align: center;
 }
 
-.swiper-slide .workflow-card  i {
+.swiper-slide .workflow-card i {
   font-size: 2vw;
   color: #14cf93;
   align-self: flex-end;
 }
 
 /* ACTIVE */
-.swiper-slide .workflow-card:active  {
+.swiper-slide .workflow-card:active {
   opacity: 1;
   transform: scale(1.08);
   box-shadow: 0 30px 90px rgba(20, 207, 147, 0.4);
@@ -1190,22 +1141,20 @@ align-content: flex-end;
   color: #f5f5f5;
   position: relative;
   overflow: hidden;
-
+  display: none;
 }
 .hero-section {
   position: relative;
 }
 
-
-#section-5 .header{
- padding-top: 3vw;
+#section-5 .header {
+  padding-top: 3vw;
 }
-#section-5 .header p{
+#section-5 .header p {
   color: #a1a1aa;
   margin-bottom: 3vw;
-  font-family: 'Nothing You Could', cursive;
+  font-family: "Nothing You Could", cursive;
 }
-
 
 .particles-container {
   position: absolute;
@@ -1309,7 +1258,6 @@ align-content: flex-end;
   align-items: center;
   gap: 2.3vw;
   margin-top: 3vw;
- 
 }
 .ml-stats .stat h4 {
   font-size: 2.2vw;
@@ -1317,7 +1265,7 @@ align-content: flex-end;
   font-family: "Nothing You Could", cursive;
 }
 
-.case-right{
+.case-right {
   width: 60%;
   min-height: 70vh;
   display: flex;
@@ -1327,7 +1275,7 @@ align-content: flex-end;
   /* background-color: red; */
 }
 
-.cdss-globe{
+.cdss-globe {
   width: 80%;
   max-width: 480px;
   overflow: visible;
@@ -1335,74 +1283,109 @@ align-content: flex-end;
 }
 
 /* Core */
-.core{
+.core {
   animation: pulse 2.8s ease-in-out infinite;
 }
 
 /* Orbits */
-.orbit{
+.orbit {
   fill: none;
-  stroke: #14CF93;
+  stroke: #14cf93;
   stroke-width: 1;
   opacity: 0.3;
 }
 
-.orbit-inner{ animation: spin 18s linear infinite; }
-.orbit-mid{ animation: spinReverse 28s linear infinite; }
-.orbit-outer{ animation: spin 40s linear infinite; }
+.orbit-inner {
+  animation: spin 18s linear infinite;
+}
+.orbit-mid {
+  animation: spinReverse 28s linear infinite;
+}
+.orbit-outer {
+  animation: spin 40s linear infinite;
+}
 
 /* Nodes */
-.node{
-  fill: #14CF93;
+.node {
+  fill: #14cf93;
   filter: url(#softGlow);
   animation: nodePulse 2s ease-in-out infinite alternate;
 }
 
-.n1{ animation-delay: 0s; }
-.n2{ animation-delay: .6s; }
-.n3{ animation-delay: 1.2s; }
-.n4{ animation-delay: 1.8s; }
+.n1 {
+  animation-delay: 0s;
+}
+.n2 {
+  animation-delay: 0.6s;
+}
+.n3 {
+  animation-delay: 1.2s;
+}
+.n4 {
+  animation-delay: 1.8s;
+}
 
 /* Animations */
-@keyframes spin{
-  from{ transform: rotate(0deg); }
-  to{ transform: rotate(360deg); }
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
-@keyframes spinReverse{
-  from{ transform: rotate(360deg); }
-  to{ transform: rotate(0deg); }
+@keyframes spinReverse {
+  from {
+    transform: rotate(360deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
 }
 
-@keyframes pulse{
-  0%,100%{ transform: scale(1); opacity: 1; }
-  50%{ transform: scale(1.12); opacity: 0.85; }
+@keyframes pulse {
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.12);
+    opacity: 0.85;
+  }
 }
 
-@keyframes nodePulse{
-  from{ transform: scale(0.9); opacity: 0.6; }
-  to{ transform: scale(1.4); opacity: 1; }
+@keyframes nodePulse {
+  from {
+    transform: scale(0.9);
+    opacity: 0.6;
+  }
+  to {
+    transform: scale(1.4);
+    opacity: 1;
+  }
 }
 
 /* FORCE SQUARE CARD */
 .case-card {
   width: 480px;
   height: 300px;
-  background: #14141a;
+
   border-radius: 1.5vw;
   position: relative;
   overflow: hidden;
-  cursor: pointer;
-  box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
   transition: transform 0.6s ease, box-shadow 0.6s ease;
+  /* background-color: red; */
 }
 
 /* IMAGE LAYER */
 .card-image {
   position: absolute;
   inset: 0;
-  z-index: 2;
-  transition: all 0.8s cubic-bezier(.19,1,.22,1);
+  transition: all 0.8s cubic-bezier(0.19, 1, 0.22, 1);
 }
 
 .card-image img {
@@ -1418,8 +1401,8 @@ align-content: flex-end;
   inset: 0;
   background: linear-gradient(
     to bottom,
-    rgba(0,0,0,0.2),
-    rgba(0,0,0,0.8)
+    rgba(0, 0, 0, 0.2),
+    rgba(0, 0, 0, 0.8)
   );
 }
 
@@ -1440,7 +1423,7 @@ align-content: flex-end;
 }
 
 .card-content h4 {
-  color: #14CF93;
+  color: #14cf93;
   font-size: 1.1rem;
   margin-bottom: 0.5rem;
 }
@@ -1470,16 +1453,12 @@ align-content: flex-end;
   transform: translateY(0);
 }
 
-
-/* /Section -6  */
-
-
 /* ========================= */
 /* SECTION 6 — PROFESSIONAL CONTEXT */
 /* ========================= */
 
-.section-6 {
-  padding: 10vw 8vw;
+#section-6 {
+  padding: 10vw 8vw 2vw 8vw;
   background: #0b0b0e;
   color: #e5e7eb;
   position: relative;
@@ -1506,8 +1485,8 @@ align-content: flex-end;
 }
 
 .context-header h2 span {
-  color: #14CF93;
-  font-family: 'Nothing You Could', cursive;
+  color: #14cf93;
+  font-family: "Nothing You Could", cursive;
 }
 
 .context-header p {
@@ -1521,13 +1500,7 @@ align-content: flex-end;
   font-weight: 500;
 }
 
-/* ---------- GRID ---------- */
-/* .context-grid {
-  display: flex;
-  align-items: center;
-  gap: 6vw;
 
-} */
 .context-grid {
   display: flex;
   gap: 5vw;
@@ -1543,10 +1516,9 @@ align-content: flex-end;
 .context-label {
   font-size: 0.9rem;
   letter-spacing: 0.18em;
-  color: #14CF93;
+  color: #14cf93;
   display: inline-block;
   margin-bottom: 1.5vw;
-  
 }
 
 .context-column h3 {
@@ -1556,9 +1528,9 @@ align-content: flex-end;
   font-weight: 500;
 }
 .context-column h3 span {
-  font-family: 'Nothing You Could', cursive;
+  font-family: "Nothing You Could", cursive;
   font-weight: 700;
-  color: #14CF93;
+  color: #14cf93;
 }
 
 /* ---------- LIST ---------- */
@@ -1599,37 +1571,30 @@ align-content: flex-end;
 }
 
 .context-footer strong {
-  color: #14CF93;
+  color: #14cf93;
   font-weight: 500;
 }
-
-
-
-
-
-
 
 /* ================================
    DECISIONS SECTION — MANIFESTO
 ================================ */
-
-.decisions-section {
+#section-7 {
   padding: 5vw 8vw;
   background-color: #0b0d10;
   color: #e6e6e6;
   position: relative;
   overflow: hidden;
-  height: 220vh;
+  height: 180vh;
 }
 
 /* subtle depth */
-.decisions-section::before {
+#section-7::before {
   content: "";
   position: absolute;
   inset: 0;
   background: radial-gradient(
     circle at 20% 20%,
-    rgba(255,255,255,0.04),
+    rgba(255, 255, 255, 0.05),
     transparent 40%
   );
   pointer-events: none;
@@ -1674,9 +1639,10 @@ align-content: flex-end;
 }
 
 .decisions-title span {
-  display: block;
   font-weight: 300;
   opacity: 0.75;
+  color:#14cf93;
+   font-family: 'Nothing You Could', cursive;
 }
 
 .decisions-subtitle {
@@ -1684,7 +1650,11 @@ align-content: flex-end;
   max-width: 520px;
   font-size: 1.1rem;
   line-height: 1.6;
-  color: rgba(255,255,255,0.65);
+  color: rgba(255, 255, 255, 0.65);
+}
+.decisions-subtitle span {
+  font-family: 'Nothing You Could', cursive;
+  font-size: 1.3vw;
 }
 
 /* ================================
@@ -1695,6 +1665,7 @@ align-content: flex-end;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 4vw 6vw;
+  margin-bottom: 5vw;
 }
 
 /* ================================
@@ -1713,7 +1684,7 @@ align-content: flex-end;
   left: 0;
   top: 0.2rem;
   font-size: 1.5rem;
-  color: rgba(255,255,255,0.25);
+  color: rgba(255, 255, 255, 0.25);
 }
 
 .decision-item:hover {
@@ -1740,15 +1711,15 @@ align-content: flex-end;
   height: 1px;
   background: linear-gradient(
     90deg,
-    rgba(255,255,255,0.6),
-    rgba(20,207,147,0.9)
+    rgba(255, 255, 255, 0.6),
+    rgba(20, 207, 147, 0.9)
   );
   transition: width 0.4s ease;
 }
 
 /* hover effects */
 .decision-item:hover .decision-title {
-  text-shadow: 0 0 12px rgba(20,207,147,0.15);
+  text-shadow: 0 0 12px rgba(20, 207, 147, 0.15);
 }
 
 .decision-item:hover .decision-title::after {
@@ -1763,30 +1734,15 @@ align-content: flex-end;
 }
 
 .decision-why {
-  color: rgba(255,255,255,0.6);
+  color: rgba(255, 255, 255, 0.6);
   margin-bottom: 0.5rem;
 }
 
 .decision-impact {
-  color: rgba(255,255,255,0.85);
+  color: rgba(255, 255, 255, 0.85);
 }
 
-/* ================================
-   DIVIDER
-================================ */
 
-.decisions-divider {
-  margin: 6vw 4vw;
-}
-
-.decisions-divider svg {
-  width: 100%;
-  height: 60px;
-}
-
-.decisions-divider svg path {
-  stroke: #14CF93;
-}
 
 /* ================================
    FOOTER
@@ -1817,8 +1773,8 @@ align-content: flex-end;
   pointer-events: none;
   background: linear-gradient(
     to right,
-    rgba(20,207,147,0.35),
-    rgba(20,207,147,0)
+    rgba(20, 207, 147, 0.35),
+    rgba(20, 207, 147, 0)
   );
   filter: blur(60px);
 }
@@ -1834,12 +1790,11 @@ align-content: flex-end;
   pointer-events: none;
   background: linear-gradient(
     to left,
-    rgba(20,207,147,0.35),
-    rgba(20,207,147,0)
+    rgba(20, 207, 147, 0.35),
+    rgba(20, 207, 147, 0)
   );
   filter: blur(60px);
 }
-
 
 .decisions-marquee-track {
   display: flex;
@@ -1856,26 +1811,21 @@ align-content: flex-end;
   /* background-color: blue; */
 }
 
-.decisions-marquee h2{
+.decisions-marquee h2 {
   font-size: 3.2vw;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.04em;
-  color: rgba(255,255,255,0.9);
+  color: rgba(255, 255, 255, 0.9);
 }
 .decisions-marquee h2 span {
-  color: #14CF93;
-   font-family: 'Nothing You Could', cursive;
+  color: #14cf93;
+  font-family: "Nothing You Could", cursive;
 }
 
 .decisions-marquee img {
-   height: 4vw;
+  height: 4vw;
 }
-
-
-
-
-
 
 /* ================================
    FINAL FOOTER — PHILOSOPHY CLOSE
@@ -1894,12 +1844,11 @@ align-content: flex-end;
   content: "";
   position: absolute;
   inset: 0;
-  background:
-    radial-gradient(
-      circle at 30% 20%,
-      rgba(255,255,255,0.04),
-      transparent 45%
-    );
+  background: radial-gradient(
+    circle at 30% 20%,
+    rgba(255, 255, 255, 0.04),
+    transparent 45%
+  );
   pointer-events: none;
 }
 
@@ -1933,7 +1882,7 @@ align-content: flex-end;
   font-size: 0.95rem;
   letter-spacing: 0.02em;
   text-transform: uppercase;
-  color: rgba(255,255,255,0.55);
+  color: rgba(255, 255, 255, 0.55);
 }
 
 /* ================================
@@ -1945,8 +1894,8 @@ align-content: flex-end;
   display: flex;
   overflow: hidden;
   position: relative;
-  border-top: 1px solid rgba(255,255,255,0.08);
-  border-bottom: 1px solid rgba(255,255,255,0.08);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 /* fade edges */
@@ -1963,20 +1912,12 @@ align-content: flex-end;
 
 .footer-marquee::before {
   left: 0;
-  background: linear-gradient(
-    to right,
-    #0b0d10 20%,
-    transparent
-  );
+  background: linear-gradient(to right, #0b0d10 20%, transparent);
 }
 
 .footer-marquee::after {
   right: 0;
-  background: linear-gradient(
-    to left,
-    #0b0d10 20%,
-    transparent
-  );
+  background: linear-gradient(to left, #0b0d10 20%, transparent);
 }
 
 .marquee-track {
@@ -1996,7 +1937,7 @@ align-content: flex-end;
   font-size: 1.1rem;
   letter-spacing: 0.01em;
   white-space: nowrap;
-  color: rgba(255,255,255,0.75);
+  color: rgba(255, 255, 255, 0.75);
 }
 
 .marquee-track img {
@@ -2028,13 +1969,13 @@ align-content: flex-end;
 .identity-name {
   font-size: 0.95rem;
   letter-spacing: 0.01em;
-  color: rgba(255,255,255,0.85);
+  color: rgba(255, 255, 255, 0.85);
 }
 
 .identity-meta {
   font-size: 0.85rem;
   letter-spacing: 0.02em;
-  color: rgba(255,255,255,0.45);
+  color: rgba(255, 255, 255, 0.45);
 }
 
 /* ================================
