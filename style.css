@@ -747,7 +747,9 @@ align-content: flex-end;
   position: relative;
   transition: background-color cubic-bezier(0.19, 1, 0.22, 1) 2s;
   /* display: none; */
+  
 }
+
 .header {
   display: flex;
   justify-content: center;
@@ -757,21 +759,43 @@ align-content: flex-end;
   padding: 2vw;
   gap: 3vw;
   position: relative;
-  /* background-color: rebeccapurple; */
 }
-
-
-
-#section-3 .header p {
+.scroll-whisper {
+  position: absolute;
+  right: 3vw;
+  top: 50%;
+  writing-mode: vertical-rl;
+  font-size: 1vw;
+  letter-spacing: 0.4em;
+  opacity: 0.9;
+  text-transform: uppercase;
   color: #111;
-  font-weight: 700;
 }
+.scroll-whisper  i{
+  
+
+  font-size: 1.5vw;
+  color: #111;
+}
+
+#typing-para {
+  font-size: 1.3vw;
+  opacity: 0.85;
+  white-space: nowrap;
+   color: #111;
+  font-weight: 900;
+}
+
+.typing-letter {
+  display: inline-block;
+  opacity: 0;
+}
+
 
 #work-section-projects {
   width: 100%;
   height: 330vh;
   position: relative;
-  /* background-color: red; */
   position: relative;
 }
 #work-section-projects .project-rows {
@@ -782,8 +806,8 @@ align-content: flex-end;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /* background-color: gray; */
   margin-bottom: 7vw;
+  
 }
 #work-section-projects .project-rows.row-2 {
   justify-content: center;
@@ -792,10 +816,7 @@ align-content: flex-end;
 #work-section-projects .projects {
   position: relative;
   overflow: hidden;
-}
-#work-section-projects .projects {
-  position: relative;
-  overflow: hidden;
+  cursor: pointer;
 }
 
 /* overlay container */
@@ -833,6 +854,7 @@ align-content: flex-end;
   width: 18vw;
 }
 
+
 /* bottom button */
 .project-button {
   background: #fff;
@@ -851,7 +873,14 @@ align-content: flex-end;
   font-weight: 700;
   font-family: "Nothing You Could", cursive;
 }
+.project-button h2 {
+  transition: letter-spacing 0.5s ease, transform 0.5s ease;
+}
 
+.projects:hover .project-button h2 {
+  letter-spacing: 0.17em;
+  transform: translateX(10px);
+}
 /* arrow circle */
 .project-button .arrow {
   width: 3vw;
@@ -861,6 +890,7 @@ align-content: flex-end;
   display: flex;
   align-items: center;
   justify-content: center;
+   transition: all 0.5s ease;
 }
 .project-button .arrow:hover {
   background-color: #14cf93;
@@ -893,7 +923,6 @@ align-content: flex-end;
   top: 0;
   left: 0;
   width: 17vw;
-  /* height: 20vw; */
   pointer-events: none;
   z-index: 999999;
   opacity: 0;
@@ -2041,8 +2070,3 @@ align-content: flex-end;
     width: 60px;
   }
 }
-
-
-
-
-

@@ -247,10 +247,10 @@ function navScrollAnimation(){
 }
 
 
-aboutValuesAnimation();
+genericRevealWordAnimation();
 
 
-function aboutValuesAnimation(){
+function genericRevealWordAnimation(){
 
 
 
@@ -265,11 +265,74 @@ function aboutValuesAnimation(){
       scrollTrigger: {
         trigger: el,
         start: "top 85%",
-        scroller: "[data-scroll-container]", // IMPORTANT for Locomotive
+        scroller: "[data-scroll-container]"
       }
     });
   });
+
+
+  ScrollTrigger.create({
+  trigger: "#section-3",
+  scroller: "[data-scroll-container]", // locomotive support
+  start: "top 75%",
+  once: true,               // 🔥 only once
+  onEnter: wordTypingEffect // 🔥 start typing here
+});
 }
+
+
+function wordTypingEffect() {
+  const para = document.querySelector("#typing-para");
+  if (!para) return;
+
+  const text = ' " Crafting Seamless Interfaces From Concept To Code. "';
+  const words = text.split(" ");
+
+  para.innerHTML = "";
+
+  let wordIndex = 0;
+
+  function typeWord() {
+    if (wordIndex >= words.length) return;
+
+    const word = words[wordIndex];
+    const wordSpan = document.createElement("span");
+    para.appendChild(wordSpan);
+
+    let letterIndex = 0;
+
+    function typeLetter() {
+      if (letterIndex >= word.length) {
+        para.innerHTML += " ";
+        wordIndex++;
+        setTimeout(typeWord, 120);
+        return;
+      }
+
+      const letterSpan = document.createElement("span");
+      letterSpan.classList.add("typing-letter");
+      letterSpan.textContent = word[letterIndex];
+      wordSpan.appendChild(letterSpan);
+
+      gsap.to(letterSpan, {
+        opacity: 1,
+        duration: 0.12,
+        ease: "power1.out"
+      });
+
+      letterIndex++;
+      setTimeout(typeLetter, 40);
+    }
+
+    typeLetter();
+  }
+
+  typeWord();
+
+  
+}
+
+
 
 
 
@@ -291,7 +354,7 @@ function cardShow() {
   let cursorX = 0;
   let cursorY = 0;
 
-  window.addEventListener("mousemove", (e) => {
+  section.addEventListener("mousemove", (e) => {
     mouseX = e.clientX;
     mouseY = e.clientY;
   });
