@@ -1,575 +1,455 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio-Website</title>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Portfolio-Website</title>
+    <!-- Gilroy Cdn link -->
+    <link href="https://fonts.cdnfonts.com/css/gilroy-bold" rel="stylesheet" />
 
-  <!-- Gilroy Cdn link -->
-  <link href="https://fonts.cdnfonts.com/css/gilroy-bold" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nothing+You+Could&display=swap"
+      rel="stylesheet"
+    />
 
-  
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Remix-icon-cdn -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.7.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <!-- locomotive-scroll Css -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css"
+    />
 
-  <link href="https://fonts.googleapis.com/css2?family=Nothing+You+Could&display=swap" rel="stylesheet">
+    <!-- User defined Style.css -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-
-
-  <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet" />
-  <!-- Remix-icon-cdn -->
-  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.7.0/fonts/remixicon.css" rel="stylesheet" />
-  <!-- locomotive-scroll Css -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css" />
-
-  <!-- User defined Style.css -->
-  <link rel="stylesheet" href="style.css" />
-</head>
-
-<body>
-
-
-   <section id="loader">
+  <body>
+    <section id="loader">
       <div id="loader-first">
         <div id="top-heading">
-          <h3 class="reveal">DESIGN  <i class="ri-asterisk cross "></i>  CODE</h3>
+          <h3 class="reveal">DESIGN <i class="ri-asterisk cross"></i> CODE</h3>
           <h3 class="reveal" id="copyright">&copy; 2026</h3>
         </div>
-      
 
-<h1 class="hero-title reveal">
-  <span class="fname">ASHUTOSH</span>
-  <span class="lname">Kesharwani</span>
-  <span class="descriptor">
-    <span>is</span>
-    <span>a</span>
-  </span>
-</h1>
-
+        <h1 class="hero-title reveal">
+          <span class="fname">ASHUTOSH</span>
+          <span class="lname">Kesharwani</span>
+          <span class="descriptor">
+            <span>is</span>
+            <span>a</span>
+          </span>
+        </h1>
 
         <h2 class="reveal"><i class="ri-loop-right-fill"></i></h2>
       </div>
       <div id="green"></div>
       <div id="gray"></div>
     </section>
-      <nav>
-        <h4><a href="#">Github</a></h4>
-        <h4><a href="#">Linkedin</a></h4>
-        <h4><a href="#">Experience</a></h4>
-        <h4><a href="#">Contact</a></h4>
-      </nav>
+    <nav>
+      <h4><a href="#">Github</a></h4>
+      <h4><a href="#">Linkedin</a></h4>
+      <h4><a href="#">Experience</a></h4>
+      <h4><a href="#">Contact</a></h4>
+    </nav>
 
+    <main data-scroll-container>
+      <section
+        id="section-1"
+        class="section"
+        data-scroll
+        data-scroll-speed="-2.5"
+      >
+        <!-- ROW 1 : FULL STACK (TEXT ONLY) -->
+        <div class="row row-text">
+          <h1 id="full-stack" class="reveal">FULL STACK</h1>
+        </div>
 
-      
-  <main data-scroll-container>
+        <!-- ROW 2 : UI / UX (SVG ANIMATED) -->
+        <div class="row row-svg">
+          <h1 class="stack-heading uiux">
+            <svg viewBox="0 0 520 260">
+              <text x="50%" y="65%" text-anchor="middle">UI / UX</text>
+            </svg>
+          </h1>
+        </div>
 
+        <!-- ROW 3 : DEVELOPER (TEXT ONLY) -->
+        <div class="row row-text">
+          <h1 id="developer" class="reveal">DEVELOPER</h1>
+        </div>
 
+        <!-- DOWN ARROW -->
+        <div id="down-arrow-container">
+          <a href="#">
+            <img
+              class="down-arrow"
+              src="assets/icons/icons8-down.gif"
+              alt="Scroll Down"
+            />
+          </a>
+        </div>
+      </section>
 
+      <section id="section-2" class="section" data-scroll data-scroll-speed="0">
+        <div id="section-2-part-1">
+          <div id="about-section">
+            <div id="about-left">
+              <h1 class="about-heading">
+                I’m <span class="accent">Ashutosh Kesharwani</span> — a
+                <span class="accent">Full-Stack Developer</span><br /><br />
 
+                I design and engineer digital products that balance
+                <span class="soft">creative expression</span> with
+                <span class="soft">robust, scalable architecture</span
+                >.<br /><br />
 
+                From intuitive user interfaces to reliable backend systems, I
+                focus on building
+                <span class="accent-soft">thoughtful experiences</span> for
+                <span class="accent-soft">web & mobile platforms</span
+                >.<br /><br />
 
-<section id="section-1" class="section" data-scroll data-scroll-speed="-2.5">
-
-  <!-- ROW 1 : FULL STACK (TEXT ONLY) -->
-  <div class="row row-text">
-    <h1 id="full-stack" class="reveal">
-      FULL STACK
-    </h1>
-  </div>
-
-  <!-- ROW 2 : UI / UX (SVG ANIMATED) -->
-  <div class="row row-svg">
- 
-
-<h1 class="stack-heading uiux">
-    <svg viewBox="0 0 520 260">
-      <text x="50%" y="65%" text-anchor="middle">UI / UX</text>
-    </svg>
-  </h1>
-
-
-
-
-  </div>
-
-  <!-- ROW 3 : DEVELOPER (TEXT ONLY) -->
-  <div class="row row-text">
-    <h1 id="developer" class="reveal">
-      DEVELOPER
-    </h1>
-  </div>
-
-  <!-- DOWN ARROW -->
-  <div id="down-arrow-container">
-    <a href="#">
-      <img
-        class="down-arrow"
-        src="assets/icons/icons8-down.gif"
-        alt="Scroll Down"
-      />
-    </a>
-  </div>
-
-</section>
-
-   
-
-   
-
-    <section id="section-2" class="section" data-scroll data-scroll-speed="0">
-      <div id="section-2-part-1">
-        <div id="about-section">
-          <div id="about-left">
-            <h1 class="about-heading">
-              I’m <span class="accent">Ashutosh Kesharwani</span> — a
-              <span class="accent">Full-Stack Developer</span><br /><br />
-
-              I design and engineer digital products that balance
-              <span class="soft">creative expression</span> with
-              <span class="soft">robust, scalable architecture</span>.<br /><br />
-
-              From intuitive user interfaces to reliable backend systems, I
-              focus on building
-              <span class="accent-soft">thoughtful experiences</span> for
-              <span class="accent-soft">web & mobile platforms</span>.<br /><br />
-
-              <span id="last-span-of-h1">
-                Where clean engineering meets human-centered design.
-              </span>
-            </h1>
-          </div>
-          <div id="about-right">
-
-           
-            <div class="about-right-img-conatiner"></div>
-            <div class="about-right-img-conatiner"></div>
-            <div class="about-right-img-conatiner"></div>
+                <span id="last-span-of-h1">
+                  Where clean engineering meets human-centered design.
+                </span>
+              </h1>
+            </div>
+            <div id="about-right">
+              <div class="about-right-img-conatiner"></div>
+              <div class="about-right-img-conatiner"></div>
+              <div class="about-right-img-conatiner"></div>
+            </div>
           </div>
         </div>
-      </div>
 
-      <div id="section-2-part-2">
-        <div id="about-values">
-
+        <div id="section-2-part-2">
+          <div id="about-values">
             <div class="header">
-              <h2>What I <span class="generic reveal">Care</span> About <span class="generic reveal">?</span></h2>
-              <p >
-                Beyond tools and frameworks, these principles guide how <br> <span>I design, build,
-                  and collaborate.</span>
+              <h2>
+                What I <span class="generic reveal">Care</span> About
+                <span class="generic reveal">?</span>
+              </h2>
+              <p>
+                Beyond tools and frameworks, these principles guide how <br />
+                <span>I design, build, and collaborate.</span>
               </p>
             </div>
 
-              <div class="values-list-row">
-                <div class="value-item-card">
-                  <h1>01</h1>
-                  <h3>Clarity</h3>
-                  <div class="value-item-card-overlay">
-
-                    <h3>Clarity in Code</h3>
-                    <p>
-                      Writing code that others can read,<br> understand, and maintain <br> not just
-                      code that works.
-                    </p>
-                  </div>
+            <div class="values-list-row">
+              <div class="value-item-card">
+                <h1>01</h1>
+                <h3>Clarity</h3>
+                <div class="value-item-card-overlay">
+                  <h3>Clarity in Code</h3>
+                  <p>
+                    Writing code that others can read,<br />
+                    understand, and maintain <br />
+                    not just code that works.
+                  </p>
                 </div>
-                <div class="value-item-card">
-                  <h1>02</h1>
-                  <h3>Design </h3>
-                  <div class="value-item-card-overlay">
-
-                    <h3>Design for <br> Real Users</h3>
-                    <p>
-                      Interfaces should feel intuitive, respectful, and effortless for the
-                      people who actually use them.
-                    </p>
-                  </div>
+              </div>
+              <div class="value-item-card">
+                <h1>02</h1>
+                <h3>Design</h3>
+                <div class="value-item-card-overlay">
+                  <h3>
+                    Design for <br />
+                    Real Users
+                  </h3>
+                  <p>
+                    Interfaces should feel intuitive, respectful, and effortless
+                    for the people who actually use them.
+                  </p>
                 </div>
-                <div class="value-item-card">
-                  <h1>03</h1>
-                  <h3>Performance</h3>
-                  <div class="value-item-card-overlay">
-
-                    <h3>Performance Over <br> Noise</h3>
-                    <p>
-                      Every animation, effect, and interaction should serve a purpose — not
-                      distract from it.
-                    </p>
-                  </div>
+              </div>
+              <div class="value-item-card">
+                <h1>03</h1>
+                <h3>Performance</h3>
+                <div class="value-item-card-overlay">
+                  <h3>
+                    Performance Over <br />
+                    Noise
+                  </h3>
+                  <p>
+                    Every animation, effect, and interaction should serve a
+                    purpose — not distract from it.
+                  </p>
                 </div>
-                <div class="value-item-card">
-                  <h1>04</h1>
-                  <h3>Learning</h3>
-                  <div class="value-item-card-overlay">
-
-                    <h3>Continuous <br>Learning</h3>
-                    <p>
-                      Technology evolves fast, and I believe staying curious is part of being
-                      a responsible engineer.
-                    </p>
-                  </div>
+              </div>
+              <div class="value-item-card">
+                <h1>04</h1>
+                <h3>Learning</h3>
+                <div class="value-item-card-overlay">
+                  <h3>Continuous <br />Learning</h3>
+                  <p>
+                    Technology evolves fast, and I believe staying curious is
+                    part of being a responsible engineer.
+                  </p>
                 </div>
-                      </div>
-
-            
-          
-      </div>
-      
-
-
-       <div id="section2-line">
-        <div class="interactive-horizontal-string light" >
-  <svg viewBox="0 0 1000 200" preserveAspectRatio="none">
-
-    <defs>
-      <linearGradient id="stringGradientH" x1="0%" y1="0%" x2="100%" y2="0%">
-        <stop offset="0%" stop-color="#14CF93" stop-opacity="0"/>
-        <stop offset="50%" stop-color="#14CF93" stop-opacity="1"/>
-        <stop offset="100%" stop-color="#14CF93" stop-opacity="0"/>
-      </linearGradient>
-
-      <filter id="stringGlowH">
-        <feGaussianBlur stdDeviation="10" result="blur"/>
-        <feMerge>
-          <feMergeNode in="blur"/>
-          <feMergeNode in="SourceGraphic"/>
-        </feMerge>
-      </filter>
-    </defs>
-
-    <!-- STRING 1 -->
-    <g class="h-string" data-base="60">
-      <path class="h-string-glow"
-        d="M 0 60 Q 500 60 1000 60"
-        stroke="url(#stringGradientH)"
-        stroke-width="8"
-        fill="none"
-        filter="url(#stringGlowH)"
-        opacity="0.6"/>
-      <path class="h-string-main"
-        d="M 0 60 Q 500 60 1000 60"
-        stroke="#fff"
-        stroke-width="2"
-        fill="none"/>
-    </g>
-  </svg>
-      </div>  
-       </div> 
-      </div>
-    </section>
-
-    <section id="section-3" class="section" data-scroll>
-
-
-      <div class="header">
-  <h2 >Things <span class="generic reveal  ">I’ve</span> Built<span class="generic reveal"> &nbsp;!</span></h2>
-       <p id="typing-para"></p>
-      </div>
-<span class="scroll-whisper" data-scroll data-scroll-speed="2">
-  keep scrolling <i class="ri-arrow-down-long-fill"></i>
-</span>
-
-     
-      <div id="work-section-projects">
-
-        <div class="project-rows">
-
-          <div class="projects project-card-1" data-index="0">
-<!-- data-scroll data-scroll-speed="-1.5" -->
-            <!-- overlay details -->
-            <div class="project-details">
-
-              <div class="project-about" data-scroll data-scroll-speed="1.3">
-                <span class="pill">YEAR: 2026</span>
-                <span class="pill desc">ROLE: UI/UX & FULL STACK DEV</span>
-              </div>
-
-              <div class="project-button" data-scroll data-scroll-speed="1.3">
-                <h2>Canvas</h2>
-                <span class="arrow">
-                  <i class="ri-arrow-right-up-long-line"></i>
-                </span>
-              </div>
-
-            </div>
-
-            <!-- project image -->
-            <img src="assets/images/about-img-1.avif" data-bgcolor="d7ddf2" data-scroll data-scroll-speed="-1.5"
-              alt="project image" />
-
-          </div>
-
-
-          <div class="projects project-card-2" data-index="1">
-            <!-- overlay details -->
-            <div class="project-details">
-
-              <div class="project-about" data-scroll data-scroll-speed="1.3">
-                <span class="pill">YEAR: 2026</span>
-                <span class="pill desc">ROLE: UI/UX & FULL STACK DEV</span>
-              </div>
-
-              <div class="project-button" data-scroll data-scroll-speed="1.3">
-                <h2>Canvas</h2>
-                <span class="arrow">
-                  <i class="ri-arrow-right-up-long-line"></i>
-                </span>
-              </div>
-
-            </div>
-            <img data-bgcolor="d7ddf7" data-scroll data-scroll-speed="-1.5" src="assets/images/about-img-2.avif"
-              alt="" />
-
-          </div>
-        </div>
-        <div class="project-rows row-2">
-          <div class="projects project-card-1" data-index="2">
-            <!-- overlay details -->
-            <div class="project-details">
-
-             <div class="project-about" data-scroll data-scroll-speed="1.3">
-                <span class="pill">YEAR: 2026</span>
-                <span class="pill desc">ROLE: UI/UX & FULL STACK DEV</span>
-              </div>
-
-              <div class="project-button" data-scroll data-scroll-speed="1.3">
-                <h2>Canvas</h2>
-                <span class="arrow">
-                  <i class="ri-arrow-right-up-long-line"></i>
-                </span>
-              </div>
-
-            </div>
-
-            <img data-bgcolor="d7dde3" data-scroll data-scroll-speed="-1.5" src="assets/images/about-img-1.avif"
-              alt="" />
-          </div>
-        </div>
-        <div class="project-rows">
-
-
-          <div class="projects project-card-2" data-index="3">
-            <!-- overlay details -->
-            <div class="project-details">
-
-             <div class="project-about" data-scroll data-scroll-speed="1.3">
-                <span class="pill">YEAR: 2026</span>
-                <span class="pill desc">ROLE: UI/UX & FULL STACK DEV</span>
-              </div>
-
-              <div class="project-button" data-scroll data-scroll-speed="1.3">
-                <h2>Canvas</h2>
-                <span class="arrow">
-                  <i class="ri-arrow-right-up-long-line"></i>
-                </span>
-              </div>
-
-            </div>
-            <img data-bgcolor="e7ddf2" data-scroll data-scroll-speed="-1.5" src="assets/images/about-img-2.avif"
-              alt="" />
-
-          </div>
-          <div class="projects project-card-1" data-index="4">
-
-            <!-- overlay details -->
-            <div class="project-details">
-
-             <div class="project-about" data-scroll data-scroll-speed="1.3">
-                <span class="pill">YEAR: 2026</span>
-                <span class="pill desc">ROLE: UI/UX & FULL STACK DEV</span>
-              </div>
-
-              <div class="project-button" data-scroll data-scroll-speed="1.3">
-                <h2>Canvas</h2>
-                <span class="arrow">
-                  <i class="ri-arrow-right-up-long-line"></i>
-                </span>
               </div>
             </div>
-            <img data-bgcolor="d7bda2" data-scroll data-scroll-speed="-1.5" src="assets/images/about-img-1.avif"
-              alt="" />
-
           </div>
 
+          <div id="section2-line">
+            <div class="interactive-horizontal-string light">
+              <svg viewBox="0 0 1000 200" preserveAspectRatio="none">
+                <defs>
+                  <linearGradient
+                    id="stringGradientH"
+                    x1="0%"
+                    y1="0%"
+                    x2="100%"
+                    y2="0%"
+                  >
+                    <stop offset="0%" stop-color="#14CF93" stop-opacity="0" />
+                    <stop offset="50%" stop-color="#14CF93" stop-opacity="1" />
+                    <stop offset="100%" stop-color="#14CF93" stop-opacity="0" />
+                  </linearGradient>
+
+                  <filter id="stringGlowH">
+                    <feGaussianBlur stdDeviation="10" result="blur" />
+                    <feMerge>
+                      <feMergeNode in="blur" />
+                      <feMergeNode in="SourceGraphic" />
+                    </feMerge>
+                  </filter>
+                </defs>
+
+                <!-- STRING 1 -->
+                <g class="h-string" data-base="60">
+                  <path
+                    class="h-string-glow"
+                    d="M 0 60 Q 500 60 1000 60"
+                    stroke="url(#stringGradientH)"
+                    stroke-width="8"
+                    fill="none"
+                    filter="url(#stringGlowH)"
+                    opacity="0.6"
+                  />
+                  <path
+                    class="h-string-main"
+                    d="M 0 60 Q 500 60 1000 60"
+                    stroke="#fff"
+                    stroke-width="2"
+                    fill="none"
+                  />
+                </g>
+              </svg>
+            </div>
+          </div>
         </div>
+      </section>
 
-      </div>
-
-
-
-
-
-    </section>
-
-    <!-- ===== SECTION 4 : WORKFLOW ===== -->
-    <section  id="section-4" data-scroll>
-
-
-      <div class="header">
-  <h2>Craft, <span class="generic reveal ">Polish </span> ,Elevate.</h2>
-        <p>
-          A thoughtful balance of strategy, aesthetics and engineering  <br>
-          <span>focused on clarity, emotion and performance.</span>
-        </p>
-      </div>
-
-     
-
-      <!-- PROCESS CARDS -->
-      <div class="workflow-grid">
-        <div class="card reveal">
-          <small>PHASE 01</small>
-          <h3>Exploration & Intent</h3>
-          <p>Understanding users, goals and constraints deeply.</p>
+      <section id="section-3" class="section" data-scroll>
+        <div class="header">
+          <h2>
+            Things <span class="generic reveal">I’ve</span> Built<span
+              class="generic reveal"
+            >
+              &nbsp;!</span
+            >
+          </h2>
+          <p id="typing-para"></p>
         </div>
+        <span class="scroll-whisper" data-scroll data-scroll-speed="2">
+          keep scrolling <i class="ri-arrow-down-long-fill"></i>
+        </span>
 
-        <div class="card reveal">
-          <small>PHASE 02</small>
-          <h3>Visual Language</h3>
-          <p>Crafting typography, layouts and motion systems.</p>
+        <div id="work-section-projects">
+          <div class="project-rows">
+            <div class="projects project-card-1" data-index="0">
+              <!-- data-scroll data-scroll-speed="-1.5" -->
+              <!-- overlay details -->
+              <div class="project-details">
+                <div class="project-about" data-scroll data-scroll-speed="1.3">
+                  <span class="pill">YEAR: 2026</span>
+                  <span class="pill desc">ROLE: UI/UX & FULL STACK DEV</span>
+                </div>
+
+                <div class="project-button" data-scroll data-scroll-speed="1.3">
+                  <h2>Canvas</h2>
+                  <span class="arrow">
+                    <i class="ri-arrow-right-up-long-line"></i>
+                  </span>
+                </div>
+              </div>
+
+              <!-- project image -->
+              <img
+                src="assets/images/about-img-1.avif"
+                data-bgcolor="d7ddf2"
+                data-scroll
+                data-scroll-speed="-1.5"
+                alt="project image"
+              />
+            </div>
+
+            <div class="projects project-card-2" data-index="1">
+              <!-- overlay details -->
+              <div class="project-details">
+                <div class="project-about" data-scroll data-scroll-speed="1.3">
+                  <span class="pill">YEAR: 2026</span>
+                  <span class="pill desc">ROLE: UI/UX & FULL STACK DEV</span>
+                </div>
+
+                <div class="project-button" data-scroll data-scroll-speed="1.3">
+                  <h2>Canvas</h2>
+                  <span class="arrow">
+                    <i class="ri-arrow-right-up-long-line"></i>
+                  </span>
+                </div>
+              </div>
+              <img
+                data-bgcolor="d7ddf7"
+                data-scroll
+                data-scroll-speed="-1.5"
+                src="assets/images/about-img-2.avif"
+                alt=""
+              />
+            </div>
+          </div>
+          <div class="project-rows row-2">
+            <div class="projects project-card-1" data-index="2">
+              <!-- overlay details -->
+              <div class="project-details">
+                <div class="project-about" data-scroll data-scroll-speed="1.3">
+                  <span class="pill">YEAR: 2026</span>
+                  <span class="pill desc">ROLE: UI/UX & FULL STACK DEV</span>
+                </div>
+
+                <div class="project-button" data-scroll data-scroll-speed="1.3">
+                  <h2>Canvas</h2>
+                  <span class="arrow">
+                    <i class="ri-arrow-right-up-long-line"></i>
+                  </span>
+                </div>
+              </div>
+
+              <img
+                data-bgcolor="d7dde3"
+                data-scroll
+                data-scroll-speed="-1.5"
+                src="assets/images/about-img-1.avif"
+                alt=""
+              />
+            </div>
+          </div>
+          <div class="project-rows">
+            <div class="projects project-card-2" data-index="3">
+              <!-- overlay details -->
+              <div class="project-details">
+                <div class="project-about" data-scroll data-scroll-speed="1.3">
+                  <span class="pill">YEAR: 2026</span>
+                  <span class="pill desc">ROLE: UI/UX & FULL STACK DEV</span>
+                </div>
+
+                <div class="project-button" data-scroll data-scroll-speed="1.3">
+                  <h2>Canvas</h2>
+                  <span class="arrow">
+                    <i class="ri-arrow-right-up-long-line"></i>
+                  </span>
+                </div>
+              </div>
+              <img
+                data-bgcolor="e7ddf2"
+                data-scroll
+                data-scroll-speed="-1.5"
+                src="assets/images/about-img-2.avif"
+                alt=""
+              />
+            </div>
+            <div class="projects project-card-1" data-index="4">
+              <!-- overlay details -->
+              <div class="project-details">
+                <div class="project-about" data-scroll data-scroll-speed="1.3">
+                  <span class="pill">YEAR: 2026</span>
+                  <span class="pill desc">ROLE: UI/UX & FULL STACK DEV</span>
+                </div>
+
+                <div class="project-button" data-scroll data-scroll-speed="1.3">
+                  <h2>Canvas</h2>
+                  <span class="arrow">
+                    <i class="ri-arrow-right-up-long-line"></i>
+                  </span>
+                </div>
+              </div>
+              <img
+                data-bgcolor="d7bda2"
+                data-scroll
+                data-scroll-speed="-1.5"
+                src="assets/images/about-img-1.avif"
+                alt=""
+              />
+            </div>
+          </div>
         </div>
+      </section>
 
-        <div class="card reveal">
-          <small>PHASE 03</small>
-          <h3>Engineering</h3>
-          <p>Turning ideas into fast, scalable products.</p>
-        </div>
-
-        <div class="card reveal">
-          <small>PHASE 04</small>
-          <h3>Polish & Launch</h3>
-          <p>Refinement, testing and production readiness.</p>
-        </div>
-      </div>
-
-      <!-- SWIPER VISUAL -->
-   
-
-
-
-
-
-
-  <div class="interactive-horizontal-string " >
-  <svg viewBox="0 0 1000 200" preserveAspectRatio="none">
-
-    <defs>
-      <linearGradient id="stringGradientH" x1="0%" y1="0%" x2="100%" y2="0%">
-        <stop offset="0%" stop-color="#14CF93" stop-opacity="0"/>
-        <stop offset="50%" stop-color="#14CF93" stop-opacity="1"/>
-        <stop offset="100%" stop-color="#14CF93" stop-opacity="0"/>
-      </linearGradient>
-
-      <filter id="stringGlowH">
-        <feGaussianBlur stdDeviation="10" result="blur"/>
-        <feMerge>
-          <feMergeNode in="blur"/>
-          <feMergeNode in="SourceGraphic"/>
-        </feMerge>
-      </filter>
-    </defs>
-
-    <!-- STRING 1 -->
-    <g class="h-string" data-base="60">
-      <path class="h-string-glow"
-        d="M 0 60 Q 500 60 1000 60"
-        stroke="url(#stringGradientH)"
-        stroke-width="8"
-        fill="none"
-        filter="url(#stringGlowH)"
-        opacity="0.6"/>
-      <path class="h-string-main"
-        d="M 0 60 Q 500 60 1000 60"
-        stroke="#fff"
-        stroke-width="2"
-        fill="none"/>
-    </g>
-  </svg>
-      </div>  
-
-
-    </section>
-
-
-    <!-- Section:5 case study and achevement  -->
-    <section class="section" id="section-5" data-scroll>
-
-      <div class="particles-container"></div>
-      <div id="case-study-hero" class="hero-section">
-
-
-         <div class="header">
-  <h2> Predict, <span class="generic reveal ">Decide </span> ,Deliver</h2>
-
-   
-        <p>
-           Clinical Decision Support System — Full-Stack & ML-powered
-        </p>
-      </div>
-
-
-
-
-
-      </div>
-
-      <div class="case-container">
-
-        <!-- LEFT CONTENT -->
-        <div class="case-left reveal">
-
-          <h2>Precision in Every Choice</h2>
-
-          <h3 class="case-subtitle">
-            ML-driven decision intelligence for medical retail workflows
-          </h3>
-
-          <h3 class="role">
-            Full-Stack Engineer · UI Motion Designer · ML Developer
-          </h3>
-
-          <p class="timeline">
-            6 Weeks — Research → UX → Engineering → Model Training → Optimization
+      <!-- ===== SECTION 4 : WORKFLOW ===== -->
+      <section id="section-4" data-scroll>
+        <div class="header">
+          <h2>Craft, <span class="generic reveal">Polish </span> ,Elevate.</h2>
+          <p>
+            A thoughtful balance of strategy, aesthetics and engineering <br />
+            <span>focused on clarity, emotion and performance.</span>
           </p>
-
-          <p class="description">
-            Designed and engineered a <strong>production-grade decision support system</strong>
-            for medical retailers, integrating <strong>machine learning intelligence</strong>
-            with <strong>clarity-first UI and purposeful motion</strong>.
-          </p>
-
-          <div class="ml-stats">
-            <div class="stat">
-              <h4 class="count" data-target="95">0</h4>
-              <p>Model Accuracy</p>
-            </div>
-            <div class="stat">
-              <h4 class="count" data-target="40">0</h4>
-              <p>UI Latency Reduction</p>
-            </div>
-            <div class="stat">
-              <h4 class="count" data-target="100">0</h4>
-              <p>Layout Stability</p>
-            </div>
-          </div>
-
         </div>
 
+        <!-- PROCESS CARDS -->
+        <div class="workflow-grid">
+          <div class="card reveal">
+            <small>PHASE 01</small>
+            <h3>Exploration & Intent</h3>
+            <p>Understanding users, goals and constraints deeply.</p>
+          </div>
 
-        <!-- RIGHT CONTENT -->
+          <div class="card reveal">
+            <small>PHASE 02</small>
+            <h3>Visual Language</h3>
+            <p>Crafting typography, layouts and motion systems.</p>
+          </div>
 
+          <div class="card reveal">
+            <small>PHASE 03</small>
+            <h3>Engineering</h3>
+            <p>Turning ideas into fast, scalable products.</p>
+          </div>
 
-        <div class="case-right">
+          <div class="card reveal">
+            <small>PHASE 04</small>
+            <h3>Polish & Launch</h3>
+            <p>Refinement, testing and production readiness.</p>
+          </div>
+        </div>
 
-          <svg class="cdss-globe" viewBox="0 0 600 600">
+        <!-- SWIPER VISUAL -->
+
+        <div class="interactive-horizontal-string">
+          <svg viewBox="0 0 1000 200" preserveAspectRatio="none">
             <defs>
-              <!-- Neon gradient -->
-              <linearGradient id="neonGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                <stop offset="0%" stop-color="#14CF93" />
-                <stop offset="100%" stop-color="#7CFFCB" />
+              <linearGradient
+                id="stringGradientH"
+                x1="0%"
+                y1="0%"
+                x2="100%"
+                y2="0%"
+              >
+                <stop offset="0%" stop-color="#14CF93" stop-opacity="0" />
+                <stop offset="50%" stop-color="#14CF93" stop-opacity="1" />
+                <stop offset="100%" stop-color="#14CF93" stop-opacity="0" />
               </linearGradient>
 
-              <!-- Glow -->
-              <filter id="softGlow" x="-50%" y="-50%" width="400%" height="400%">
-                <feGaussianBlur stdDeviation="6" result="blur" />
+              <filter id="stringGlowH">
+                <feGaussianBlur stdDeviation="10" result="blur" />
                 <feMerge>
                   <feMergeNode in="blur" />
                   <feMergeNode in="SourceGraphic" />
@@ -577,689 +457,765 @@
               </filter>
             </defs>
 
-            <!-- Core -->
-            <circle cx="300" cy="300" r="100" fill="url(#neonGrad)" filter="url(#softGlow)" class="core" />
-
-            <!-- Inner orbit -->
-            <circle cx="300" cy="300" r="90" class="orbit orbit-inner" />
-
-            <!-- Middle orbit -->
-            <circle cx="300" cy="300" r="170" class="orbit orbit-mid" />
-
-            <!-- Outer orbit -->
-            <circle cx="300" cy="300" r="230" class="orbit orbit-outer" />
-
-            <!-- Nodes -->
-            <circle class="node n1" cx="300" cy="70" r="6" />
-            <circle class="node n2" cx="520" cy="300" r="6" />
-            <circle class="node n3" cx="300" cy="530" r="6" />
-            <circle class="node n4" cx="80" cy="300" r="6" />
-
+            <!-- STRING 1 -->
+            <g class="h-string" data-base="60">
+              <path
+                class="h-string-glow"
+                d="M 0 60 Q 500 60 1000 60"
+                stroke="url(#stringGradientH)"
+                stroke-width="8"
+                fill="none"
+                filter="url(#stringGlowH)"
+                opacity="0.6"
+              />
+              <path
+                class="h-string-main"
+                d="M 0 60 Q 500 60 1000 60"
+                stroke="#fff"
+                stroke-width="2"
+                fill="none"
+              />
+            </g>
           </svg>
+        </div>
+      </section>
 
+      <!-- Section:5 case study and achevement  -->
+      <section class="section" id="section-5" data-scroll>
+        <div class="particles-container"></div>
+        <div id="case-study-hero" class="hero-section">
+          <div class="header">
+            <h2>
+              Predict, <span class="generic reveal">Decide </span> ,Deliver
+            </h2>
+
+            <p>Clinical Decision Support System — Full-Stack & ML-powered</p>
+          </div>
         </div>
 
+        <div class="case-container">
+          <!-- LEFT CONTENT -->
+          <div class="case-left reveal">
+            <h2>Precision in Every Choice</h2>
 
+            <h3 class="case-subtitle">
+              ML-driven decision intelligence for medical retail workflows
+            </h3>
 
+            <h3 class="role">
+              Full-Stack Engineer · UI Motion Designer · ML Developer
+            </h3>
 
+            <p class="timeline">
+              6 Weeks — Research → UX → Engineering → Model Training →
+              Optimization
+            </p>
 
+            <p class="description">
+              Designed and engineered a
+              <strong>production-grade decision support system</strong> for
+              medical retailers, integrating
+              <strong>machine learning intelligence</strong> with
+              <strong>clarity-first UI and purposeful motion</strong>.
+            </p>
 
-
-
-
-
-      </div>
-
-      <!-- ===============================
-     ACHIEVEMENTS / CARDS SECTION
-================================ -->
-      <div class="case-cards-section">
-
-        <div class="swiper caseSwiper">
-          <div class="swiper-wrapper">
-
-
-
-            <div class="swiper-slide">
-              <div class="case-card">
-
-                <div class="card-image">
-                  <img src="assets/images/about-img-2.avif" alt="">
-                </div>
-
-                <div class="card-content">
-                  <h4>UHack Hackathon – Top 10</h4>
-                  <p>ML powered clinical recommendation system with production-ready UI</p>
-                </div>
-
+            <div class="ml-stats">
+              <div class="stat">
+                <h4 class="count" data-target="95">0</h4>
+                <p>Model Accuracy</p>
               </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="case-card">
-
-                <div class="card-image">
-                  <img src="assets/images/about-img-2.avif" alt="">
-                </div>
-
-                <div class="card-content">
-                  <h4>UHack Hackathon – Top 10</h4>
-                  <p>ML powered clinical recommendation system with production-ready UI</p>
-                </div>
-
+              <div class="stat">
+                <h4 class="count" data-target="40">0</h4>
+                <p>UI Latency Reduction</p>
               </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="case-card">
-
-                <div class="card-image">
-                  <img src="assets/images/about-img-2.avif" alt="">
-                </div>
-
-                <div class="card-content">
-                  <h4>UHack Hackathon – Top 10</h4>
-                  <p>ML powered clinical recommendation system with production-ready UI</p>
-                </div>
-
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="case-card">
-
-                <div class="card-image">
-                  <img src="assets/images/about-img-2.avif" alt="">
-                </div>
-
-                <div class="card-content">
-                  <h4>UHack Hackathon – Top 10</h4>
-                  <p>ML powered clinical recommendation system with production-ready UI</p>
-                </div>
-
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="case-card">
-
-                <div class="card-image">
-                  <img src="assets/images/about-img-2.avif" alt="">
-                </div>
-
-                <div class="card-content">
-                  <h4>UHack Hackathon – Top 10</h4>
-                  <p>ML powered clinical recommendation system with production-ready UI</p>
-                </div>
-
+              <div class="stat">
+                <h4 class="count" data-target="100">0</h4>
+                <p>Layout Stability</p>
               </div>
             </div>
           </div>
 
-          <!-- Optional -->
-          <div class="swiper-scrollbar"></div>
+          <!-- RIGHT CONTENT -->
+
+          <div class="case-right">
+            <svg class="cdss-globe" viewBox="0 0 600 600">
+              <defs>
+                <!-- Neon gradient -->
+                <linearGradient
+                  id="neonGrad"
+                  x1="0%"
+                  y1="0%"
+                  x2="100%"
+                  y2="100%"
+                >
+                  <stop offset="0%" stop-color="#14CF93" />
+                  <stop offset="100%" stop-color="#7CFFCB" />
+                </linearGradient>
+
+                <!-- Glow -->
+                <filter
+                  id="softGlow"
+                  x="-50%"
+                  y="-50%"
+                  width="400%"
+                  height="400%"
+                >
+                  <feGaussianBlur stdDeviation="6" result="blur" />
+                  <feMerge>
+                    <feMergeNode in="blur" />
+                    <feMergeNode in="SourceGraphic" />
+                  </feMerge>
+                </filter>
+              </defs>
+
+              <!-- Core -->
+              <circle
+                cx="300"
+                cy="300"
+                r="100"
+                fill="url(#neonGrad)"
+                filter="url(#softGlow)"
+                class="core"
+              />
+
+              <!-- Inner orbit -->
+              <circle cx="300" cy="300" r="90" class="orbit orbit-inner" />
+
+              <!-- Middle orbit -->
+              <circle cx="300" cy="300" r="170" class="orbit orbit-mid" />
+
+              <!-- Outer orbit -->
+              <circle cx="300" cy="300" r="230" class="orbit orbit-outer" />
+
+              <!-- Nodes -->
+              <circle class="node n1" cx="300" cy="70" r="6" />
+              <circle class="node n2" cx="520" cy="300" r="6" />
+              <circle class="node n3" cx="300" cy="530" r="6" />
+              <circle class="node n4" cx="80" cy="300" r="6" />
+            </svg>
+          </div>
         </div>
 
-      </div>
-
-
-
-    </section>
-
-        <!-- Section:6 Professional Context  -->
-    <section class="professional-context section-6" id="section-6" data-scroll>
-
-  
-
-
-  <!-- SECTION HEADER -->
-  <div class="context-header reveal">
-    <h2>
-      Where My <span>Craft</span> Lives
-    </h2>
-    <p>
-      Not theory. Not experiments.
-      <br>
-      <strong>Real systems, real constraints, real responsibility.</strong>
-    </p>
-  </div>
-
-  <!-- CONTEXT GRID -->
-  <div class="context-grid">
-
-    <!-- COLUMN 01 -->
-    <div class="context-column reveal">
-      <small class="context-label">APPLIED DOMAINS</small>
-      <h3>
-        Problem Spaces
-        
-        <span>I’ve</span> <br> Worked In
-      </h3>
-
-      <ul class="context-list">
-        <li>
-          <span>Clinical Decision Support</span>
-          <em>Data-heavy, clarity-critical environments</em>
-        </li>
-        <li>
-          <span>ML-Driven Interfaces</span>
-          <em>Turning predictions into usable decisions</em>
-        </li>
-        <li>
-          <span>Information-Dense Dashboards</span>
-          <em>Designing for speed, not decoration</em>
-        </li>
-        <li>
-          <span>Performance-Sensitive UI Systems</span>
-          <em>Where every millisecond matters</em>
-        </li>
-      </ul>
-    </div>
-
-<!-- VERTICAL STRING -->
-<div class="interactive-vertical-string" data-string-index="0">
-  <svg viewBox="0 0 200 1000" preserveAspectRatio="none">
-
-    <defs>
-      <linearGradient id="vStringGradient0" x1="0%" y1="0%" x2="0%" y2="100%">
-        <stop offset="0%" stop-color="#14CF93" stop-opacity="0"/>
-        <stop offset="50%" stop-color="#14CF93" stop-opacity="1"/>
-        <stop offset="100%" stop-color="#14CF93" stop-opacity="0"/>
-      </linearGradient>
-
-      <filter id="vStringGlow0">
-        <feGaussianBlur stdDeviation="10" result="blur"/>
-        <feMerge>
-          <feMergeNode in="blur"/>
-          <feMergeNode in="SourceGraphic"/>
-        </feMerge>
-      </filter>
-    </defs>
-
-    <path class="v-string-glow" stroke="url(#vStringGradient0)" stroke-width="8" fill="none" filter="url(#vStringGlow0)" opacity="0.6"/>
-    <path class="v-string-main" stroke="#ffffff" stroke-width="2" stroke-linecap="round" fill="none"/>
-  </svg>
-</div>
-
-
-    <!-- COLUMN 02 -->
-    <div class="context-column reveal">
-      <small class="context-label">OWNERSHIP</small>
-      <h3>
-        Responsibilities I <span> Take</span>  
-        <br>
-         Seriously
-      </h3>
-
-      <ul class="context-list">
-        <li>
-          <span>Translating Abstract Requirements</span>
-          <em>From vague ideas to shippable systems</em>
-        </li>
-        <li>
-          <span>UI Architecture & Motion Systems</span>
-          <em>Structure before style</em>
-        </li>
-        <li>
-          <span>ML Integration in Products</span>
-          <em>Not just models — usable outcomes</em>
-        </li>
-        <li>
-          <span>Edge Cases & Failure States</span>
-          <em>Designing beyond the happy path</em>
-        </li>
-      </ul>
-    </div>
-
-
-    <!-- VERTICAL STRING -->
-<div class="interactive-vertical-string" data-string-index="0">
-  <svg viewBox="0 0 200 1000" preserveAspectRatio="none">
-
-    <defs>
-      <linearGradient id="vStringGradient1" x1="0%" y1="0%" x2="0%" y2="100%">
-        <stop offset="0%" stop-color="#14CF93" stop-opacity="0"/>
-        <stop offset="50%" stop-color="#14CF93" stop-opacity="1"/>
-        <stop offset="100%" stop-color="#14CF93" stop-opacity="0"/>
-      </linearGradient>
-
-      <filter id="vStringGlow1">
-        <feGaussianBlur stdDeviation="10" result="blur"/>
-        <feMerge>
-          <feMergeNode in="blur"/>
-          <feMergeNode in="SourceGraphic"/>
-        </feMerge>
-      </filter>
-    </defs>
-
-    <path class="v-string-glow" stroke="url(#vStringGradient0)" stroke-width="8" fill="none" filter="url(#vStringGlow0)" opacity="0.6"/>
-    <path class="v-string-main" stroke="#ffffff" stroke-width="2" stroke-linecap="round" fill="none"/>
-  </svg>
-</div>
-
-
-
-    <!-- COLUMN 03 -->
-    <div class="context-column reveal">
-      <small class="context-label">OUTCOMES</small>
-      <h3>
-       Impact I <span> Intend</span> <br>
-        To  Make
-      </h3>
-
-      <ul class="context-list">
-        <li>
-          <span>Decision Clarity</span>
-          <em>Reducing cognitive load in complex workflows</em>
-        </li>
-        <li>
-          <span>Production-Ready Thinking</span>
-          <em>Built to last, not just to impress</em>
-        </li>
-        <li>
-          <span>Performance as a Feature</span>
-          <em>Speed, stability, and responsiveness</em>
-        </li>
-        <li>
-          <span>User Confidence</span>
-          <em>Interfaces that feel reliable and intentional</em>
-        </li>
-      </ul>
-    </div>
-
-  </div>
-
-  <!-- CLOSING STATEMENT -->
-  <div class="context-footer reveal">
-    <p>
-      I don’t chase buzzwords.
-      <br>
-      <strong>I build systems that people can trust.</strong>
-    </p>
-  </div>
-
- 
-
-<!-- INTERACTIVE GUITAR STRING  HORIZONTAL-->
-<div class="interactive-horizontal-string" data-horizontal>
-  <svg viewBox="0 0 1000 200" preserveAspectRatio="none">
-
-    <defs>
-      <linearGradient id="stringGradientH" x1="0%" y1="0%" x2="100%" y2="0%">
-        <stop offset="0%" stop-color="#14CF93" stop-opacity="0"/>
-        <stop offset="50%" stop-color="#14CF93" stop-opacity="1"/>
-        <stop offset="100%" stop-color="#14CF93" stop-opacity="0"/>
-      </linearGradient>
-
-      <filter id="stringGlowH">
-        <feGaussianBlur stdDeviation="10" result="blur"/>
-        <feMerge>
-          <feMergeNode in="blur"/>
-          <feMergeNode in="SourceGraphic"/>
-        </feMerge>
-      </filter>
-    </defs>
-
-    <!-- STRING 1 -->
-    <g class="h-string" data-base="60">
-      <path class="h-string-glow"
-        d="M 0 60 Q 500 60 1000 60"
-        stroke="url(#stringGradientH)"
-        stroke-width="8"
-        fill="none"
-        filter="url(#stringGlowH)"
-        opacity="0.6"/>
-      <path class="h-string-main"
-        d="M 0 60 Q 500 60 1000 60"
-        stroke="#fff"
-        stroke-width="2"
-        fill="none"/>
-    </g>
-
-    <!-- STRING 2 -->
-   
-
-    <!-- STRING 3 -->
-  
-
-  </svg>
-</div>
-
-
-
-
-
-</section>
-
-   <!-- section-7 Decision section -->
-
-   <section class="decisions-section " id="section-7" data-scroll>
-
-  <!-- SECTION INTRO -->
- <header class="decisions-header">
-
-  <!-- LEFT CONTENT -->
-  <div class="decisions-header-content">
-    <h2 class="decisions-title">
-      Decisions<br>
-      <span>I’ve Made</span>
-    </h2>
-
-    <p class="decisions-subtitle">
-      Not features. Not trends.<br>
-      Just deliberate choices — and their consequences.
-    </p>
-  </div>
-
-  <!-- RIGHT VISUAL -->
-   <div class="decisions-visual">
-   <video src="assets/videos/decision.mp4" autoplay loop muted></video>
-</div> 
-</header>
-
-
-
-
-  <!-- DECISIONS LIST -->
-  <div class="decisions-list">
-
-    <!-- ITEM -->
-    <article class="decision-item">
-      <h3 class="decision-title">
-        Clarity over cleverness
-      </h3>
-      <p class="decision-why">
-        Because confusion breaks trust faster than bad design.
-      </p>
-      <p class="decision-impact">
-        Interfaces feel obvious, confident, and frictionless.
-      </p>
-    </article>
-
-    <!-- ITEM -->
-    <article class="decision-item">
-      <h3 class="decision-title">
-        Motion must earn its place
-      </h3>
-      <p class="decision-why">
-        Animation without purpose is visual noise.
-      </p>
-      <p class="decision-impact">
-        Movement guides attention and explains state changes.
-      </p>
-    </article>
-
-    <!-- ITEM -->
-    <article class="decision-item">
-      <h3 class="decision-title">
-        Performance is part of the experience
-      </h3>
-      <p class="decision-why">
-        Slow feedback makes even good products feel broken.
-      </p>
-      <p class="decision-impact">
-        Experiences feel instant, responsive, and reliable.
-      </p>
-    </article>
-
-    <!-- ITEM -->
-    <article class="decision-item">
-      <h3 class="decision-title">
-        Systems over one-off solutions
-      </h3>
-      <p class="decision-why">
-        Because scalable thinking outlives individual screens.
-      </p>
-      <p class="decision-impact">
-        Components stay consistent and evolve without friction.
-      </p>
-    </article>
-
-    <!-- ITEM -->
-    <article class="decision-item">
-      <h3 class="decision-title">
-        Data informs. Taste decides.
-      </h3>
-      <p class="decision-why">
-        Metrics show what happens — judgment decides what matters.
-      </p>
-      <p class="decision-impact">
-        Decisions stay grounded yet human-centered.
-      </p>
-    </article>
-
-    <!-- ITEM -->
-    <article class="decision-item">
-      <h3 class="decision-title">
-        Build like it will scale
-      </h3>
-      <p class="decision-why">
-        Good habits compound faster than quick hacks.
-      </p>
-      <p class="decision-impact">
-        Products remain maintainable under growth.
-      </p>
-    </article>
-
-  </div>
-
-  <div class="decisions-divider">
-  <svg viewBox="0 0 1000 60" preserveAspectRatio="none">
-    <path
-      d="M0,30 C150,20 300,40 450,30 600,20 750,35 1000,30"
-      fill="none"
-      stroke-width="1.5"
-      stroke-linecap="round"
-    />
-  </svg>
-</div>
-
-
- <footer class="decisions-footer-marquee" data-scroll>
-  <div class="decisions-marquee-track">
-    
-
-    <div class="decisions-marquee">
-      <h2> Decisions <span >Define</span> outcomes</h2>
-      <img src="assets/images/arrow-br.svg" alt="arrow">
-    </div>
-    <div class="decisions-marquee">
-      <h2> Decisions <span >Define</span> outcomes</h2>
-      <img src="assets/images/arrow-br.svg" alt="arrow">
-    </div>
-    <div class="decisions-marquee">
-      <h2> Decisions <span >Define</span> outcomes</h2>
-      <img src="assets/images/arrow-br.svg" alt="arrow">
-    </div>
-    <div class="decisions-marquee">
-      <h2> Decisions <span >Define</span> outcomes</h2>
-      <img src="assets/images/arrow-br.svg" alt="arrow">
-    </div>
-    <div class="decisions-marquee">
-      <h2> Decisions <span >Define</span> outcomes</h2>
-      <img src="assets/images/arrow-br.svg" alt="arrow">
-    </div>
-    <div class="decisions-marquee">
-      <h2> Decisions <span >Define</span> outcomes</h2>
-      <img src="assets/images/arrow-br.svg" alt="arrow">
-    </div>
-   
-    
-    
-  </div>
-</footer>
-
-
-
-</section>
-
-
-
-<section class="final-footer" id="final-thought">
-
-  <!-- PRIMARY STATEMENT -->
-  <div class="footer-statement">
-    <h2 class="footer-thought">
-      Good outcomes<br>
-      come from good thinking.
-    </h2>
-  </div>
-
-  <!-- MICRO MANIFESTO -->
-  <div class="footer-principles">
-    <p>Design with intent.</p>
-    <p>Build with discipline.</p>
-    <p>Ship with responsibility.</p>
-  </div>
-
-  <!-- PHILOSOPHY MARQUEE -->
-  <div class="footer-marquee">
-    <div class="marquee-track">
-      <span>Decisions over decoration</span>
-      <img src="assets/images/arrow-br.svg" alt="">
-      <span>Systems over shortcuts</span>
-       <img src="assets/images/arrow-br.svg" alt="">
-      <span>Taste × Data × Discipline</span>
-       <img src="assets/images/arrow-br.svg" alt="">
-      <span>Built to scale — mentally first</span>
-       <img src="assets/images/arrow-br.svg" alt="">
-    </div>
-    <div class="marquee-track">
-      <span>Decisions over decoration</span>
-      <img src="assets/images/arrow-br.svg" alt="">
-      <span>Systems over shortcuts</span>
-       <img src="assets/images/arrow-br.svg" alt="">
-      <span>Taste × Data × Discipline</span>
-       <img src="assets/images/arrow-br.svg" alt="">
-      <span>Built to scale — mentally first</span>
-       <img src="assets/images/arrow-br.svg" alt="">
-    </div>
-
-  
-  </div>
-
-  <!-- IDENTITY STRIP -->
-  <div class="footer-identity">
-    <p class="identity-name">
-      Ashutosh Kesharwani — Software · ML · Systems
-    </p>
-    <p class="identity-meta">
-      Based in India · Open to meaningful work
-    </p>
-  </div>
-
-</section>
-
-
-
-
-
-
-
-  </main>
-
-  <div id="cursor">
-
-    <!-- ye div hi hmara har project ke liye individual hai i.e abhi iss div ko copy karke dusre project ke liye bnaye to dusre project img ke liye bam jayga -->
-    <div class="projects-cursor" data-index="0">
-
-      <div class="crow">
-        <div class="ccircle"></div>
-        <div class="ccapsule">
-          Behance
+        <!-- ===============================
+     ACHIEVEMENTS / CARDS SECTION
+================================ -->
+        <div class="case-cards-section">
+          <div class="swiper caseSwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="case-card">
+                  <div class="card-image">
+                    <img src="assets/images/about-img-2.avif" alt="" />
+                  </div>
+
+                  <div class="card-content">
+                    <h4>UHack Hackathon – Top 10</h4>
+                    <p>
+                      ML powered clinical recommendation system with
+                      production-ready UI
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="case-card">
+                  <div class="card-image">
+                    <img src="assets/images/about-img-2.avif" alt="" />
+                  </div>
+
+                  <div class="card-content">
+                    <h4>UHack Hackathon – Top 10</h4>
+                    <p>
+                      ML powered clinical recommendation system with
+                      production-ready UI
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="case-card">
+                  <div class="card-image">
+                    <img src="assets/images/about-img-2.avif" alt="" />
+                  </div>
+
+                  <div class="card-content">
+                    <h4>UHack Hackathon – Top 10</h4>
+                    <p>
+                      ML powered clinical recommendation system with
+                      production-ready UI
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="case-card">
+                  <div class="card-image">
+                    <img src="assets/images/about-img-2.avif" alt="" />
+                  </div>
+
+                  <div class="card-content">
+                    <h4>UHack Hackathon – Top 10</h4>
+                    <p>
+                      ML powered clinical recommendation system with
+                      production-ready UI
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="case-card">
+                  <div class="card-image">
+                    <img src="assets/images/about-img-2.avif" alt="" />
+                  </div>
+
+                  <div class="card-content">
+                    <h4>UHack Hackathon – Top 10</h4>
+                    <p>
+                      ML powered clinical recommendation system with
+                      production-ready UI
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Optional
+            <div class="swiper-scrollbar"></div>
+          </div> -->
+        </div>
+      </section>
+
+      <!-- Section:6 Professional Context  -->
+      <section
+        id="section-6"
+        data-scroll
+      >
+        <!-- SECTION HEADER -->
+        <div class="context-header reveal">
+          <h2>Where My <span>Craft</span> Lives</h2>
+          <p>
+            Not theory. Not experiments.
+            <br />
+            <strong
+              >Real systems, real constraints, real responsibility.</strong
+            >
+          </p>
+        </div>
+
+        <!-- CONTEXT GRID -->
+        <div class="context-grid">
+          <!-- COLUMN 01 -->
+          <div class="context-column reveal">
+            <small class="context-label">APPLIED DOMAINS</small>
+            <h3>
+              Problem Spaces
+
+              <span>I’ve</span> <br />
+              Worked In
+            </h3>
+
+            <ul class="context-list">
+              <li>
+                <span>Clinical Decision Support</span>
+                <em>Data-heavy, clarity-critical environments</em>
+              </li>
+              <li>
+                <span>ML-Driven Interfaces</span>
+                <em>Turning predictions into usable decisions</em>
+              </li>
+              <li>
+                <span>Information-Dense Dashboards</span>
+                <em>Designing for speed, not decoration</em>
+              </li>
+              <li>
+                <span>Performance-Sensitive UI Systems</span>
+                <em>Where every millisecond matters</em>
+              </li>
+            </ul>
+          </div>
+
+          <!-- VERTICAL STRING -->
+          <div class="interactive-vertical-string" data-string-index="0">
+            <svg viewBox="0 0 200 1000" preserveAspectRatio="none">
+              <defs>
+                <linearGradient
+                  id="vStringGradient0"
+                  x1="0%"
+                  y1="0%"
+                  x2="0%"
+                  y2="100%"
+                >
+                  <stop offset="0%" stop-color="#14CF93" stop-opacity="0" />
+                  <stop offset="50%" stop-color="#14CF93" stop-opacity="1" />
+                  <stop offset="100%" stop-color="#14CF93" stop-opacity="0" />
+                </linearGradient>
+
+                <filter id="vStringGlow0">
+                  <feGaussianBlur stdDeviation="10" result="blur" />
+                  <feMerge>
+                    <feMergeNode in="blur" />
+                    <feMergeNode in="SourceGraphic" />
+                  </feMerge>
+                </filter>
+              </defs>
+
+              <path
+                class="v-string-glow"
+                stroke="url(#vStringGradient0)"
+                stroke-width="8"
+                fill="none"
+                filter="url(#vStringGlow0)"
+                opacity="0.6"
+              />
+              <path
+                class="v-string-main"
+                stroke="#ffffff"
+                stroke-width="2"
+                stroke-linecap="round"
+                fill="none"
+              />
+            </svg>
+          </div>
+
+          <!-- COLUMN 02 -->
+          <div class="context-column reveal">
+            <small class="context-label">OWNERSHIP</small>
+            <h3>
+              Responsibilities I <span> Take</span>
+              <br />
+              Seriously
+            </h3>
+
+            <ul class="context-list">
+              <li>
+                <span>Translating Abstract Requirements</span>
+                <em>From vague ideas to shippable systems</em>
+              </li>
+              <li>
+                <span>UI Architecture & Motion Systems</span>
+                <em>Structure before style</em>
+              </li>
+              <li>
+                <span>ML Integration in Products</span>
+                <em>Not just models — usable outcomes</em>
+              </li>
+              <li>
+                <span>Edge Cases & Failure States</span>
+                <em>Designing beyond the happy path</em>
+              </li>
+            </ul>
+          </div>
+
+          <!-- VERTICAL STRING -->
+          <div class="interactive-vertical-string" data-string-index="0">
+            <svg viewBox="0 0 200 1000" preserveAspectRatio="none">
+              <defs>
+                <linearGradient
+                  id="vStringGradient1"
+                  x1="0%"
+                  y1="0%"
+                  x2="0%"
+                  y2="100%"
+                >
+                  <stop offset="0%" stop-color="#14CF93" stop-opacity="0" />
+                  <stop offset="50%" stop-color="#14CF93" stop-opacity="1" />
+                  <stop offset="100%" stop-color="#14CF93" stop-opacity="0" />
+                </linearGradient>
+
+                <filter id="vStringGlow1">
+                  <feGaussianBlur stdDeviation="10" result="blur" />
+                  <feMerge>
+                    <feMergeNode in="blur" />
+                    <feMergeNode in="SourceGraphic" />
+                  </feMerge>
+                </filter>
+              </defs>
+
+              <path
+                class="v-string-glow"
+                stroke="url(#vStringGradient0)"
+                stroke-width="8"
+                fill="none"
+                filter="url(#vStringGlow0)"
+                opacity="0.6"
+              />
+              <path
+                class="v-string-main"
+                stroke="#ffffff"
+                stroke-width="2"
+                stroke-linecap="round"
+                fill="none"
+              />
+            </svg>
+          </div>
+
+          <!-- COLUMN 03 -->
+          <div class="context-column reveal">
+            <small class="context-label">OUTCOMES</small>
+            <h3>
+              Impact I <span> Intend</span> <br />
+              To Make
+            </h3>
+
+            <ul class="context-list">
+              <li>
+                <span>Decision Clarity</span>
+                <em>Reducing cognitive load in complex workflows</em>
+              </li>
+              <li>
+                <span>Production-Ready Thinking</span>
+                <em>Built to last, not just to impress</em>
+              </li>
+              <li>
+                <span>Performance as a Feature</span>
+                <em>Speed, stability, and responsiveness</em>
+              </li>
+              <li>
+                <span>User Confidence</span>
+                <em>Interfaces that feel reliable and intentional</em>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- CLOSING STATEMENT -->
+        <div class="context-footer reveal">
+          <p>
+            I don’t chase buzzwords.
+            <br />
+            <strong>I build systems that people can trust.</strong>
+          </p>
+        </div>
+
+        <!-- INTERACTIVE GUITAR STRING  HORIZONTAL-->
+        <div class="interactive-horizontal-string" data-horizontal>
+          <svg viewBox="0 0 1000 200" preserveAspectRatio="none">
+            <defs>
+              <linearGradient
+                id="stringGradientH"
+                x1="0%"
+                y1="0%"
+                x2="100%"
+                y2="0%"
+              >
+                <stop offset="0%" stop-color="#14CF93" stop-opacity="0" />
+                <stop offset="50%" stop-color="#14CF93" stop-opacity="1" />
+                <stop offset="100%" stop-color="#14CF93" stop-opacity="0" />
+              </linearGradient>
+
+              <filter id="stringGlowH">
+                <feGaussianBlur stdDeviation="10" result="blur" />
+                <feMerge>
+                  <feMergeNode in="blur" />
+                  <feMergeNode in="SourceGraphic" />
+                </feMerge>
+              </filter>
+            </defs>
+
+            <!-- STRING 1 -->
+            <g class="h-string" data-base="60">
+              <path
+                class="h-string-glow"
+                d="M 0 60 Q 500 60 1000 60"
+                stroke="url(#stringGradientH)"
+                stroke-width="8"
+                fill="none"
+                filter="url(#stringGlowH)"
+                opacity="0.6"
+              />
+              <path
+                class="h-string-main"
+                d="M 0 60 Q 500 60 1000 60"
+                stroke="#fff"
+                stroke-width="2"
+                fill="none"
+              />
+            </g>
+
+            <!-- STRING 2 -->
+
+            <!-- STRING 3 -->
+          </svg>
+        </div>
+      </section>
+
+      <!-- section-7 Decision section -->
+
+      <section class="section" id="section-7" data-scroll>
+        <!-- SECTION INTRO -->
+        <header class="decisions-header">
+          <!-- LEFT CONTENT -->
+          <div class="decisions-header-content">
+            <h2 class="decisions-title">
+              Decisions<br />
+               I’ve <span>Made</span>
+            </h2>
+
+            <p class="decisions-subtitle">
+              <span>Not features.  Not trends.</span> <br />
+              Just deliberate choices — and their consequences.
+            </p>
+          </div>
+
+          <!-- RIGHT VISUAL -->
+          <div class="decisions-visual">
+            <video src="assets/videos/decision.mp4" autoplay loop muted></video>
+          </div>
+        </header>
+
+        <!-- DECISIONS LIST -->
+        <div class="decisions-list">
+          <!-- ITEM -->
+          <article class="decision-item">
+            <h3 class="decision-title">Clarity over cleverness</h3>
+            <p class="decision-why">
+              Because confusion breaks trust faster than bad design.
+            </p>
+            <p class="decision-impact">
+              Interfaces feel obvious, confident, and frictionless.
+            </p>
+          </article>
+
+          <!-- ITEM -->
+          <article class="decision-item">
+            <h3 class="decision-title">Motion must earn its place</h3>
+            <p class="decision-why">
+              Animation without purpose is visual noise.
+            </p>
+            <p class="decision-impact">
+              Movement guides attention and explains state changes.
+            </p>
+          </article>
+
+          <!-- ITEM -->
+          <article class="decision-item">
+            <h3 class="decision-title">
+              Performance is part of the experience
+            </h3>
+            <p class="decision-why">
+              Slow feedback makes even good products feel broken.
+            </p>
+            <p class="decision-impact">
+              Experiences feel instant, responsive, and reliable.
+            </p>
+          </article>
+
+          <!-- ITEM -->
+          <article class="decision-item">
+            <h3 class="decision-title">Systems over one-off solutions</h3>
+            <p class="decision-why">
+              Because scalable thinking outlives individual screens.
+            </p>
+            <p class="decision-impact">
+              Components stay consistent and evolve without friction.
+            </p>
+          </article>
+
+          <!-- ITEM -->
+          <article class="decision-item">
+            <h3 class="decision-title">Data informs. Taste decides.</h3>
+            <p class="decision-why">
+              Metrics show what happens — judgment decides what matters.
+            </p>
+            <p class="decision-impact">
+              Decisions stay grounded yet human-centered.
+            </p>
+          </article>
+
+          <!-- ITEM -->
+          <article class="decision-item">
+            <h3 class="decision-title">Build like it will scale</h3>
+            <p class="decision-why">
+              Good habits compound faster than quick hacks.
+            </p>
+            <p class="decision-impact">
+              Products remain maintainable under growth.
+            </p>
+          </article>
+        </div>
+
+
+        <footer class="decisions-footer-marquee" data-scroll>
+          <div class="decisions-marquee-track">
+            <div class="decisions-marquee">
+              <h2>Decisions <span>Define</span> outcomes</h2>
+              <img src="assets/images/arrow-br.svg" alt="arrow" />
+            </div>
+            <div class="decisions-marquee">
+              <h2>Decisions <span>Define</span> outcomes</h2>
+              <img src="assets/images/arrow-br.svg" alt="arrow" />
+            </div>
+            <div class="decisions-marquee">
+              <h2>Decisions <span>Define</span> outcomes</h2>
+              <img src="assets/images/arrow-br.svg" alt="arrow" />
+            </div>
+            <div class="decisions-marquee">
+              <h2>Decisions <span>Define</span> outcomes</h2>
+              <img src="assets/images/arrow-br.svg" alt="arrow" />
+            </div>
+            <div class="decisions-marquee">
+              <h2>Decisions <span>Define</span> outcomes</h2>
+              <img src="assets/images/arrow-br.svg" alt="arrow" />
+            </div>
+            <div class="decisions-marquee">
+              <h2>Decisions <span>Define</span> outcomes</h2>
+              <img src="assets/images/arrow-br.svg" alt="arrow" />
+            </div>
+          </div>
+        </footer>
+      </section>
+
+
+
+
+
+
+
+
+
+      <section class="final-footer" id="final-thought">
+        <!-- PRIMARY STATEMENT -->
+        <div class="footer-statement">
+          <h2 class="footer-thought">
+            Good outcomes<br />
+            come from good thinking.
+          </h2>
+        </div>
+
+        <!-- MICRO MANIFESTO -->
+        <div class="footer-principles">
+          <p>Design with intent.</p>
+          <p>Build with discipline.</p>
+          <p>Ship with responsibility.</p>
+        </div>
+
+        <!-- PHILOSOPHY MARQUEE -->
+        <div class="footer-marquee">
+          <div class="marquee-track">
+            <span>Decisions over decoration</span>
+            <img src="assets/images/arrow-br.svg" alt="" />
+            <span>Systems over shortcuts</span>
+            <img src="assets/images/arrow-br.svg" alt="" />
+            <span>Taste × Data × Discipline</span>
+            <img src="assets/images/arrow-br.svg" alt="" />
+            <span>Built to scale — mentally first</span>
+            <img src="assets/images/arrow-br.svg" alt="" />
+          </div>
+          <div class="marquee-track">
+            <span>Decisions over decoration</span>
+            <img src="assets/images/arrow-br.svg" alt="" />
+            <span>Systems over shortcuts</span>
+            <img src="assets/images/arrow-br.svg" alt="" />
+            <span>Taste × Data × Discipline</span>
+            <img src="assets/images/arrow-br.svg" alt="" />
+            <span>Built to scale — mentally first</span>
+            <img src="assets/images/arrow-br.svg" alt="" />
+          </div>
+        </div>
+
+        <!-- IDENTITY STRIP -->
+        <div class="footer-identity">
+          <p class="identity-name">
+            Ashutosh Kesharwani — Software · ML · Systems
+          </p>
+          <p class="identity-meta">Based in India · Open to meaningful work</p>
+        </div>
+      </section>
+    </main>
+
+    <div id="cursor">
+      <!-- ye div hi hmara har project ke liye individual hai i.e abhi iss div ko copy karke dusre project ke liye bnaye to dusre project img ke liye bam jayga -->
+      <div class="projects-cursor" data-index="0">
+        <div class="crow">
+          <div class="ccircle"></div>
+          <div class="ccapsule">Behance</div>
+        </div>
+        <div class="elem">
+          <img src="assets/images/about-img-1.avif" alt="images-1" />
+          <img src="assets/images/about-img-2.avif" alt="images-2" />
+          <img src="assets/images/about-img-3.avif" alt="images-3" />
+          <img src="assets/images/about-img-1.avif" alt="images-4" />
+          <img src="assets/images/about-img-2.avif" alt="images-5" />
         </div>
       </div>
-      <div class="elem">
-        <img src="assets/images/about-img-1.avif" alt="images-1">
-        <img src="assets/images/about-img-2.avif" alt="images-2">
-        <img src="assets/images/about-img-3.avif" alt="images-3">
-        <img src="assets/images/about-img-1.avif" alt="images-4">
-        <img src="assets/images/about-img-2.avif" alt="images-5">
-      </div>
-    </div>
-    <div class="projects-cursor" data-index="1">
-
-      <div class="crow">
-        <div class="ccircle"></div>
-        <div class="ccapsule">
-          Behance
+      <div class="projects-cursor" data-index="1">
+        <div class="crow">
+          <div class="ccircle"></div>
+          <div class="ccapsule">Behance</div>
+        </div>
+        <div class="elem">
+          <img src="assets/images/about-img-1.avif" alt="images-1" />
+          <img src="assets/images/about-img-2.avif" alt="images-2" />
+          <img src="assets/images/about-img-3.avif" alt="images-3" />
+          <img src="assets/images/about-img-1.avif" alt="images-4" />
+          <img src="assets/images/about-img-2.avif" alt="images-5" />
         </div>
       </div>
-      <div class="elem">
-        <img src="assets/images/about-img-1.avif" alt="images-1">
-        <img src="assets/images/about-img-2.avif" alt="images-2">
-        <img src="assets/images/about-img-3.avif" alt="images-3">
-        <img src="assets/images/about-img-1.avif" alt="images-4">
-        <img src="assets/images/about-img-2.avif" alt="images-5">
-      </div>
-    </div>
-    <div class="projects-cursor" data-index="2">
-
-      <div class="crow">
-        <div class="ccircle"></div>
-        <div class="ccapsule">
-          Behance
+      <div class="projects-cursor" data-index="2">
+        <div class="crow">
+          <div class="ccircle"></div>
+          <div class="ccapsule">Behance</div>
+        </div>
+        <div class="elem">
+          <img src="assets/images/about-img-1.avif" alt="images-1" />
+          <img src="assets/images/about-img-2.avif" alt="images-2" />
+          <img src="assets/images/about-img-3.avif" alt="images-3" />
+          <img src="assets/images/about-img-1.avif" alt="images-4" />
+          <img src="assets/images/about-img-2.avif" alt="images-5" />
         </div>
       </div>
-      <div class="elem">
-        <img src="assets/images/about-img-1.avif" alt="images-1">
-        <img src="assets/images/about-img-2.avif" alt="images-2">
-        <img src="assets/images/about-img-3.avif" alt="images-3">
-        <img src="assets/images/about-img-1.avif" alt="images-4">
-        <img src="assets/images/about-img-2.avif" alt="images-5">
-      </div>
-    </div>
-    <div class="projects-cursor" data-index="3">
-
-      <div class="crow">
-        <div class="ccircle"></div>
-        <div class="ccapsule">
-          Behance
+      <div class="projects-cursor" data-index="3">
+        <div class="crow">
+          <div class="ccircle"></div>
+          <div class="ccapsule">Behance</div>
+        </div>
+        <div class="elem">
+          <img src="assets/images/about-img-1.avif" alt="images-1" />
+          <img src="assets/images/about-img-2.avif" alt="images-2" />
+          <img src="assets/images/about-img-3.avif" alt="images-3" />
+          <img src="assets/images/about-img-1.avif" alt="images-4" />
+          <img src="assets/images/about-img-2.avif" alt="images-5" />
         </div>
       </div>
-      <div class="elem">
-        <img src="assets/images/about-img-1.avif" alt="images-1">
-        <img src="assets/images/about-img-2.avif" alt="images-2">
-        <img src="assets/images/about-img-3.avif" alt="images-3">
-        <img src="assets/images/about-img-1.avif" alt="images-4">
-        <img src="assets/images/about-img-2.avif" alt="images-5">
-      </div>
-    </div>
-    <div class="projects-cursor" data-index="4">
-
-      <div class="crow">
-        <div class="ccircle"></div>
-        <div class="ccapsule">
-          Behance
+      <div class="projects-cursor" data-index="4">
+        <div class="crow">
+          <div class="ccircle"></div>
+          <div class="ccapsule">Behance</div>
+        </div>
+        <div class="elem">
+          <img src="assets/images/about-img-1.avif" alt="images-1" />
+          <img src="assets/images/about-img-2.avif" alt="images-2" />
+          <img src="assets/images/about-img-3.avif" alt="images-3" />
+          <img src="assets/images/about-img-1.avif" alt="images-4" />
+          <img src="assets/images/about-img-2.avif" alt="images-5" />
         </div>
       </div>
-      <div class="elem">
-        <img src="assets/images/about-img-1.avif" alt="images-1">
-        <img src="assets/images/about-img-2.avif" alt="images-2">
-        <img src="assets/images/about-img-3.avif" alt="images-3">
-        <img src="assets/images/about-img-1.avif" alt="images-4">
-        <img src="assets/images/about-img-2.avif" alt="images-5">
-      </div>
     </div>
-  </div>
 
+    <!-- locomotive-scroll Js -->
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
 
-  <!-- locomotive-scroll Js -->
-  <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
+    <!-- Gsap Cdn Link -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"
+      integrity="sha512-NcZdtrT77bJr4STcmsGAESr06BYGE8woZdSdEgqnpyqac7sugNO+Tr4bGwGF3MsnEkGKhU2KL2xh6Ec+BqsaHA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
 
-  <!-- Gsap Cdn Link -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"
-    integrity="sha512-NcZdtrT77bJr4STcmsGAESr06BYGE8woZdSdEgqnpyqac7sugNO+Tr4bGwGF3MsnEkGKhU2KL2xh6Ec+BqsaHA=="
-    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- ScrollTrigger Cdn Link -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js"
+      integrity="sha512-P2IDYZfqSwjcSjX0BKeNhwRUH8zRPGlgcWl5n6gBLzdi4Y5/0O4zaXrtO4K9TZK6Hn1BenYpKowuCavNandERg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
 
-  <!-- ScrollTrigger Cdn Link -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js"
-    integrity="sha512-P2IDYZfqSwjcSjX0BKeNhwRUH8zRPGlgcWl5n6gBLzdi4Y5/0O4zaXrtO4K9TZK6Hn1BenYpKowuCavNandERg=="
-    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- Swiper-js  -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 
-  <!-- Swiper-js  -->
-  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-
-
-  <!-- User-defined Script.js -->
-  <script src="script.js"></script>
-</body>
-
+    <!-- User-defined Script.js -->
+    <script src="script.js"></script>
+  </body>
 </html>
 wq

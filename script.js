@@ -1,32 +1,23 @@
 
+
+
+
 revealToSpan();
 valueSetters();
 // loadingAnimation();
-
 locomotiveSmoothScroll();
 navScrollAnimation();
 cardShow();
 countNumberPoints();
-swiperAnimationOnCards();
-section6Animation();
-guitarHorizontalStrings()
-guitarVerticalStrings();
+
+
 decisionsReveal();
-decisionsDividerReveal();
 marqueeAnimation();
 
 gsap.registerPlugin(ScrollTrigger);
 
+genericRevealWordAnimation();
 
-// window.addEventListener("load", () => {
-//   locoScroll.update();
-// });
-// imagesLoaded("main", () => {
-//   locoScroll.update();
-// });
-// window.addEventListener("resize", () => {
-//   locoScroll.update();
-// });
 
 function locomotiveSmoothScroll() {
   gsap.registerPlugin(ScrollTrigger);
@@ -246,7 +237,7 @@ function navScrollAnimation(){
 }
 
 
-genericRevealWordAnimation();
+
 
 
 function genericRevealWordAnimation(){
@@ -331,35 +322,49 @@ function wordTypingEffect() {
   
 }
 
-
 function cardShow() {
   const projects = document.querySelectorAll(".projects");
   const cursor = document.querySelector("#cursor");
   const cursorItems = document.querySelectorAll(".projects-cursor");
   const section = document.querySelector("#section-3");
 
-  if (!projects.length || !cursor) return;
+  if (!projects.length || !cursor || !section) return;
 
   // =========================
-  // CURSOR SMOOTH FOLLOW
+  // CURSOR SMOOTH FOLLOW (RAF)
   // =========================
   let mouseX = 0;
   let mouseY = 0;
   let cursorX = 0;
   let cursorY = 0;
+  let rafId = null;
+
+  function followCursor() {
+    cursorX += (mouseX - cursorX) * 0.18;
+    cursorY += (mouseY - cursorY) * 0.18;
+
+    cursor.style.transform = `translate(${cursorX}px, ${cursorY}px)`;
+    rafId = requestAnimationFrame(followCursor);
+  }
+
+  section.addEventListener("mouseenter", () => {
+    if (!rafId) followCursor();
+  });
 
   section.addEventListener("mousemove", (e) => {
     mouseX = e.clientX;
     mouseY = e.clientY;
   });
 
-  gsap.ticker.add(() => {
-    cursorX += (mouseX - cursorX) * 0.18; // smoothness
-    cursorY += (mouseY - cursorY) * 0.18;
+  section.addEventListener("mouseleave", () => {
+    cancelAnimationFrame(rafId);
+    rafId = null;
 
-    gsap.set(cursor, {
-      x: cursorX,
-      y: cursorY
+    gsap.to(cursor, {
+      opacity: 0,
+      scale: 0.85,
+      duration: 0.25,
+      ease: "power3.out"
     });
   });
 
@@ -388,13 +393,6 @@ function cardShow() {
     });
 
     project.addEventListener("mouseleave", () => {
-      gsap.to(cursor, {
-        opacity: 0,
-        scale: 0.85,
-        duration: 0.25,
-        ease: "power3.out"
-      });
-
       cursorItems.forEach(item => (item.style.opacity = 0));
 
       if (img) img.style.filter = "grayscale(0)";
@@ -407,48 +405,7 @@ function cardShow() {
 
 
 
-
-
-
-particlesGlobeAnimation();
-
-function particlesGlobeAnimation(){
-gsap.to(".cdss-globe", {
-  rotate: 360,
-  ease:"power1.out" ,
-  scrollTrigger:{
-    trigger: "#section-5",
-    scroller: "[data-scroll-container]",
-    start: "top bottom",
-    end: "bottom top",
-    scrub: 1
-  }
-});
-}
-
-
-
-function swiperAnimationOnCards(){
-  const caseSwiper = new Swiper(".caseSwiper", {
-  slidesPerView: "auto",
-  spaceBetween: 40,
-  freeMode: true,
-  grabCursor: true,
-  mousewheel: {
-    forceToAxis: true,
-  },
-  scrollbar: {
-    el: ".swiper-scrollbar",
-    draggable: true,
-  },
-});
-}
-
-
-
-
-
-
+particleFloatingAnimation();
 
 function countNumberPoints(){
   const counts = document.querySelectorAll(".count");
@@ -475,9 +432,53 @@ function countNumberPoints(){
 }
 
 
+particlesGlobeAnimation();
 
-particleFloatingAnimation();
-// Floating particles
+function particlesGlobeAnimation(){
+gsap.to(".cdss-globe", {
+  rotate: 360,
+  ease:"power1.out" ,
+  scrollTrigger:{
+    trigger: "#section-5",
+    scroller: "[data-scroll-container]",
+    start: "top bottom",
+    end: "bottom top",
+    scrub: 1
+  }
+});
+}
+
+
+
+section6Animation();
+guitarHorizontalStrings()
+guitarVerticalStrings();
+swiperAnimationOnCards();
+
+function swiperAnimationOnCards(){
+  const caseSwiper = new Swiper(".caseSwiper", {
+  slidesPerView: "auto",
+  spaceBetween: 40,
+  freeMode: true,
+  grabCursor: true,
+  mousewheel: {
+    forceToAxis: true,
+  },
+  scrollbar: {
+    el: ".swiper-scrollbar",
+    draggable: true,
+  },
+});
+}
+
+
+
+
+
+
+
+
+
 function particleFloatingAnimation(){
   
 const section = document.querySelector("#section-5");
@@ -547,22 +548,7 @@ gsap.to(".particle",{
 /* SECTION 6 — GSAP REVEALS */
 /* ========================= */
 
-function section6Animation() {
-  gsap.utils.toArray("#section-6 .reveal").forEach((el, i) => {
-    gsap.from(el, {
-      y: 60,
-      opacity: 0,
-      duration: 1.1,
-      ease: "power3.out",
-      delay: i * 0.08,
-      scrollTrigger: {
-        trigger: el,
-        start: "top 85%",
-        scroller: "[data-scroll-container]", // IMPORTANT for Locomotive
-      }
-    });
-  });
-}
+
 
 
 
@@ -670,56 +656,56 @@ function guitarVerticalStrings() {
 }
 
 
+
 function decisionsReveal() {
-
-  // SAFETY: run only if section exists
-  if (!document.querySelector(".decisions-section")) return;
-
-  // Initial states
-  gsap.set(".decision-item", { opacity: 0, y: 40 });
-  gsap.set(".decisions-title span", { opacity: 0, y: 20 });
+  const section = document.querySelector("#section-7");
+  if (!section) return;
   
 
-  // Timeline for manifesto-style reveal
+  const titleSpans = section.querySelectorAll(".decisions-title span");
+  const items = section.querySelectorAll(".decision-item");
+
+  // Initial state
+  gsap.set(titleSpans, { opacity: 0, y: 80 });
+  gsap.set(items, { opacity: 0, y: 60 });
+
   const tl = gsap.timeline({
     scrollTrigger: {
-      trigger: ".decisions-section",
-      scroller: "[data-scroll-container]", // 🔥 THIS WAS MISSING
-      start: "top 70%",
+      trigger: section,
+      scroller: "[data-scroll-container]",
+      start: "top 60%",
+      end: "top 0%",        // 🔥 scroll distance
+      scrub: 1.2,            // 🔥 THIS IS THE FEEL
+      markers: true
     }
   });
 
-  tl.to(".decisions-title span", {
+  // PHASE 1 — HEADING
+  tl.to(titleSpans, {
     opacity: 1,
     y: 0,
-    duration: 0.9,
+    duration:0.12,
     ease: "power3.out",
-  })
+    duration: 1
+  });
 
-  .to(".decision-item", {
+  // PHASE 2 — ITEMS (AFTER HEADING)
+  tl.to(items, {
     opacity: 1,
     y: 0,
-    duration: 0.9,
-    ease: "power3.out",
     stagger: 0.15,
-  }, "-=0.3")
+    ease: "power3.out",
+    duration: 0.9
+  }, "+=0.3"); // gap after heading
+  console.log(section);
+  
 }
-function decisionsDividerReveal() {
 
-  if (!document.querySelector(".decisions-divider")) return;
 
-  gsap.from(".decisions-divider path", {
-    strokeDasharray: 1000,
-    strokeDashoffset: 1000,
-    duration: 1.5,
-    ease: "power2.out",
-    scrollTrigger: {
-      trigger: ".decisions-divider",
-      scroller: "[data-scroll-container]", // 🔥 REQUIRED
-      start: "top 85%",
-    }
-  });
-}
+
+
+
+
 function marqueeAnimation() {
   let currentTween;
 
@@ -759,4 +745,20 @@ function marqueeAnimation() {
 
 
 
+function section6Animation() {
+  gsap.utils.toArray("#section-6 .reveal").forEach((el, i) => {
+    gsap.from(el, {
+      y: 60,
+      opacity: 0,
+      duration: 1.1,
+      ease: "power3.out",
+      delay: i * 0.08,
+      scrollTrigger: {
+        trigger: el,
+        start: "top 85%",
+        scroller: "[data-scroll-container]", // IMPORTANT for Locomotive
+      }
+    });
+  });
+}
 
