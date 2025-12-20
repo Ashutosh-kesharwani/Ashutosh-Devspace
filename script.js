@@ -1,12 +1,11 @@
 
 revealToSpan();
 valueSetters();
-loadingAnimation();
+// loadingAnimation();
 
 locomotiveSmoothScroll();
 navScrollAnimation();
 cardShow();
-particleAnimation();
 countNumberPoints();
 swiperAnimationOnCards();
 section6Animation();
@@ -16,7 +15,7 @@ decisionsReveal();
 decisionsDividerReveal();
 marqueeAnimation();
 
-
+gsap.registerPlugin(ScrollTrigger);
 
 
 // window.addEventListener("load", () => {
@@ -305,7 +304,7 @@ function wordTypingEffect() {
       if (letterIndex >= word.length) {
         para.innerHTML += " ";
         wordIndex++;
-        setTimeout(typeWord, 120);
+        setTimeout(typeWord, 10);
         return;
       }
 
@@ -331,11 +330,6 @@ function wordTypingEffect() {
 
   
 }
-
-
-
-
-
 
 
 function cardShow() {
@@ -414,11 +408,11 @@ function cardShow() {
 
 
 
-function particlesAnimation(){
-  gsap.registerPlugin(ScrollTrigger);
 
 
+particlesGlobeAnimation();
 
+function particlesGlobeAnimation(){
 gsap.to(".cdss-globe", {
   rotate: 360,
   ease:"power1.out" ,
@@ -482,17 +476,15 @@ function countNumberPoints(){
 
 
 
-
+particleFloatingAnimation();
 // Floating particles
-function particleAnimation(){
+function particleFloatingAnimation(){
   
-gsap.registerPlugin(ScrollTrigger);
-
 const section = document.querySelector("#section-5");
 const container = section.querySelector(".particles-container");
 
 const bounds = section.getBoundingClientRect();
-const particleCount = 500;
+const particleCount = 400;
 
 for(let i = 0; i < particleCount; i++){
   const p = document.createElement("div");

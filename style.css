@@ -21,7 +21,7 @@ main {
   z-index: 999;
   position: fixed;
   /* Changed */
-  /* display: none; */
+  display: none;
 }
 
 #loader-first {
@@ -227,7 +227,7 @@ nav h4:hover a {
 #section-1 {
   height: 120vh;
   padding-top: 20vh;
-  /* display: none; */
+  display: none;
 }
 
 /* ================= ROW LAYOUT ================= */
@@ -430,7 +430,7 @@ align-content: flex-end;
 #section-2 {
   background-color: #f5f5f5;
   height: 220vh;
-  /* display: none; */
+  display: none;
   
 }
 #section-2-part-1 {
@@ -746,7 +746,7 @@ align-content: flex-end;
   background-color: #e8e8e8;
   position: relative;
   transition: background-color cubic-bezier(0.19, 1, 0.22, 1) 2s;
-  /* display: none; */
+  display: none;
   
 }
 
@@ -1184,44 +1184,34 @@ align-content: flex-end;
 /* SECTION 5: CASE STUDY */
 
 #section-5 {
-  height: 170vh;
+  height: 180vh;
   width: 100%;
   background-color: #0b0b0e;
   color: #f5f5f5;
   position: relative;
   overflow: hidden;
 
-  /* display: none; */
-
 }
 .hero-section {
   position: relative;
-  /* background: #0b0b0e; */
-}
-.hero-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  /* background-color: red; */
-  padding-top: 2vw;
 }
 
 
-.page-subtitle {
-  font-size: 1.5vw;
-  text-align: center;
+#section-5 .header{
+ padding-top: 3vw;
+}
+#section-5 .header p{
   color: #a1a1aa;
   margin-bottom: 3vw;
-  font-family: "Playfair Display", serif;
+  font-family: 'Nothing You Could', cursive;
 }
+
 
 .particles-container {
   position: absolute;
   inset: 0;
   overflow: hidden;
   pointer-events: none;
-  z-index: 999;
 }
 
 /* Single particle */
@@ -1272,16 +1262,13 @@ align-content: flex-end;
   gap: 5vw;
   position: relative;
   overflow: hidden;
-  /* background-color: red; */
   padding-left: 3vw;
 }
 
 .case-left {
-  /* flex:0 0 70%; */
   display: flex;
   justify-content: center;
   width: 40%;
-  /* background-color: rgb(114, 114, 1); */
   text-align: center;
 }
 
@@ -1322,13 +1309,11 @@ align-content: flex-end;
   align-items: center;
   gap: 2.3vw;
   margin-top: 3vw;
-  /* background-color: red; */
+ 
 }
 .ml-stats .stat h4 {
   font-size: 2.2vw;
   color: #14cf93;
-  /* font-family: 'Kaushan Script', cursive; */
-  /* font-family: 'Gilroy', sans-serif; */
   font-family: "Nothing You Could", cursive;
 }
 
