@@ -4,34 +4,40 @@
 
 revealToSpan();
 valueSetters();
-// loadingAnimation();
+loadingAnimation();
 locomotiveSmoothScroll();
 navScrollAnimation();
 cardShow();
 countNumberPoints();
-
-
-decisionsReveal();
+section7Animation();
 marqueeAnimation();
+particleFloatingAnimation();
+particlesGlobeAnimation();
+section6Animation();
+guitarHorizontalStrings()
+guitarVerticalStrings();
+swiperAnimationOnCards();
+initFooterAnimation();
 
-gsap.registerPlugin(ScrollTrigger);
+
+
 
 genericRevealWordAnimation();
 
 
 function locomotiveSmoothScroll() {
-  gsap.registerPlugin(ScrollTrigger);
-  const locoScroll = new LocomotiveScroll({
+  // gsap.registerPlugin(ScrollTrigger);
+  window.loco = new LocomotiveScroll({
     el: document.querySelector("[data-scroll-container]"),
     smooth: true,
     multiplier: 0.5,
   });
-  locoScroll.on("scroll", ScrollTrigger.update);
+  loco.on("scroll", ScrollTrigger.update);
   ScrollTrigger.scrollerProxy("[data-scroll-container]", {
     scrollTop(value) {
       return arguments.length
-        ? locoScroll.scrollTo(value, 0, 0)
-        : locoScroll.scroll.instance.scroll.y;
+        ? loco.scrollTo(value, 0, 0)
+        : loco.scroll.instance.scroll.y;
     },
     getBoundingClientRect() {
       return {
@@ -45,7 +51,7 @@ function locomotiveSmoothScroll() {
       ? "transform"
       : "fixed",
   });
-  ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
+  ScrollTrigger.addEventListener("refresh", () => loco.update());
   ScrollTrigger.refresh();
 }
 
@@ -227,7 +233,7 @@ function navScrollAnimation(){
   ease: "power3.out",
   scrollTrigger: {
     trigger: "body",
-    scroller: "main",
+    scroller: "[data-scroll-container]",
     start: "top top",
     end: "top+=120",
     scrub: 0.6,
@@ -405,7 +411,7 @@ function cardShow() {
 
 
 
-particleFloatingAnimation();
+
 
 function countNumberPoints(){
   const counts = document.querySelectorAll(".count");
@@ -432,7 +438,7 @@ function countNumberPoints(){
 }
 
 
-particlesGlobeAnimation();
+
 
 function particlesGlobeAnimation(){
 gsap.to(".cdss-globe", {
@@ -450,26 +456,19 @@ gsap.to(".cdss-globe", {
 
 
 
-section6Animation();
-guitarHorizontalStrings()
-guitarVerticalStrings();
-swiperAnimationOnCards();
 
-function swiperAnimationOnCards(){
+function swiperAnimationOnCards() {
   const caseSwiper = new Swiper(".caseSwiper", {
-  slidesPerView: "auto",
-  spaceBetween: 40,
-  freeMode: true,
-  grabCursor: true,
-  mousewheel: {
-    forceToAxis: true,
-  },
-  scrollbar: {
-    el: ".swiper-scrollbar",
-    draggable: true,
-  },
-});
+    slidesPerView: "auto",
+    spaceBetween: 40,
+    freeMode: true,
+    grabCursor: true,
+    mousewheel: {
+      forceToAxis: true,
+    }
+  });
 }
+
 
 
 
@@ -544,9 +543,6 @@ gsap.to(".particle",{
 
 
 
-/* ========================= */
-/* SECTION 6 — GSAP REVEALS */
-/* ========================= */
 
 
 
@@ -657,7 +653,7 @@ function guitarVerticalStrings() {
 
 
 
-function decisionsReveal() {
+function section7Animation() {
   const section = document.querySelector("#section-7");
   if (!section) return;
   
@@ -673,10 +669,10 @@ function decisionsReveal() {
     scrollTrigger: {
       trigger: section,
       scroller: "[data-scroll-container]",
-      start: "top 60%",
+      start: "top 70%",
       end: "top 0%",        // 🔥 scroll distance
       scrub: 1.2,            // 🔥 THIS IS THE FEEL
-      markers: true
+      // markers: true
     }
   });
 
@@ -697,7 +693,7 @@ function decisionsReveal() {
     ease: "power3.out",
     duration: 0.9
   }, "+=0.3"); // gap after heading
-  console.log(section);
+  // console.log(section);
   
 }
 
@@ -761,4 +757,98 @@ function section6Animation() {
     });
   });
 }
+
+
+function initFooterAnimation() {
+  const footer = document.querySelector("#final-footer");
+  const footerBg = document.querySelector(".footer-bg");
+  console.log(footer);
+  console.log(footerBg);
+  
+
+  if (!footer || !footerBg) return;
+
+  // GSAP reveal
+  const footerTL = gsap.timeline({
+  scrollTrigger: {
+  trigger: "#final-footer",
+  scroller: "[data-scroll-container]",
+  start: "top 30%",
+  // markers: true,
+  once: true
+}
+
+});
+
+footerTL
+  .from("#final-footer .parent .child", {
+    y: 100,
+    opacity: 0,
+    stagger: 0.12,
+    duration: 1.2,
+    ease: "power3.out"
+  })
+  .to(".intent-line", {
+    width: "48%",
+    duration: 0.9,
+    ease: "power2.out"
+  }, "-=0.6")
+  .from(".footer-identity", {
+    y: 40,
+    opacity: 0,
+    duration: 0.8
+  }, "-=0.4")
+  .from(".footer-actions-list li", {
+    y: 30,
+    opacity: 0,
+    stagger: 0.12,
+    duration: 0.6
+  }, "-=0.3")
+  .from(".footer-closure-text", {
+    y: 20,
+    opacity: 0,
+    duration: 0.5
+  }, "-=0.2");
+
+
+  // Background interaction
+  let gx = 50, gy = 50;
+  let tgx = 50, tgy = 50;
+  let glow = 0.9, targetGlow = 0.9;
+  let lastScrollY = 0;
+
+  footer.addEventListener("mousemove", e=>{
+    const r = footer.getBoundingClientRect();
+    tgx = 50 + ((e.clientX - r.left) / r.width - .5) * 10;
+    tgy = 50 + ((e.clientY - r.top) / r.height - .5) * 10;
+  });
+
+  footer.addEventListener("mouseleave", ()=>{
+    tgx = 50; tgy = 50;
+  });
+
+  if (window.loco) {
+    loco.on("scroll", args=>{
+      const v = Math.abs(args.scroll.y - lastScrollY);
+      targetGlow = Math.min(1.05, 0.9 + v * 0.0008);
+      lastScrollY = args.scroll.y;
+    });
+  }
+
+  function animateFooterGlow(){
+    gx += (tgx - gx) * 0.04;
+    gy += (tgy - gy) * 0.04;
+    glow += (targetGlow - glow) * 0.04;
+
+    footerBg.style.setProperty("--gx", `${gx}%`);
+    footerBg.style.setProperty("--gy", `${gy}%`);
+    footerBg.style.setProperty("--glow", glow.toFixed(2));
+
+    requestAnimationFrame(animateFooterGlow);
+  }
+
+  animateFooterGlow();
+}
+
+
 
