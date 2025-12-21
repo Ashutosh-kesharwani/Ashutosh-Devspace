@@ -1,3 +1,187 @@
+/*  PALETTE B — Charcoal × Warm Sand (Human + Premium) */
+ /* :root {
+  --bg-main: #121212;
+  --bg-secondary: #1A1A1A;
+  --bg-card: #222222;
+  --bg-soft: #2A2A2A;
+
+  --nav-bg-scrolled: rgba(18, 18, 18, 0.7);
+  --nav-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+
+  --text-primary: #FAF7F2;
+  --text-secondary: #E7E5E4;
+  --text-muted: #A8A29E;
+
+  --accent: #E6B566;
+  --accent-soft: #F2D28B;
+  --accent-dim: rgba(230, 181, 102, 0.35);
+
+  --border-soft: rgba(231, 229, 228, 0.18);
+  --border-accent: rgba(230, 181, 102, 0.45);
+
+  --glow-soft: rgba(230, 181, 102, 0.25);
+  --glow-strong: rgba(230, 181, 102, 0.45);
+
+  --loader-bg: #101010;
+  --loader-accent: #E6B566;
+  --loader-overlay: #1C1C1C;
+
+  --hover-bg: #E6B566;
+  --hover-text-dark: #0B0B0B;
+
+  --project-hover-1: rgba(230, 181, 102, 0.45);
+  --project-hover-2: rgba(251, 191, 36, 0.45);
+  --project-hover-3: rgba(245, 158, 11, 0.45);
+  --project-hover-4: rgba(234, 179, 8, 0.45);
+  --project-hover-5: rgba(202, 138, 4, 0.45);
+
+  --globe-accent-start: #E6B566;
+  --globe-accent-end: #F2D28B;
+}  */
+
+/* Arctic Slate × Soft Terracotta */
+/* :root {
+  --bg-main: #0E1318;
+  --bg-secondary: #141A21;
+  --bg-card: #1B222B;
+  --bg-soft: #232C36;
+
+  --text-primary: #F3F4F6;
+  --text-secondary: #D1D5DB;
+  --text-muted: #9CA3AF;
+
+  --accent: #C26A4A;              
+  --accent-soft: #E0A18A;
+  --accent-dim: rgba(194,106,74,0.35);
+
+  --border-soft: rgba(209,213,219,0.18);
+  --border-accent: rgba(194,106,74,0.45);
+
+  --glow-soft: rgba(194,106,74,0.25);
+  --glow-strong: rgba(194,106,74,0.45);
+
+  --hover-bg: #C26A4A;
+  --hover-text-dark: #0A0C0F;
+} */
+
+
+/* Ash Black × Cool Mint */
+/* :root {
+  --bg-main: #0E1010;
+  --bg-secondary: #141717;
+  --bg-card: #1B1F1F;
+  --bg-soft: #232828;
+
+  --text-primary: #F6F7F7;
+  --text-secondary: #DADDDD;
+  --text-muted: #9FA5A5;
+
+  --accent: #6FD6C2;              
+  --accent-soft: #AEEADF;
+  --accent-dim: rgba(111,214,194,0.35);
+
+  --border-soft: rgba(218,221,221,0.18);
+  --border-accent: rgba(111,214,194,0.45);
+
+  --glow-soft: rgba(111,214,194,0.25);
+  --glow-strong: rgba(111,214,194,0.45);
+
+  --hover-bg: #6FD6C2;
+  --hover-text-dark: #070909;
+} */
+
+:root {
+  /* =========================
+     BACKGROUNDS
+  ========================= */
+  --bg-main: #0D1217;
+  --bg-secondary: #141B23;
+  --bg-card: #1C2430;
+  --bg-soft: #253040;
+
+  --nav-bg-scrolled: rgba(13, 18, 23, 0.65);
+  --nav-shadow: 0 8px 30px rgba(0, 0, 0, 0.45);
+
+  /* =========================
+     TEXT
+  ========================= */
+  --text-primary: #F4F5F7;
+  --text-secondary: #C9D0DA;
+  --text-muted: #8E97A3;
+
+  /* =========================
+     ACCENT — TERRACOTTA
+  ========================= */
+  --accent: #C87452;
+  --accent-soft: #E3A58E;
+  --accent-dim: rgba(200, 116, 82, 0.32);
+
+  /* =========================
+     BORDERS
+  ========================= */
+  --border-soft: rgba(201, 208, 218, 0.14);
+  --border-accent: rgba(200, 116, 82, 0.42);
+
+  /* =========================
+     GLOWS
+  ========================= */
+  --glow-soft: rgba(200, 116, 82, 0.18);
+  --glow-strong: rgba(200, 116, 82, 0.35);
+
+  /* =========================
+     LOADER
+  ========================= */
+  --loader-bg: #0B1015;
+  --loader-accent: #C87452;
+  --loader-overlay: #141B23;
+
+  /* =========================
+     HOVER
+  ========================= */
+  --hover-bg: #C87452;
+  --hover-text-dark: #090C10;
+
+  /* =========================
+     PROJECT HOVERS
+  ========================= */
+  --project-hover-1: rgba(200, 116, 82, 0.45);
+  --project-hover-2: rgba(226, 142, 94, 0.45);
+  --project-hover-3: rgba(206, 98, 92, 0.45);
+  --project-hover-4: rgba(171, 104, 78, 0.45);
+  --project-hover-5: rgba(214, 162, 124, 0.45);
+
+  /* =========================
+     IMAGE CARD / EDITORIAL UI
+  ========================= */
+  --pill-bg: rgba(255, 255, 255, 0.92);
+  --pill-text: #1A1F24;
+  --pill-border: rgba(0, 0, 0, 0.08);
+  --pill-accent-text: var(--accent);
+
+  --img-btn-bg: rgba(255, 255, 255, 0.95);
+  --img-btn-text: var(--accent);
+  --img-btn-border: rgba(200, 116, 82, 0.45);
+  --img-btn-bg-hover: var(--accent);
+  --img-btn-text-hover: var(--hover-text-dark);
+
+  --img-icon-border: var(--accent);
+  --img-icon-text: var(--accent);
+  --img-icon-bg-hover: var(--accent);
+  --img-icon-text-hover: var(--hover-text-dark);
+
+  --img-text-primary: #111418;
+  --img-text-secondary: #3A3F45;
+
+  /* =========================
+     GLOBE / SVG
+  ========================= */
+  --globe-accent-start: #C87452;
+  --globe-accent-end: #E3A58E;
+}
+
+
+
+
 * {
   margin: 0;
   padding: 0;
@@ -9,6 +193,8 @@ body {
   height: 100%;
   width: 100%;
   overflow: hidden;
+  background: var(--bg-main);
+  color: var(--text-primary);
 }
 main {
   position: relative;
@@ -19,33 +205,29 @@ main {
   width: 100%;
   z-index: 999;
   position: fixed;
-  /* Changed */
-  /* display: none; */
 }
 
 #loader-first {
   height: 100vh;
   width: 100%;
-  background-color: #343434;
   position: absolute;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  color: white;
   padding: 2vh;
+  background-color: var(--loader-bg);
+  color: var(--text-primary);
 }
 .reveal {
   margin-bottom: 1vh;
   display: inline-block;
-  /* background-color:yellow; */
 }
 .parent {
   display: inline-block;
   overflow: hidden;
 }
 .child {
-  /* background-color: rgb(0, 83, 36); */
   display: inline-block;
   transform: translate(0, 0);
 }
@@ -68,13 +250,20 @@ main {
   text-align: center;
   letter-spacing: 0.1vw;
 }
+
+#top-heading h3 .cross,
+#top-heading #copyright,
+.hero-title .lname,
+#loader-first h2 i {
+  color: var(--accent);
+}
+
+
 #top-heading h3 .cross {
-  color: #14cf93;
   font-weight: 900;
 }
 
 #top-heading #copyright {
-  color: #14cf93;
   font-weight: 900;
   font-size: 1.2vw;
 }
@@ -85,7 +274,6 @@ main {
   font-family: "Gilroy", sans-serif;
 }
 
-/* FIRST NAME – POWER */
 .hero-title .fname {
   display: block;
   font-size: clamp(3.8rem, 8vw, 6.5rem);
@@ -93,18 +281,29 @@ main {
   letter-spacing: 0.08em;
   text-transform: uppercase;
 }
+.fname
+{
+  background: linear-gradient(
+    90deg,
+    #F4F5F7 0%,                 /* clean authority */
+    #F1EAE6 45%,                /* warm stone */
+    rgba(200,116,82,0.85) 120%  /* terracotta whisper */
+  );
 
-/* LAST NAME – PERSONALITY */
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+
+  /* VERY important for professional feel */
+  text-shadow: 0 1px 0 rgba(255,255,255,0.04);
+}
 .hero-title .lname {
   display: block;
   margin-top: -0.6vw;
   font-size: clamp(3rem, 6vw, 5rem);
   font-weight: 700;
-  color: #14cf93;
-  font-family: "Kaushan Script", cursive;
+  
 }
-
-/* IS A – SUBTLE & PREMIUM */
 .hero-title .descriptor {
   display: flex;
   justify-content: center;
@@ -118,7 +317,6 @@ main {
 
 #loader-first h2 i {
   display: inline-block;
-  color: #14cf93;
   font-size: 3vw;
   font-weight: 100;
   animation: rotate 1s linear infinite;
@@ -134,7 +332,7 @@ main {
 #green {
   height: 0;
   width: 100%;
-  background-color: #14cf93;
+  background-color: var(--accent);
   position: absolute;
   bottom: 0;
   z-index: 99;
@@ -142,7 +340,7 @@ main {
 #gray {
   height: 0;
   width: 100%;
-  background-color: #343434;
+  background-color: var(--loader-overlay);
   position: absolute;
   bottom: 0;
   z-index: 99;
@@ -157,28 +355,27 @@ nav {
   position: fixed;
   z-index: 99;
   width: 100%;
-  /* background-color: red; */
 }
 nav h4 {
   font-weight: 700;
   font-size: 1.2vw;
   padding: 10px 20px;
   border-radius: 25px;
-  border: 0.5px solid rgb(149, 146, 146);
+  border: 1px solid var(--border-soft);
   position: relative;
   overflow: hidden;
   z-index: 9;
   transition: all ease 0.4s;
 }
 nav h4 a {
-  color: #14cf93;
+  color: var(--accent);
   text-decoration: none;
   position: relative;
   z-index: 9;
 }
 nav h4::after {
   content: "";
-  background-color: #14cf93;
+  background-color: var(--hover-bg);
   height: 100%;
   width: 100%;
   position: absolute;
@@ -187,13 +384,13 @@ nav h4::after {
   border-radius: 50%;
   transition: all ease 0.3s;
 }
-/*Here dont add any space as tbhi usko pta chalega ki jispe hover ho rha hai <a> me uska hi after ki baat horhi hai*/
+
 nav h4:hover::after {
   bottom: 0%;
-  border-radius: 0; /*Isse vo hover hone pe upar aate hue dhikhenge */
+  border-radius: 0; 
 }
 nav h4:hover a {
-  color: rgb(0, 0, 0);
+  color: var(--hover-text-dark);
 }
 
 .section {
@@ -216,7 +413,6 @@ nav h4:hover a {
 #section-1 {
   height: 120vh;
   padding-top: 20vh;
-  /* display: none; */
 }
 
 /* ================= ROW LAYOUT ================= */
@@ -225,7 +421,6 @@ nav h4:hover a {
   width: 100%;
   display: flex;
   flex-direction: column;
-  /* background-color: yellow; */
 }
 
 /* ================= TEXT ROWS ================= */
@@ -234,22 +429,44 @@ nav h4:hover a {
   font-family: "Gilroy", sans-serif;
   font-weight: 900;
   text-transform: uppercase;
-  color: #111;
+  color: var(--text-primary);
   line-height: 1;
-  letter-spacing: 0.12em;
+   letter-spacing: 0.08em;
   text-align: center;
 }
 
-/* FULL STACK */
-#full-stack {
+
+
+/* ONLY for FULL STACK text */
+/* Gradient ONLY for FULL STACK text (GSAP-safe) */
+.full-stack-title,
+.full-stack-title .child {
+  display: inline-block;
+
+  background: linear-gradient(
+    90deg,
+    rgba(200,116,82,0.75) 0%,
+    #F4F5F7 38%,
+    #F4F5F7 62%,
+    rgba(200,116,82,0.9) 100%
+  );
+
+  -webkit-background-clip: text;
+  background-clip: text;
+
+  -webkit-text-fill-color: transparent; /* CRITICAL */
+  color: transparent;                  /* CRITICAL */
+
+  text-shadow: 0 1px 0 rgba(255,255,255,0.06);
   font-size: 11vw;
-  /* background-color: red; */
+ 
+
 }
 
-/* DEVELOPER */
+
+
 #developer {
   font-size: 9.5vw;
-  /* background-color: #14CF93; */
 }
 
 /* ================= SVG ROW ================= */
@@ -260,10 +477,8 @@ nav h4:hover a {
   align-items: center;
   flex-direction: row;
   align-content: flex-end;
-  /* background-color: #333; */
 }
 
-/* SVG HOLDER */
 .stack-heading.uiux {
   height: 16vw;
   display: flex;
@@ -279,14 +494,11 @@ nav h4:hover a {
 
 /* SVG TEXT */
 .stack-heading.uiux text {
-  /* font-family: "Kaushan Script", cursive; */
   font-family: "Nothing You Could", cursive;
   font-size: 10vw;
   font-weight: 900;
-  /* font-style: italic; */
-
   fill: transparent;
-  stroke: #14cf93;
+  stroke: var(--accent);
   stroke-width: 3;
   stroke-linecap: round;
   stroke-linejoin: round;
@@ -299,7 +511,7 @@ nav h4:hover a {
   animation-play-state: paused;
 }
 
-/* ================= UNDERLINE ================= */
+
 
 /* ================= ANIMATIONS ================= */
 
@@ -321,7 +533,7 @@ nav h4:hover a {
     fill: transparent;
   }
   to {
-    fill: #14cf93;
+   fill: var(--accent);
   }
 }
 
@@ -341,13 +553,21 @@ nav h4:hover a {
   justify-content: center;
 }
 
-.down-arrow {
-  width: 44px;
-  height: 44px;
-  object-fit: contain;
+#down-arrow-container a>i {
+  display: inline-block;
+  text-decoration:  none;
+  color: var(--accent);
+  font-size: 3vw;
+  font-weight: 700;
 }
 
-/* ================= DOWN ARROW ================= */
+
+
+/* STRINGS */
+.interactive-horizontal-string path,
+.interactive-vertical-string path {
+  stroke: var(--accent);
+}
 
 /* ============================= */
 /* INTERACTIVE HORIZONTAL STRING  */
@@ -355,12 +575,9 @@ nav h4:hover a {
 
 .interactive-horizontal-string {
   width: 100%;
-  /* height: 20vh; */
-  /* margin-top: 1vw; */
   position: relative;
   cursor: grab;
   pointer-events: auto;
-  /* background-color: palegoldenrod; */
 }
 
 .interactive-horizontal-string:active {
@@ -374,9 +591,6 @@ nav h4:hover a {
   display: block;
 }
 
-.interactive-horizontal-string.light path {
-  stroke: #14cf93; /* any color */
-}
 
 /* ============================= */
 /* INTERACTIVE VERTICAL STRING   */
@@ -404,9 +618,8 @@ nav h4:hover a {
 }
 
 #section-2 {
-  background-color: #f5f5f5;
+background-color: var(--bg-secondary);
   height: 220vh;
-  /* display: none; */
 }
 #section-2-part-1 {
   height: 100vh;
@@ -428,33 +641,33 @@ nav h4:hover a {
   font-size: 2vw;
   line-height: 2.9vw;
   font-weight: 500;
-  color: #111;
+   color: var(--text-secondary);
   max-width: 44vw;
 }
-
-/* Primary Accent — Name & Role */
-.about-heading .accent {
-  font-family: "Kaushan Script", cursive;
-  color: #14cf93;
-  font-weight: 600;
-}
-
-/* Soft Accent — concepts */
-.about-heading .soft {
-  color: #333;
-  font-weight: 600;
-}
-
-/* Secondary Accent — platforms */
+.about-heading .accent,
 .about-heading .accent-soft {
-  color: #14cf93;
+  color: var(--accent);
+}
+
+.about-heading .accent {
+ 
+   font-family: 'Nothing You Could', cursive;
+   font-style: italic;
+  font-weight: 600;
+}
+
+.about-heading .soft {
+  font-weight: 600;
+   color: var(--text-muted);
+}
+
+.about-heading .accent-soft {
   font-weight: 500;
 }
 
-/* Final Statement — anchor line */
 #last-span-of-h1 {
   font-weight: 700;
-  color: #000;
+  color: var(--text-primary);
   display: inline-block;
   margin-top: 1vw;
 }
@@ -493,35 +706,27 @@ nav h4:hover a {
   will-change: transform;
 }
 
-/* CARD 1 — BACK */
-
-/* CARD 2 — MIDDLE */
 #section-2 #about-section #about-right .about-right-img-conatiner:nth-child(1) {
-  /* transform: translate3d(-68%, -64%, 0) rotate(-14deg) scale(0.96); */
   transform: translate3d(-73%, -66%, 0) rotate(-18deg) scale(0.95);
 
   z-index: 2;
   background-image: url("assets/images/about-img-2.avif");
 }
 
-/* CARD 3 — FRONT / HERO */
-#section-2 #about-section #about-right .about-right-img-conatiner:nth-child(2) {
-  /* transform: translate3d(-54%, -58%, 0) rotate(-5deg) scale(1); */
-  transform: translate3d(-63%, -60%, 0) rotate(-10deg) scale(0.98);
 
-  /* background-color: red; */
+#section-2 #about-section #about-right .about-right-img-conatiner:nth-child(2) {
+  
+  transform: translate3d(-63%, -60%, 0) rotate(-10deg) scale(0.98);
   z-index: 3;
   background-image: url("assets/images/about-img-3.avif");
 }
 #section-2 #about-section #about-right .about-right-img-conatiner:nth-child(3) {
-  /* transform: translate3d(-50%, -53%, 0) rotate(-5deg) scale(1); */
   transform: translate3d(-51%, -50%, 0) rotate(0deg) scale(1);
 
   z-index: 4;
   background-image: url("assets/images/about-img-1.avif");
 }
 
-/* 🔥 HOVER — NO POSITION CHANGE (NO JITTER) */
 
 #section-2
   #about-section
@@ -549,7 +754,6 @@ nav h4:hover a {
   z-index: 10;
 }
 
-/* OPTIONAL — GROUP SYNC (SUBTLE PUSH BACK) */
 #section-2
   #about-section
   #about-right:hover
@@ -560,8 +764,7 @@ nav h4:hover a {
 #section-2-part-2 {
   height: 140vh;
   width: 100%;
-  /* background-color: #5406c2; */
-  background-color: #0b0b0e;
+  background-color: var(--bg-secondary);
 }
 
 #about-values {
@@ -570,7 +773,6 @@ nav h4:hover a {
 .header {
   position: relative;
   width: 100%;
-  color: white;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -579,7 +781,7 @@ nav h4:hover a {
 }
 
 .header h2 {
-  position: relative; /* 🔥 IMPORTANT */
+  position: relative; 
   font-size: 5vw;
   font-weight: 800;
   line-height: 1.1;
@@ -588,7 +790,7 @@ nav h4:hover a {
   font-family: "Nothing You Could", cursive;
   display: inline-block;
   vertical-align: middle;
-  color: #14cf93;
+  color: var(--accent)
 }
 .header h2 span {
   font-family: "Nothing You Could", cursive;
@@ -602,8 +804,15 @@ nav h4:hover a {
   bottom: -0.6vw;
   width: 70%;
   height: 0.3vw;
-  background: linear-gradient(90deg, #14cf93, transparent);
+
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--accent),
+    transparent
+  );
 }
+
 
 .header p {
   font-size: 1.2vw;
@@ -614,13 +823,7 @@ nav h4:hover a {
   font-weight: 700;
 }
 
-.values-intro {
-  margin-top: 2vw;
-  font-size: 1.1vw;
-  color: #c5c5c5;
-  max-width: 45%;
-  line-height: 1.8vw;
-}
+
 
 .values-list-row {
   display: flex;
@@ -637,23 +840,26 @@ nav h4:hover a {
   border-radius: 2vw;
   position: relative;
   overflow: hidden;
-  background-color: #878787;
   cursor: pointer;
   transition: all ease 0.6s;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-color: var(--bg-card);
+  color: var(--text-primary);
 }
 .value-item-card h1 {
   font-weight: 900;
   font-size: 2.5vw;
   margin-bottom: 0.5vw;
+  color: var(--text-muted);
 }
 .value-item-card h3 {
   font-weight: 900;
   text-transform: uppercase;
   font-size: 2vw;
+  color: var(--text-primary);
 }
 .value-item-card-overlay {
   position: absolute;
@@ -663,9 +869,10 @@ nav h4:hover a {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: #14cf93;
   transition: all ease 0.6s;
   opacity: 0;
+  background-color: var(--accent);
+  color: var(--hover-text-dark);
 }
 
 .value-item-card:hover .value-item-card-overlay {
@@ -675,7 +882,7 @@ nav h4:hover a {
   transform: rotate3d(-1, 1, 0, 15deg);
 }
 
-.value-item-card-overlay span {
+/* .value-item-card-overlay span {
   position: absolute;
   left: 0;
   top: 0;
@@ -683,7 +890,7 @@ nav h4:hover a {
   font-weight: 700;
   color: #14cf93;
   opacity: 0.8;
-}
+} */
 
 .value-item-card-overlay h3 {
   font-size: 1.4vw;
@@ -694,23 +901,20 @@ nav h4:hover a {
 .value-item-card-overlay p {
   font-size: 1vw;
   line-height: 1.7vw;
-  /* color: #555; */
   text-align: center;
 }
 
 #section2-line {
   padding: 0vw 6vw;
-  /* background-color: goldenrod; */
   height: 20vh;
 }
 
-/* Work Section */
+
 #section-3 {
   height: 400vh;
-  background-color: #e8e8e8;
+  background-color: var(--bg-secondary);
   position: relative;
   transition: background-color cubic-bezier(0.19, 1, 0.22, 1) 2s;
-  /* display: none; */
 }
 
 .header {
@@ -723,6 +927,10 @@ nav h4:hover a {
   gap: 3vw;
   position: relative;
 }
+.scroll-whisper,
+#typing-para {
+  color: var(--text-muted);
+}
 .scroll-whisper {
   position: absolute;
   right: 3vw;
@@ -732,18 +940,15 @@ nav h4:hover a {
   letter-spacing: 0.4em;
   opacity: 0.9;
   text-transform: uppercase;
-  color: #111;
 }
 .scroll-whisper i {
   font-size: 1.5vw;
-  color: #111;
 }
 
 #typing-para {
   font-size: 1.3vw;
   opacity: 0.85;
   white-space: nowrap;
-  color: #111;
   font-weight: 900;
 }
 
@@ -756,8 +961,9 @@ nav h4:hover a {
   width: 100%;
   height: 330vh;
   position: relative;
-  position: relative;
 }
+
+
 #work-section-projects .project-rows {
   width: 100%;
   height: 110vh;
@@ -775,10 +981,35 @@ nav h4:hover a {
 #work-section-projects .projects {
   position: relative;
   overflow: hidden;
-  cursor: pointer;
+  
 }
 
-/* overlay container */
+/* Disable selection on Project Card and Child elem */
+#work-section-projects .projects * {
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+.project-card-1 { --project-hover-color: var(--project-hover-1); }
+.project-card-2 { --project-hover-color: var(--project-hover-2); }
+[data-index="2"] { --project-hover-color: var(--project-hover-3); }
+[data-index="3"] { --project-hover-color: var(--project-hover-4); }
+[data-index="4"] { --project-hover-color: var(--project-hover-5); }
+
+.projects:hover::before {
+  background: radial-gradient(
+    circle at center,
+    var(--project-hover-color),
+    rgba(11, 16, 32, 0.9) 70%
+  );
+}
+
+/* =========================
+   PROJECT DETAILS WRAPPER
+========================= */
+
 .project-details {
   position: absolute;
   bottom: 2vw;
@@ -788,34 +1019,42 @@ nav h4:hover a {
   display: flex;
   flex-direction: column;
   gap: 1.2vw;
-  /* background-color: red; */
 }
 
-/* top pills */
 .project-about {
   width: 100%;
   display: flex;
   flex-direction: column;
   gap: 1vw;
-  /* background-color: yellow; */
 }
 
+/* =========================
+   PILLS
+========================= */
+
 .project-about .pill {
+  display: inline-block;
   width: 30%;
-  background: #fff;
   padding: 0.6vw 1.4vw;
   border-radius: 100px;
   font-size: 0.9vw;
   font-weight: 600;
   white-space: nowrap;
+
+  background: var(--pill-bg);
+  color: var(--pill-text);
+  border: 1px solid var(--pill-border);
 }
+
 .project-about .pill.desc {
   width: 18vw;
 }
 
-/* bottom button */
+/* =========================
+   PROJECT BUTTON
+========================= */
+
 .project-button {
-  background: #fff;
   border-radius: 100px;
   padding: 1vw 1.5vw;
   display: flex;
@@ -823,15 +1062,24 @@ nav h4:hover a {
   justify-content: space-between;
   width: fit-content;
   gap: 2vw;
+
+  background: var(--img-btn-bg);
+  color: var(--img-btn-text);
+  border: 1.5px solid var(--img-btn-border);
+
+  transition: background 0.5s ease, color 0.3s ease;
+  cursor: pointer;
 }
 
-/* title */
+
+/* =========================
+   BUTTON TEXT
+========================= */
+
 .project-button h2 {
   font-size: 1.7vw;
   font-weight: 700;
   font-family: "Nothing You Could", cursive;
-}
-.project-button h2 {
   transition: letter-spacing 0.5s ease, transform 0.5s ease;
 }
 
@@ -839,24 +1087,36 @@ nav h4:hover a {
   letter-spacing: 0.17em;
   transform: translateX(10px);
 }
-/* arrow circle */
+.projects:hover .project-button{
+  background: var(--img-btn-bg-hover);
+  color: var(--img-btn-text-hover);
+}
+.projects:hover .project-button  .arrow {
+  border-color: var(--bg-main);
+}
+
+
+/* =========================
+   ARROW ICON
+========================= */
+
 .project-button .arrow {
   width: 3vw;
   height: 3vw;
   border-radius: 50%;
-  border: 2px solid #000;
+  border: 2px solid var(--img-icon-border);
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: all 0.5s ease;
+  transition: background 0.4s ease, border 0.4s ease, color 0.4s ease;
 }
-.project-button .arrow:hover {
-  background-color: #14cf93;
-  border: none;
-}
+
+
+
 .project-button i {
   font-size: 1.4vw;
 }
+
 
 #work-section-projects .project-card-1 {
   width: 55%;
@@ -874,7 +1134,10 @@ nav h4:hover a {
   object-fit: cover;
   object-position: center;
   transition: filter cubic-bezier(0.19, 1, 0.22, 1) 2s;
+  pointer-events: none;
 }
+
+
 
 #cursor {
   position: fixed;
@@ -884,7 +1147,7 @@ nav h4:hover a {
   pointer-events: none;
   z-index: 999999;
   opacity: 0;
-  transform: translate(-50%, -50%);
+  /* transform: translate(-50%, -50%); */
   will-change: transform;
   transition: all linear 0.3s;
 }
@@ -896,14 +1159,9 @@ nav h4:hover a {
   justify-content: center;
   flex-direction: column;
   opacity: 0;
-  transition: all cubic-bezier(0.19, 1, 0.22, 1) 1s;
+  transition: opacity 0.25s ease;
 }
-.projects-cursor {
-  position: absolute;
-  transform: translate(-50%, -50%);
-  opacity: 0;
-  transition: opacity 0.2s ease;
-}
+
 
 .elem {
   width: 100%;
@@ -919,13 +1177,15 @@ nav h4:hover a {
 .crow .ccircle {
   width: 2vw;
   height: 2vw;
-  border: 2px solid #fff;
+ border: 2px solid var(--text-primary);
   border-radius: 50%;
 }
 .crow .ccapsule {
   padding: 0.7vw 3vw;
   border-radius: 100px;
-  background-color: #fff;
+  background-color: var(--text-primary);
+  color: var(--hover-text-dark);
+  opacity: 0.8;
 }
 
 .elem img {
@@ -934,7 +1194,7 @@ nav h4:hover a {
   height: 20vh;
   object-fit: cover;
   object-position: center;
-  animation: anim 4s linear infinite;
+  animation: anim 6s linear infinite;
   position: absolute;
   border-radius: 20px;
 }
@@ -994,7 +1254,6 @@ nav h4:hover a {
 .caseSwiper .swiper-wrapper {
   display: flex;
   flex-direction: row;
-  /* background-color: rgb(39, 39, 0); */
 }
 
 /* MUST */
@@ -1011,20 +1270,21 @@ nav h4:hover a {
 
 #section-4 {
   padding: 7vw 8vw 0vw 8vw;
-  background-color: #0b0b0e;
-  color: #f5f5f5;
   position: relative;
   overflow: hidden;
   /* display: none; */
+   background-color: var(--bg-secondary);
+  color: var(--text-primary);
 }
 #section-4 .header p {
   font-size: 1.2vw;
   font-weight: 500;
   text-align: center;
+  color: var(--text-secondary);
 }
 #section-4 .header p span {
   font-weight: 700;
-  color: #c2c2c2;
+  color: var(--text-muted);
   margin-top: 1vw;
 }
 
@@ -1037,7 +1297,7 @@ nav h4:hover a {
 }
 
 .card {
-  background-color: #14141a;
+  background-color: var(--bg-card);
   padding: 3vw;
   border-radius: 2vw;
   position: relative;
@@ -1049,14 +1309,13 @@ nav h4:hover a {
   transform: translateY(-14px);
 }
 
-/* glow follow cursor */
 .card::after {
   content: "";
   position: absolute;
   inset: 0;
-  background: radial-gradient(
+   background: radial-gradient(
     circle at var(--x, 50%) var(--y, 50%),
-    rgba(20, 207, 147, 0.35),
+    var(--glow-soft),
     transparent 60%
   );
   opacity: 0;
@@ -1068,7 +1327,7 @@ nav h4:hover a {
 }
 
 .card small {
-  color: #14cf93;
+  color: var(--accent);
   letter-spacing: 0.2em;
   font-size: 0.85vw;
 }
@@ -1080,7 +1339,7 @@ nav h4:hover a {
 
 .card p {
   font-size: 1vw;
-  color: #a1a1aa;
+  color: var(--text-secondary);
   line-height: 1.8;
 }
 
@@ -1097,13 +1356,12 @@ nav h4:hover a {
 
   background: linear-gradient(
     135deg,
-    rgba(5, 212, 147, 0.18),
-    rgba(12, 12, 16, 0.9)
+    var(--accent-dim),
+    var(--bg-main)
   );
 
-  border: 1px solid rgba(20, 207, 147, 0.25);
+  border: 1px solid var(--border-strong);
   backdrop-filter: blur(10px);
-
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1117,11 +1375,12 @@ nav h4:hover a {
   font-size: 1.7vw;
   font-weight: 600;
   text-align: center;
+  color: var(--text-primary);
 }
 
 .swiper-slide .workflow-card i {
   font-size: 2vw;
-  color: #14cf93;
+   color: var(--accent);
   align-self: flex-end;
 }
 
@@ -1129,7 +1388,7 @@ nav h4:hover a {
 .swiper-slide .workflow-card:active {
   opacity: 1;
   transform: scale(1.08);
-  box-shadow: 0 30px 90px rgba(20, 207, 147, 0.4);
+  box-shadow: 0 30px 90px var(--glow-strong);
 }
 
 /* SECTION 5: CASE STUDY */
@@ -1137,12 +1396,12 @@ nav h4:hover a {
 #section-5 {
   height: 180vh;
   width: 100%;
-  background-color: #0b0b0e;
-  color: #f5f5f5;
+  background-color: var(--bg-secondary);
+  color: var(--text-primary);
   position: relative;
   overflow: hidden;
-  /* display: none; */
 }
+
 .hero-section {
   position: relative;
 }
@@ -1151,7 +1410,7 @@ nav h4:hover a {
   padding-top: 3vw;
 }
 #section-5 .header p {
-  color: #a1a1aa;
+  color: var(--text-secondary);
   margin-bottom: 3vw;
   font-family: "Nothing You Could", cursive;
 }
@@ -1163,16 +1422,14 @@ nav h4:hover a {
   pointer-events: none;
 }
 
-/* Single particle */
 .particle {
   position: absolute;
   width: 6px;
   height: 6px;
   border-radius: 50%;
-  background: radial-gradient(
+   background: radial-gradient(
     circle,
-    rgba(20, 207, 147, 0.9),
-    rgba(20, 207, 147, 0.2),
+    var(--glow-strong),
     transparent 70%
   );
   filter: blur(0.5px);
@@ -1180,7 +1437,6 @@ nav h4:hover a {
   will-change: transform;
 }
 
-/* Depth layers */
 .particle.small {
   width: 5px;
   height: 5px;
@@ -1199,8 +1455,6 @@ nav h4:hover a {
   opacity: 0.7;
   filter: blur(1px);
 }
-
-/* Content above particles */
 #section-5 > *:not(.particles-container) {
   position: relative;
   z-index: 2;
@@ -1226,31 +1480,33 @@ nav h4:hover a {
   margin-bottom: 1vw;
   white-space: nowrap;
 }
+.case-left h3.role,
+.case-left strong,
+.ml-stats .stat h4 {
+  color: var(--accent);
+}
 .case-left h3 {
   font-family: "Nothing You Could", cursive;
   font-size: 1vw;
   margin-bottom: 1vw;
-  color: #cecece;
+  color: var(--text-secondary);
 }
 
 .case-left h3.role {
   font-size: 1.6vw;
   margin-bottom: 1vw;
-  color: #14cf93;
 }
 .case-left .timeline {
-  color: #cecece;
+  color: var(--text-muted);
   margin-bottom: 1vw;
 }
 .case-left .description {
-  color: #dddddd;
+  color: var(--text-secondary);
   font-size: 1.1vw;
   line-height: 1.6;
   margin-bottom: 2vw;
 }
-.case-left strong {
-  color: #14cf93;
-}
+
 
 .ml-stats {
   display: flex;
@@ -1261,7 +1517,6 @@ nav h4:hover a {
 }
 .ml-stats .stat h4 {
   font-size: 2.2vw;
-  color: #14cf93;
   font-family: "Nothing You Could", cursive;
 }
 
@@ -1272,42 +1527,54 @@ nav h4:hover a {
   align-items: center;
   justify-content: center;
   position: relative;
-  /* background-color: red; */
 }
 
 .cdss-globe {
   width: 80%;
   max-width: 480px;
   overflow: visible;
-  /* background-color: yellow; */
 }
+
 
 /* Core */
 .core {
   animation: pulse 2.8s ease-in-out infinite;
 }
 
-/* Orbits */
-.orbit {
-  fill: none;
-  stroke: #14cf93;
-  stroke-width: 1;
-  opacity: 0.3;
-}
 
+
+
+.cdss-globe .orbit {
+  fill: none;
+  stroke: var(--globe-accent-start);
+  opacity: 0.35;
+  stroke-width: 1.2;
+}
 .orbit-inner {
   animation: spin 18s linear infinite;
 }
-.orbit-mid {
+
+
+
+.cdss-globe .orbit-mid {
+  opacity: 0.25;
   animation: spinReverse 28s linear infinite;
 }
-.orbit-outer {
-  animation: spin 40s linear infinite;
+
+.cdss-globe .orbit-outer {
+  opacity: 0.15;
+   animation: spin 40s linear infinite;
 }
+
+
+
+
+
+
 
 /* Nodes */
 .node {
-  fill: #14cf93;
+   fill: var(--globe-accent-end);
   filter: url(#softGlow);
   animation: nodePulse 2s ease-in-out infinite alternate;
 }
@@ -1378,10 +1645,9 @@ nav h4:hover a {
 
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
   transition: transform 0.6s ease, box-shadow 0.6s ease;
-  /* background-color: red; */
 }
 
-/* IMAGE LAYER */
+
 .card-image {
   position: absolute;
   inset: 0;
@@ -1401,8 +1667,8 @@ nav h4:hover a {
   inset: 0;
   background: linear-gradient(
     to bottom,
-    rgba(0, 0, 0, 0.2),
-    rgba(0, 0, 0, 0.8)
+    rgba(0, 0, 0, 0.25),
+    rgba(0, 0, 0, 0.85)
   );
 }
 
@@ -1423,13 +1689,13 @@ nav h4:hover a {
 }
 
 .card-content h4 {
-  color: #14cf93;
+  color: var(--accent);
   font-size: 1.1rem;
   margin-bottom: 0.5rem;
 }
 
 .card-content p {
-  color: #ccc;
+  color: var(--text-secondary);
   font-size: 0.9rem;
   line-height: 1.4;
 }
@@ -1437,7 +1703,7 @@ nav h4:hover a {
 /* 🔥 HOVER MAGIC */
 .case-card:hover {
   transform: translateY(-15px) scale(1.05);
-  box-shadow: 0 0px 10px rgba(20, 207, 147, 0.35);
+ box-shadow: 0 0px 14px var(--glow-soft);
 }
 
 /* IMAGE DISAPPEARS COOLLY */
@@ -1459,17 +1725,14 @@ nav h4:hover a {
 
 #section-6 {
   padding: 10vw 8vw 2vw 8vw;
-  background: #0b0b0e;
-  color: #e5e7eb;
+   background: var(--bg-secondary);
   position: relative;
   /* display: none; */
 }
 
 /* ---------- HEADER ---------- */
 .context-header {
-  /* max-width: 800px; */
   margin-bottom: 6vw;
-  /* background-color: red; */
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -1484,19 +1747,22 @@ nav h4:hover a {
   font-weight: 600;
 }
 
+.context-header h2 span,
+.context-column h3 span,
+.context-label {
+  color: var(--accent);
+}
 .context-header h2 span {
-  color: #14cf93;
   font-family: "Nothing You Could", cursive;
 }
 
 .context-header p {
   font-size: 1.1rem;
   line-height: 1.7;
-  color: #a1a1aa;
+  color: var(--text-secondary);
 }
 
 .context-header strong {
-  color: #f5f5f5;
   font-weight: 500;
 }
 
@@ -1516,7 +1782,7 @@ nav h4:hover a {
 .context-label {
   font-size: 0.9rem;
   letter-spacing: 0.18em;
-  color: #14cf93;
+  color: var(--accent);
   display: inline-block;
   margin-bottom: 1.5vw;
 }
@@ -1526,14 +1792,14 @@ nav h4:hover a {
   line-height: 1.3;
   margin-bottom: 2.5vw;
   font-weight: 500;
+  
 }
 .context-column h3 span {
   font-family: "Nothing You Could", cursive;
   font-weight: 700;
-  color: #14cf93;
+  color: var(--accent);;
 }
 
-/* ---------- LIST ---------- */
 .context-list {
   list-style: none;
   display: flex;
@@ -1545,14 +1811,14 @@ nav h4:hover a {
   display: block;
   font-size: 1rem;
   font-weight: 500;
-  color: #f5f5f5;
+   color: var(--text-primary);
   margin-bottom: 0.3vw;
 }
 
 .context-list li em {
   font-style: normal;
   font-size: 0.9rem;
-  color: #9ca3af;
+  color: var(--text-muted);
   line-height: 1.6;
 }
 
@@ -1560,8 +1826,6 @@ nav h4:hover a {
 .context-footer {
   margin-top: 8vw;
   max-width: 700px;
-  /* background-color: rgb(0, 255, 242); */
-  /* margin-bottom: 10vw; */
 }
 
 .context-footer p {
@@ -1571,7 +1835,7 @@ nav h4:hover a {
 }
 
 .context-footer strong {
-  color: #14cf93;
+  color: var(--accent);
   font-weight: 500;
 }
 
@@ -1580,8 +1844,7 @@ nav h4:hover a {
 ================================ */
 #section-7 {
   padding: 5vw 8vw;
-  background-color: #0b0d10;
-  color: #e6e6e6;
+  background-color: var(--bg-main);
   position: relative;
   overflow: hidden;
   height: 180vh;
@@ -1624,12 +1887,17 @@ nav h4:hover a {
   align-items: center;
 }
 
-.decisions-visual video {
-  height: 70%;
-  object-fit: cover;
-  object-position: center;
-  border-radius: 50%;
+.decision-compass .compass-needle {
+  animation: compass-drift 14s ease-in-out infinite;
 }
+
+@keyframes compass-drift {
+  0%   { transform: rotate(-10deg); }
+  50%  { transform: rotate(3deg); }
+  100% { transform: rotate(-10deg); }
+}
+
+
 
 .decisions-title {
   font-size: clamp(3rem, 6vw, 6rem);
@@ -1641,7 +1909,7 @@ nav h4:hover a {
 .decisions-title span {
   font-weight: 300;
   opacity: 0.75;
-  color:#14cf93;
+  color: var(--accent);
    font-family: 'Nothing You Could', cursive;
 }
 
@@ -1650,11 +1918,12 @@ nav h4:hover a {
   max-width: 520px;
   font-size: 1.1rem;
   line-height: 1.6;
-  color: rgba(255, 255, 255, 0.65);
+  color: var(--text-secondary);
 }
 .decisions-subtitle span {
   font-family: 'Nothing You Could', cursive;
   font-size: 1.3vw;
+  color: var(--text-muted);
 }
 
 /* ================================
@@ -1684,7 +1953,7 @@ nav h4:hover a {
   left: 0;
   top: 0.2rem;
   font-size: 1.5rem;
-  color: rgba(255, 255, 255, 0.25);
+   color: var(--text-muted);
 }
 
 .decision-item:hover {
@@ -1709,17 +1978,19 @@ nav h4:hover a {
   bottom: -6px;
   width: 0;
   height: 1px;
-  background: linear-gradient(
+ background: linear-gradient(
     90deg,
-    rgba(255, 255, 255, 0.6),
-    rgba(20, 207, 147, 0.9)
+    rgba(248,250,252,0.6),
+    var(--accent)
   );
   transition: width 0.4s ease;
 }
 
 /* hover effects */
 .decision-item:hover .decision-title {
-  text-shadow: 0 0 12px rgba(20, 207, 147, 0.15);
+
+  text-shadow: 0 0 12px var(--glow-soft);
+
 }
 
 .decision-item:hover .decision-title::after {
@@ -1734,32 +2005,15 @@ nav h4:hover a {
 }
 
 .decision-why {
-  color: rgba(255, 255, 255, 0.6);
+  color: var(--text-secondary);
   margin-bottom: 0.5rem;
 }
-
-.decision-impact {
-  color: rgba(255, 255, 255, 0.85);
-}
-
-
-
-/* ================================
-   FOOTER
-================================ */
-
-/* .decisions-footer-marquee {
-  border-top: 1px solid rgba(255,255,255,0.08);
-  padding: 3vw 0;
-  overflow: hidden;
-  background-color: red;
-} */
 
 .decisions-footer-marquee {
   position: relative;
   padding: 3vw 0;
   overflow: hidden;
-  background-color: #0b0d10;
+  background-color: var(--bg-main);
 }
 
 /* LEFT FADE */
@@ -1773,8 +2027,8 @@ nav h4:hover a {
   pointer-events: none;
   background: linear-gradient(
     to right,
-    rgba(20, 207, 147, 0.35),
-    rgba(20, 207, 147, 0)
+    var(--glow-soft),
+    transparent
   );
   filter: blur(60px);
 }
@@ -1790,8 +2044,8 @@ nav h4:hover a {
   pointer-events: none;
   background: linear-gradient(
     to left,
-    rgba(20, 207, 147, 0.35),
-    rgba(20, 207, 147, 0)
+    var(--glow-soft),
+    transparent
   );
   filter: blur(60px);
 }
@@ -1799,7 +2053,6 @@ nav h4:hover a {
 .decisions-marquee-track {
   display: flex;
   gap: 4vw;
-  /* background-color: yellow; */
 }
 
 .decisions-marquee {
@@ -1808,7 +2061,6 @@ nav h4:hover a {
   align-items: center;
   gap: 2vw;
   transform: translateX(-100%);
-  /* background-color: blue; */
 }
 
 .decisions-marquee h2 {
@@ -1816,15 +2068,18 @@ nav h4:hover a {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.04em;
-  color: rgba(255, 255, 255, 0.9);
+  color: var(--text-primary);
 }
+
 .decisions-marquee h2 span {
-  color: #14cf93;
+  color: var(--accent);
   font-family: "Nothing You Could", cursive;
 }
 
-.decisions-marquee img {
-  height: 4vw;
+.decisions-marquee h3>i {
+  height: 1vw;
+  color: var(--accent);
+  display: inline-block;
 }
 
 
@@ -1832,7 +2087,8 @@ nav h4:hover a {
    FINAL FOOTER
 ================================ */
 /* ===============================
-   FINAL FOOTER
+   FOOTER — ARCTIC SLATE × TERRACOTTA
+   Calm • Editorial • Premium
 ================================ */
 
 .footer-final{
@@ -1843,31 +2099,35 @@ nav h4:hover a {
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  background: #0b0b0e;
-  color: white;
+
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(14,19,24,0.0),
+      rgba(14,19,24,0.35) 40%,
+      rgba(14,19,24,0.7) 100%
+    ),
+    var(--bg-main);
+
+  color: var(--text-primary);
 }
 
-/* ---------- Background ---------- */
+/* ---------- Background (Soft Afterglow) ---------- */
 .footer-bg{
   position:absolute;
   inset:0;
   z-index:0;
   pointer-events:none;
-  overflow:hidden;
-
-  --gx: 50%;
-  --gy: 50%;
-  --glow: 0.9;
 
   background:
     radial-gradient(
-      circle at 50% 40%,
-      rgba(20,207,147,0.18),
-      rgba(11,11,14,0.9) 65%
+      circle at 50% 45%,
+      rgba(194,106,74,0.18),
+      var(--bg-main) 70%
     );
 }
 
-/* Depth vignette */
+/* subtle depth vignette */
 .footer-bg::before{
   content:"";
   position:absolute;
@@ -1875,41 +2135,9 @@ nav h4:hover a {
   background:
     radial-gradient(
       circle at center,
-      rgba(255,255,255,0.04),
-      rgba(11,11,14,0.85) 65%
+      rgba(255,255,255,0.035),
+      var(--bg-main) 68%
     );
-}
-
-/* Glow orbs */
-.footer-bg::after{
-  content:"";
-  position:absolute;
-  inset:-30%;
-  background:
-    radial-gradient(
-      circle at var(--gx) var(--gy),
-      rgba(20,207,147,0.28),
-      transparent 45%
-    ),
-    radial-gradient(
-      circle at calc(100% - var(--gx)) calc(100% - var(--gy)),
-      rgba(20,207,147,0.18),
-      transparent 55%
-    );
-  filter: blur(140px);
-  opacity:0.85;
-}
-
-/* Noise film (WORKING VERSION) */
-.footer-bg::before{
-  background-image:
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.7' numOctaves='1'/%3E%3C/filter%3E%3Crect width='120' height='120' filter='url(%23n)' opacity='0.15'/%3E%3C/svg%3E"),
-    radial-gradient(
-      circle at center,
-      rgba(255,255,255,0.04),
-      rgba(11,11,14,0.85) 65%
-    );
-  mix-blend-mode: soft-light;
 }
 
 /* ---------- Content ---------- */
@@ -1921,25 +2149,29 @@ nav h4:hover a {
   text-align:center;
 }
 
-/* Typography */
+/* ---------- Typography ---------- */
 .footer-structure-text{
   font-size:clamp(2.4rem,16vw,5.2rem);
   letter-spacing:-0.045em;
-  opacity:.85;
-  margin-bottom:.8vw;
-  
+  opacity:0.85;
+  margin-bottom:0.8vw;
 }
 
 .footer-hero-text{
   font-size:clamp(3.4rem,8vw,7.8rem);
   font-weight:900;
-  letter-spacing:-.06em;
-  color:#14CF93;
+  letter-spacing:-0.06em;
   margin-bottom:2.2vw;
+
+  /* muted terracotta (NOT neon) */
+  color: color-mix(
+    in srgb,
+    var(--accent) 75%,
+    var(--text-primary)
+  );
 }
 
-
-/* Intent line */
+/* ---------- Intent Line ---------- */
 .intent-line-wrapper{
   display:flex;
   justify-content:center;
@@ -1949,25 +2181,38 @@ nav h4:hover a {
 .intent-line{
   width:0%;
   height:1px;
-  background:linear-gradient(90deg,transparent,#14CF93,transparent);
-  box-shadow:0 0 10px rgba(20,207,147,.4);
+  background:linear-gradient(
+    90deg,
+    transparent,
+    rgba(194,106,74,0.6),
+    transparent
+  );
 }
 
-/* Identity */
-.footer-identity{margin-bottom:3vw}
-.footer-name{font-size:1.45rem;font-weight:600}
-.footer-name span{
-  font-family: 'Nothing You Could', cursive;
-  color: #14CF93;
+/* ---------- Identity ---------- */
+.footer-identity{
+  margin-bottom:3vw;
 }
+
+.footer-name{
+  font-size:1.45rem;
+  font-weight:600;
+  color: var(--text-primary);
+}
+
+.footer-name span{
+  font-family:'Nothing You Could', cursive;
+  color: var(--accent);
+}
+
 .footer-role{
   font-size:1rem;
-  color:#bcbcbc;
-  font-family:"Nothing You Could", cursive;
-  letter-spacing:.06em;
+  color: var(--text-muted);
+  font-family:'Nothing You Could', cursive;
+  letter-spacing:0.06em;
 }
 
-/* Links */
+/* ---------- Actions / Links ---------- */
 .footer-actions-list{
   display:flex;
   justify-content:center;
@@ -1977,17 +2222,18 @@ nav h4:hover a {
 }
 
 .footer-actions-list a{
-  color:#fff;
-  text-decoration:none;
   position:relative;
+  color: var(--text-secondary);
+  text-decoration:none;
+  font-weight:600;
+  font-size:1rem;
   padding-bottom:6px;
-  font-weight: 700;
-  font-size: 1rem;
 }
+
 .footer-actions-list a i{
-  color:#14CF93;
-  font-weight: 900;
-  font-size: 1.2rem;
+  color: var(--accent);
+  font-size:1.15rem;
+  opacity:0.85;
 }
 
 .footer-actions-list a::after{
@@ -1997,30 +2243,43 @@ nav h4:hover a {
   bottom:0;
   width:0%;
   height:1px;
-  background:linear-gradient(90deg,transparent,#14CF93,transparent);
+  background:linear-gradient(
+    90deg,
+    transparent,
+    var(--accent),
+    transparent
+  );
   transform:translateX(-50%);
-  transition:.4s ease;
+  transition:width 0.4s ease;
 }
 
-.footer-actions-list a:hover::after{width:100%}
+.footer-actions-list a:hover{
+  color: var(--text-primary);
+}
 
-/* Closure */
+.footer-actions-list a:hover::after{
+  width:100%;
+}
+
+/* ---------- Closure ---------- */
 .footer-closure-text{
-  font-size:1rem;
-  color:#b1b5bd;
-  letter-spacing:.08em;
-  text-transform: uppercase;
-}
-.footer-closure-text i{
-  font-size:1.2rem;
-  color:#14CF93;
+  font-size:0.95rem;
+  color: var(--text-muted);
+  letter-spacing:0.08em;
+  text-transform:uppercase;
 }
 
+.footer-closure-text i{
+  font-size:1.1rem;
+  color: var(--accent);
+}
+
+/* ---------- Meta ---------- */
 .footer-meta{
   position:absolute;
   bottom:2vw;
   width:100%;
   text-align:center;
-  font-size:.9rem;
-  color:#6b7280;
+  font-size:0.9rem;
+  color: var(--text-muted);
 }

@@ -217,30 +217,29 @@ function animateHomePage() {
 
 function startSvgAnimation() {
   let svgText = document.querySelectorAll(".stack-heading text");
-  // console.log(svgText);
   svgText.forEach((elem) => {
     elem.style.animationPlayState = "running";
   });
 }
 
 
-function navScrollAnimation(){
+function navScrollAnimation() {
   gsap.to("nav", {
-  height: "12vh",
-  backgroundColor: "rgba(20, 20, 20, 0.55)",
-  backdropFilter: "blur(10px)",
-  boxShadow: "0 8px 30px rgba(0,0,0,0.35)",
-  ease: "power3.out",
-  scrollTrigger: {
-    trigger: "body",
-    scroller: "[data-scroll-container]",
-    start: "top top",
-    end: "top+=120",
-    scrub: 0.6,
-  }
-});
-
+    height: "12vh",
+    backgroundColor: "var(--nav-bg-scrolled)",
+    backdropFilter: "blur(10px)",
+    boxShadow: "var(--nav-shadow)",
+    ease: "power3.out",
+    scrollTrigger: {
+      trigger: "body",
+      scroller: "[data-scroll-container]",
+      start: "top top",
+      end: "top+=120",
+      scrub: 0.6,
+    }
+  });
 }
+
 
 
 
@@ -336,36 +335,41 @@ function cardShow() {
 
   if (!projects.length || !cursor || !section) return;
 
-  // =========================
-  // CURSOR SMOOTH FOLLOW (RAF)
-  // =========================
   let mouseX = 0;
   let mouseY = 0;
-  let cursorX = 0;
-  let cursorY = 0;
-  let rafId = null;
+  let currentX = 0;
+  let currentY = 0;
+  let isActive = false;
 
-  function followCursor() {
-    cursorX += (mouseX - cursorX) * 0.18;
-    cursorY += (mouseY - cursorY) * 0.18;
+  function render() {
+    currentX += (mouseX - currentX) * 0.15;
+    currentY += (mouseY - currentY) * 0.15;
 
-    cursor.style.transform = `translate(${cursorX}px, ${cursorY}px)`;
-    rafId = requestAnimationFrame(followCursor);
+    gsap.set(cursor, {
+      x: currentX,
+      y: currentY
+    });
+
+    requestAnimationFrame(render);
   }
 
-  section.addEventListener("mouseenter", () => {
-    if (!rafId) followCursor();
-  });
+  render(); // 🔥 ALWAYS RUN RAF (IMPORTANT)
 
   section.addEventListener("mousemove", (e) => {
-    mouseX = e.clientX;
-    mouseY = e.clientY;
+    mouseX = e.clientX - cursor.offsetWidth / 2;
+    mouseY = e.clientY - cursor.offsetHeight / 2;
+  });
+
+  section.addEventListener("mouseenter", () => {
+    gsap.to(cursor, {
+      opacity: 1,
+      scale: 1,
+      duration: 0.3,
+      ease: "power3.out"
+    });
   });
 
   section.addEventListener("mouseleave", () => {
-    cancelAnimationFrame(rafId);
-    rafId = null;
-
     gsap.to(cursor, {
       opacity: 0,
       scale: 0.85,
@@ -382,27 +386,28 @@ function cardShow() {
     const img = project.querySelector("img");
 
     project.addEventListener("mouseenter", () => {
-      gsap.to(cursor, {
-        opacity: 1,
-        scale: 1,
-        duration: 0.25,
-        ease: "power3.out"
-      });
-
       cursorItems.forEach(item => (item.style.opacity = 0));
       if (cursorItems[index]) cursorItems[index].style.opacity = 1;
 
-      if (img) {
-        img.style.filter = "grayscale(1)";
-        section.style.backgroundColor = `#${img.dataset.bgcolor}`;
-      }
+      if (img) img.style.filter = "grayscale(1)";
+
+      const hoverColor = getComputedStyle(project)
+        .getPropertyValue("--project-hover-color")
+        .trim();
+
+      section.style.background = `
+        radial-gradient(
+          circle at center,
+          ${hoverColor},
+          rgba(11, 16, 32, 0.92) 70%
+        )
+      `;
     });
 
     project.addEventListener("mouseleave", () => {
       cursorItems.forEach(item => (item.style.opacity = 0));
-
       if (img) img.style.filter = "grayscale(0)";
-      section.style.backgroundColor = "#e8e8e8";
+      section.style.background = "var(--bg-secondary)";
     });
   });
 }
@@ -717,7 +722,7 @@ function marqueeAnimation() {
         ease: "linear"
       });
 
-      gsap.to(".decisions-marquee img", {
+      gsap.to(".decisions-marquee h3>i", {
         rotate: 180,
         duration: 0.4,
         ease: "power3.out"
@@ -730,7 +735,7 @@ function marqueeAnimation() {
         ease: "linear"
       });
 
-      gsap.to(".decisions-marquee img", {
+      gsap.to(".decisions-marquee h3>i", {
         rotate: 0,
         duration: 0.4,
         ease: "power3.out"
@@ -762,8 +767,8 @@ function section6Animation() {
 function initFooterAnimation() {
   const footer = document.querySelector("#final-footer");
   const footerBg = document.querySelector(".footer-bg");
-  console.log(footer);
-  console.log(footerBg);
+  // console.log(footer);
+  // console.log(footerBg);
   
 
   if (!footer || !footerBg) return;
