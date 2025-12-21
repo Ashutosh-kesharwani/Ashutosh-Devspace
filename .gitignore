@@ -4,3 +4,6 @@ test.txt
 
 # Ignore experimental HTML files all html files | generally for test html files
 *.html 
+
+test.css
+color-set.md
