@@ -4,25 +4,39 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Portfolio-Website</title>
 
-  <!-- Gilroy Cdn link -->
+  <title>Ashutosh Kesharwani — Full-Stack Developer & UI Motion Engineer</title>
+
+  <meta name="description"
+    content="Portfolio of Ashutosh Kesharwani, a Full-Stack Developer specializing in UI motion, scalable systems, and ML-driven interfaces. Real projects, real decisions, real outcomes." />
+
+  <meta name="author" content="Ashutosh Kesharwani" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Ashutosh Kesharwani — Full-Stack Developer" />
+  <meta property="og:description"
+    content="Building scalable systems with clarity, motion, and intent." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="assets/images/og-image.jpg" />
+
+  <!-- Performance -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <!-- Fonts -->
   <link href="https://fonts.cdnfonts.com/css/gilroy-bold" rel="stylesheet" />
-
-
-  <!-- Nothing You Could Display CDN Link -->
   <link href="https://fonts.googleapis.com/css2?family=Nothing+You+Could&display=swap" rel="stylesheet" />
-  <!-- Remix-icon-cdn -->
+
+  <!-- Icons & libs -->
   <link href="https://cdn.jsdelivr.net/npm/remixicon@4.7.0/fonts/remixicon.css" rel="stylesheet" />
-  <!-- locomotive-scroll Css -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css" />
 
-  <!-- User defined CSS -->
   <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
-  <section id="loader">
+  <section id="loader" aria-hidden="true">
     <div id="loader-first">
       <div id="top-heading">
         <h3 class="reveal">DESIGN <i class="ri-asterisk cross"></i> CODE</h3>
@@ -43,12 +57,15 @@
     <div id="green"></div>
     <div id="gray"></div>
   </section>
-  <nav>
-    <h4><a href="#">Github</a></h4>
-    <h4><a href="#">Linkedin</a></h4>
-    <h4><a href="#">Experience</a></h4>
-    <h4><a href="#">Contact</a></h4>
-  </nav>
+  <nav aria-label="Primary Navigation">
+  <ul>
+    <li><a href="#">GitHub</a></li>
+    <li><a href="#">LinkedIn</a></li>
+    <li><a href="#section-5">Case Study</a></li>
+    <li><a href="#final-footer">Contact</a></li>
+  </ul>
+</nav>
+
 
   <main data-scroll-container>
     <section id="section-1" class="section" data-scroll data-scroll-speed="-2.5">
@@ -755,10 +772,6 @@
               fill="none" filter="url(#stringGlowH)" opacity="0.6" />
             <path class="h-string-main" d="M 0 60 Q 500 60 1000 60" stroke="#fff" stroke-width="2" fill="none" />
           </g>
-
-          <!-- STRING 2 -->
-
-          <!-- STRING 3 -->
         </svg>
       </div>
     </section>
