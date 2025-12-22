@@ -62,7 +62,18 @@ function locomotiveSmoothScroll() {
   });
   ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
   ScrollTrigger.refresh();
+
+
+  
+  var scrollDownBtn= document.querySelector("#down-arrow-container i");
+scrollDownBtn.addEventListener("click",()=>{
+
+  locoScroll.scrollTo(".footer-final"); 
+  
+}) 
 }
+
+
 
 
 function revealToSpan() {
@@ -160,13 +171,13 @@ function loadingAnimation() {
     }, "-=0.3")
 
     /* COLOR WIPES */
-    .to("#green", {
+    .to("#overlay-1", {
       height: "100%",
       duration: 1.8,
       ease: "expo.inOut"
     }, "-=1.2")
 
-    .to("#gray", {
+    .to("#overlay-2", {
       height: "100%",
       duration: 1.8,
       ease: "expo.inOut"
@@ -188,7 +199,10 @@ function loadingAnimation() {
 }
 
 function animateHomePage() {
+  const nav=document.querySelector('.main-nav');
+  nav.style.display='block';
   const navItems = document.querySelectorAll(".main-nav ul li");
+
   const heroText = document.querySelectorAll("#section-1 .child");
   const downArrow = document.querySelector("#down-arrow-container");
 
@@ -477,35 +491,7 @@ function genericRevealWordAnimation() {
     }
   });
 }
-function genericRevealWordAnimation() {
-  const words = gsap.utils.toArray(".generic.reveal");
-  if (!words.length) return;
 
-  const prefersReducedMotion = window.matchMedia(
-    "(prefers-reduced-motion: reduce)"
-  ).matches;
-
-  if (prefersReducedMotion) {
-    gsap.set(words, { opacity: 1, y: 0, scale: 1 });
-    return;
-  }
-
-  gsap.set(words, { opacity: 0, y: 90, scale: 0.9 });
-
-  gsap.to(words, {
-    opacity: 1,
-    y: 0,
-    scale: 1,
-    duration: 0.8,
-    ease: "power3.out",
-    stagger: 0.08,
-    scrollTrigger: {
-      trigger: words[0],
-      start: "top 85%",
-      scroller: "[data-scroll-container]",
-      once: true
-    }
-  });
 
 
 function wordTypingEffect() {
