@@ -1,4 +1,9 @@
+
+
 :root {
+  /* =========================
+     BACKGROUNDS
+  ========================= */
   --bg-main: #0D1217;
   --bg-secondary: #141B23;
   --bg-card: #1C2430;
@@ -7,33 +12,67 @@
   --nav-bg-scrolled: rgba(13, 18, 23, 0.65);
   --nav-shadow: 0 8px 30px rgba(0, 0, 0, 0.45);
 
+  /* =========================
+     TEXT
+  ========================= */
   --text-primary: #F4F5F7;
   --text-secondary: #C9D0DA;
   --text-muted: #8E97A3;
 
+  /* =========================
+     ACCENT — TERRACOTTA
+  ========================= */
   --accent: #C87452;
   --accent-soft: #E3A58E;
   --accent-dim: rgba(200, 116, 82, 0.32);
 
+  /* =========================
+     BORDERS
+  ========================= */
   --border-soft: rgba(201, 208, 218, 0.14);
   --border-accent: rgba(200, 116, 82, 0.42);
 
+  /* =========================
+     GLOWS
+  ========================= */
   --glow-soft: rgba(200, 116, 82, 0.18);
   --glow-strong: rgba(200, 116, 82, 0.35);
 
+  /* =========================
+     LOADER
+  ========================= */
   --loader-bg: #0B1015;
   --loader-accent: #C87452;
   --loader-overlay: #141B23;
 
+  /* =========================
+     HOVER
+  ========================= */
   --hover-bg: #C87452;
   --hover-text-dark: #090C10;
+
+  /* =========================
+     PROJECT HOVERS
+  ========================= */
   
+
+  /* =========================
+     IMAGE CARD / EDITORIAL UI
+  ========================= */
   --pill-bg: rgba(255, 255, 255, 0.92);
-  --pill-text: #1A1F24;
+  --pill-text: #1A1F24;/* Warm Clay / Copper */
   --project-hover-1: rgba(198, 124, 96, 0.62);
+
+  /* Soft Amber / Sandstone */
   --project-hover-2: rgba(214, 148, 88, 0.5);
+
+  /* Muted Coral / Rust */
   --project-hover-3: rgba(192, 92, 86, 0.72);
+
+  /* Deep Terracotta */
   --project-hover-4: rgba(162, 98, 76, 0.52);
+
+  /* Warm Beige / Latte Glow */
   --project-hover-5: rgba(220, 79, 14, 0.52);
 
 
@@ -54,9 +93,17 @@
 
   --img-text-primary: #111418;
   --img-text-secondary: #3A3F45;
+
+  /* =========================
+     GLOBE / SVG
+  ========================= */
   --globe-accent-start: #C87452;
   --globe-accent-end: #E3A58E;
 }
+
+
+
+
 * {
   margin: 0;
   padding: 0;
@@ -69,6 +116,12 @@ html, body {
   color: var(--text-primary);
 }
 
+/* Body scroll browser se band, locomotive handle karega */
+/* body {
+  overflow: hidden;
+} */
+
+/* 🚨 SCROLL CONTAINER — MUST NOT BE HIDDEN */
 main {
   position: relative;
   overflow: visible;   
@@ -166,14 +219,16 @@ main {
 {
   background: linear-gradient(
     90deg,
-    #F4F5F7 0%,               
-    #F1EAE6 45%,                
-    rgba(200,116,82,0.85) 120%  
+    #F4F5F7 0%,                 /* clean authority */
+    #F1EAE6 45%,                /* warm stone */
+    rgba(200,116,82,0.85) 120%  /* terracotta whisper */
   );
 
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
+
+  /* VERY important for professional feel */
   text-shadow: 0 1px 0 rgba(255,255,255,0.04);
 }
 .hero-title .lname {
@@ -225,6 +280,7 @@ main {
   z-index: 99;
 }
 
+/* ------------------------------------------------------------------------------------------------------ */
 .main-nav{
   position: fixed;
   z-index: 999;
@@ -238,6 +294,9 @@ main {
   
 }
 
+/* =========================
+   MAIN NAV ONLY
+========================= */
 
 .main-nav ul li {
   font-weight: 700;
@@ -298,11 +357,16 @@ main {
   display: flex;
   flex-direction: column;
 }
+
+
+/* TEXT ROW — semantic safe */
 .row-text {
   width: 100%;
   display: flex;
   justify-content: center;
 }
+
+/* FULL STACK + DEVELOPER text */
 .full-stack-title,
 #developer {
   font-family: "Gilroy", sans-serif;
@@ -313,6 +377,10 @@ main {
   text-align: center;
 }
 
+
+
+/* ONLY for FULL STACK text */
+/* Gradient ONLY for FULL STACK text (GSAP-safe) */
 .full-stack-title,
 .full-stack-title .child {
   display: inline-block;
@@ -328,8 +396,8 @@ main {
   -webkit-background-clip: text;
   background-clip: text;
 
-  -webkit-text-fill-color: transparent; 
-  color: transparent;                  
+  -webkit-text-fill-color: transparent; /* CRITICAL */
+  color: transparent;                  /* CRITICAL */
 
   text-shadow: 0 1px 0 rgba(255,255,255,0.06);
   font-size: 11vw;
@@ -343,6 +411,7 @@ main {
   font-size: 9.5vw;
 }
 
+/* ================= SVG ROW ================= */
 
 .row-svg {
   display: flex;
@@ -367,6 +436,7 @@ main {
   overflow: visible;
 }
 
+/* SVG TEXT */
 .stack-heading.uiux text {
   font-family: "Nothing You Could", cursive;
   font-size: 10vw;
@@ -386,6 +456,8 @@ main {
 }
 
 
+
+/* ================= ANIMATIONS ================= */
 
 @keyframes paintDraw {
   0% {
@@ -415,6 +487,8 @@ main {
   }
 }
 
+/* ================= DOWN ARROW ================= */
+
 #down-arrow-container {
   position: absolute;
   bottom: 6vh;
@@ -433,11 +507,15 @@ main {
 
 
 
+/* STRINGS */
 .interactive-horizontal-string path,
 .interactive-vertical-string path {
   stroke: var(--accent);
 }
 
+/* ============================= */
+/* INTERACTIVE HORIZONTAL STRING  */
+/* ============================= */
 
 .interactive-horizontal-string {
   width: 100%;
@@ -458,12 +536,18 @@ main {
 }
 
 
+/* ============================= */
+/* INTERACTIVE VERTICAL STRING   */
+/* ============================= */
+
 .interactive-vertical-string {
-  width: 100px; 
+  width: 100px; /* you can scale width */
+  /* height: 60vh; full section height */
   margin: auto;
   position: relative;
   cursor: grab;
   pointer-events: auto;
+  /* background-color: red; */
 }
 
 .interactive-vertical-string:active {
@@ -748,6 +832,15 @@ background-color: var(--bg-secondary);
   transform: rotate3d(-1, 1, 0, 15deg);
 }
 
+/* .value-item-card-overlay span {
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 0.9vw;
+  font-weight: 700;
+  color: #14cf93;
+  opacity: 0.8;
+} */
 
 .value-item-card-overlay h4 {
   font-size: 1.4vw;
@@ -846,6 +939,7 @@ background-color: var(--bg-secondary);
   
 }
 
+/* Disable selection on Project Card and Child elem */
 #work-section-projects .projects * {
   user-select: none;
   -webkit-user-select: none;
@@ -867,7 +961,9 @@ background-color: var(--bg-secondary);
   );
 }
 
-
+/* =========================
+   PROJECT DETAILS WRAPPER
+========================= */
 
 .project-details {
   position: absolute;
@@ -887,6 +983,9 @@ background-color: var(--bg-secondary);
   gap: 1vw;
 }
 
+/* =========================
+   PILLS
+========================= */
 
 .project-about .pill {
   display: inline-block;
@@ -906,7 +1005,9 @@ background-color: var(--bg-secondary);
   width: 18vw;
 }
 
-
+/* =========================
+   PROJECT BUTTON
+========================= */
 
 .project-button {
   border-radius: 100px;
@@ -926,7 +1027,9 @@ background-color: var(--bg-secondary);
 }
 
 
-
+/* =========================
+   BUTTON TEXT
+========================= */
 
 .project-button .project-title  {
   font-size: 1.7vw;
@@ -948,7 +1051,9 @@ background-color: var(--bg-secondary);
 }
 
 
-
+/* =========================
+   ARROW ICON
+========================= */
 
 .project-button .arrow {
   width: 3vw;
@@ -1002,6 +1107,7 @@ background-color: var(--bg-secondary);
   transform: translate3d(0, 0, 0);
 }
 
+/* ================= EACH PROJECT CURSOR ================= */
 .projects-cursor {
   position: absolute;
   inset: 0;
@@ -1012,7 +1118,7 @@ background-color: var(--bg-secondary);
   transition: opacity 0.25s ease;
 }
 
-
+/* ================= HEADER (LABEL) ================= */
 .projects-cursor .crow {
   display: flex;
   align-items: center;
@@ -1020,6 +1126,7 @@ background-color: var(--bg-secondary);
   padding: 0.8vw 1vw;
 }
 
+/* circle */
 .crow .ccircle {
   width: 1.8vw;
   height: 1.8vw;
@@ -1029,7 +1136,7 @@ background-color: var(--bg-secondary);
   border: 2px solid var(--text-primary);
 }
 
-
+/* capsule */
 .crow .ccapsule {
   padding: 0.6vw 2.4vw;
   border-radius: 999px;
@@ -1041,6 +1148,7 @@ background-color: var(--bg-secondary);
   white-space: nowrap;
 }
 
+/* ================= IMAGE STACK ================= */
 .projects-cursor .elem {
   position: relative;
   width: 100%;
@@ -1050,7 +1158,7 @@ background-color: var(--bg-secondary);
   min-height: 180px;
 }
 
-
+/* images */
 .projects-cursor .elem img {
   position: absolute;
   inset: 0;
@@ -1062,13 +1170,14 @@ background-color: var(--bg-secondary);
   border-radius: 18px;
 }
 
+/* stagger animation */
 .projects-cursor .elem img:nth-child(1) { animation-delay: 0s; }
 .projects-cursor .elem img:nth-child(2) { animation-delay: 1.2s; }
 .projects-cursor .elem img:nth-child(3) { animation-delay: 2.4s; }
 .projects-cursor .elem img:nth-child(4) { animation-delay: 3.6s; }
 .projects-cursor .elem img:nth-child(5) { animation-delay: 4.8s; }
 
-
+/* ================= IMAGE FADE LOOP ================= */
 @keyframes cursorImageCycle {
   0%   { opacity: 1; }
   20%  { opacity: 1; }
@@ -1077,6 +1186,8 @@ background-color: var(--bg-secondary);
   100% { opacity: 0; }
 }
 
+
+/* -------------------------------------------------------------------------------------------------------------------------- */
 
 
 
@@ -1092,32 +1203,35 @@ background-color: var(--bg-secondary);
   margin-bottom: 1vw;
   color: var(--accent);
 }
-#achievements-heading{
-  text-align: center;
-  font-size: 2vw;
-  font-family: 'Nothing You Could', cursive;
-  margin-bottom: 1vw;
-  color: var(--accent);
-}
 .caseSwiper {
   width: 100%;
   overflow: hidden;
   height: 50vh;
+  /* background-color: slateblue; */
   padding-top: 2vw;
 }
 
-
+/* MUST */
 .caseSwiper .swiper-wrapper {
   display: flex;
   flex-direction: row;
-
+  /* background-color: green; */
 }
+
+/* MUST */
 .caseSwiper .swiper-slide {
   width: 30vw;
   flex-shrink: 0;
   padding: 2vw;
 }
 
+
+
+
+/* ===== SECTION 4 : WORKFLOW ===== */
+/* =========================
+   WORKFLOW / SECTION-4
+========================= */
 
 #section-4 {
   padding: 7vw 8vw 0vw 8vw;
@@ -1199,6 +1313,8 @@ background-color: var(--bg-secondary);
 }
 
 
+
+/* SECTION 5: CASE STUDY */
 
 #section-5 {
   min-height: 100vh;
@@ -1339,8 +1455,6 @@ background-color: var(--bg-secondary);
 
 
 
-
-
 .case-right {
   width: 60%;
   min-height: 50vh;
@@ -1351,15 +1465,36 @@ background-color: var(--bg-secondary);
 }
 
 
+/* =========================
+   CDSS GLOBE BASE
+========================= */
+
 .cdss-globe {
   /* width: 80%; */
   max-width: 400px;
 }
 
+
+/* IMPORTANT FOR GSAP SVG ROTATION */
 .cdss-globe,
 .cdss-globe * {
   transform-box: fill-box;
   transform-origin: 50% 50%;
+}
+/* =========================
+   INNER COLORFUL GLOBE
+========================= */
+
+.inner-globe {
+  transform-origin: 50% 50%;
+  transform-box: fill-box;
+}
+
+/* Bigger + richer core */
+.core {
+  fill: var(--globe-accent-start);
+  filter: url(#softGlow);
+  animation: pulse 2.8s ease-in-out infinite;
 }
 
 /* Nodes slightly larger */
@@ -1369,21 +1504,10 @@ background-color: var(--bg-secondary);
   animation: nodePulse 2s ease-in-out infinite alternate;
 }
 
-.inner-globe {
-  transform-origin: 50% 50%;
-  transform-box: fill-box;
-}
 
-.core {
-  fill: var(--globe-accent-start);
-  filter: url(#softGlow);
-  animation: pulse 2.8s ease-in-out infinite;
-}
-.node {
-  fill: var(--globe-accent-end);
-  filter: url(#softGlow);
-  animation: nodePulse 2s ease-in-out infinite alternate;
-}
+/* =========================
+   ORBITS
+========================= */
 
 .orbit {
   fill: none;
@@ -1416,6 +1540,10 @@ background-color: var(--bg-secondary);
   animation: pulse 2.8s ease-in-out infinite;
 }
 
+/* =========================
+   NODES
+========================= */
+
 .node {
   fill: var(--globe-accent-end);
   filter: url(#softGlow);
@@ -1427,6 +1555,9 @@ background-color: var(--bg-secondary);
 .n3 { animation-delay: 1.2s; }
 .n4 { animation-delay: 1.8s; }
 
+/* =========================
+   KEYFRAMES
+========================= */
 
 @keyframes spin {
   from { transform: rotate(0deg); }
@@ -1461,6 +1592,7 @@ background-color: var(--bg-secondary);
 }
 
 
+/* FORCE SQUARE CARD */
 .case-card {
   width: 480px;
   height: 300px;
@@ -1486,6 +1618,7 @@ background-color: var(--bg-secondary);
   object-fit: cover;
 }
 
+/* DARK OVERLAY */
 .card-image::after {
   content: "";
   position: absolute;
@@ -1496,6 +1629,8 @@ background-color: var(--bg-secondary);
     rgba(0, 0, 0, 0.85)
   );
 }
+
+/* CONTENT (HIDDEN INITIALLY) */
 .card-content {
   position: absolute;
   inset: 0;
@@ -1523,22 +1658,28 @@ background-color: var(--bg-secondary);
   line-height: 1.4;
 }
 
+/* 🔥 HOVER MAGIC */
 .case-card:hover {
   transform: translateY(-15px) scale(1.05);
  box-shadow: 0 0px 14px var(--glow-soft);
 }
 
+/* IMAGE DISAPPEARS COOLLY */
 .case-card:hover .card-image {
   transform: scale(1.3) rotate(8deg);
   opacity: 0;
   filter: blur(12px);
 }
 
+/* CONTENT REVEAL */
 .case-card:hover .card-content {
   opacity: 1;
   transform: translateY(0);
 }
 
+/* ========================= */
+/* SECTION 6 — PROFESSIONAL CONTEXT */
+/* ========================= */
 
 #section-6 {
   padding: 3vw 8vw 2vw 8vw;
@@ -1546,6 +1687,7 @@ background-color: var(--bg-secondary);
   position: relative;
 }
 
+/* ---------- HEADER ---------- */
 .context-header {
   margin-bottom: 6vw;
   display: flex;
@@ -1554,7 +1696,7 @@ background-color: var(--bg-secondary);
   justify-content: center;
   align-items: center;
   text-align: center;
-
+  /* background-color: yellow; */
 }
 
 .context-header h2 {
@@ -1587,6 +1729,8 @@ background-color: var(--bg-secondary);
   display: flex;
   gap: 5vw;
 }
+
+/* ---------- COLUMN ---------- */
 .context-column {
   position: relative;
   width: min(20vw, 260px);
@@ -1632,6 +1776,8 @@ background-color: var(--bg-secondary);
   line-height: 1.6;
 }
 
+/* ---------- FOOTER ---------- */
+
 
 .context-footer {
   margin-top: 8vw;
@@ -1649,6 +1795,9 @@ background-color: var(--bg-secondary);
   font-weight: 500;
 }
 
+/* ================================
+   DECISIONS SECTION — MANIFESTO
+================================ */
 #section-7 {
   padding: 5vw 8vw;
   background-color: var(--bg-main);
@@ -1660,7 +1809,7 @@ background-color: var(--bg-secondary);
 }
 
 
-
+/* subtle depth */
 #section-7::before {
   content: "";
   position: absolute;
@@ -1673,6 +1822,9 @@ background-color: var(--bg-secondary);
   pointer-events: none;
 }
 
+/* ================================
+   HEADER
+================================ */
 
 .decisions-header {
   display: flex;
@@ -1734,6 +1886,9 @@ background-color: var(--bg-secondary);
   color: var(--text-muted);
 }
 
+/* ================================
+   DECISIONS GRID
+================================ */
 
 .decisions-list {
   display: grid;
@@ -1742,7 +1897,9 @@ background-color: var(--bg-secondary);
   margin-bottom: 5vw;
 }
 
-
+/* ================================
+   ITEM
+================================ */
 
 .decision-item {
   position: relative;
@@ -1763,6 +1920,9 @@ background-color: var(--bg-secondary);
   transform: translateY(-4px);
 }
 
+
+
+/* underline */
 .decision-title::after {
   content: "";
   position: absolute;
@@ -1777,6 +1937,8 @@ background-color: var(--bg-secondary);
   );
   transition: width 0.4s ease;
 }
+
+/* hover effects */
 .decision-item:hover .decision-title {
 
   text-shadow: 0 0 12px var(--glow-soft);
@@ -1787,6 +1949,7 @@ background-color: var(--bg-secondary);
   width: 100%;
 }
 
+/* text blocks */
 .decision-why,
 .decision-impact {
   font-size: 0.95rem;
@@ -1805,6 +1968,7 @@ background-color: var(--bg-secondary);
   background-color: var(--bg-main);
 }
 
+/* LEFT FADE */
 .decisions-footer-marquee::before {
   content: "";
   position: absolute;
@@ -1821,6 +1985,7 @@ background-color: var(--bg-secondary);
   filter: blur(60px);
 }
 
+/* RIGHT FADE */
 .decisions-footer-marquee::after {
   content: "";
   position: absolute;
@@ -1877,6 +2042,14 @@ background-color: var(--bg-secondary);
   display: block;        
 }
 
+
+/* ===============================
+   FINAL FOOTER
+================================ */
+/* ===============================
+   FOOTER — ARCTIC SLATE × TERRACOTTA
+   Calm • Editorial • Premium
+================================ */
 .footer-final {
   position: relative;
   min-height: 100vh;
@@ -1898,6 +2071,9 @@ background-color: var(--bg-secondary);
   color: var(--text-primary);
 }
 
+/* =========================
+   BACKGROUND GLOW
+========================= */
 .footer-bg {
   position: absolute;
   inset: 0;
@@ -1924,6 +2100,9 @@ background-color: var(--bg-secondary);
     );
 }
 
+/* =========================
+   INNER CONTENT
+========================= */
 .footer-inner {
   position: relative;
   z-index: 2;
@@ -1932,6 +2111,9 @@ background-color: var(--bg-secondary);
   text-align: center;
 }
 
+/* =========================
+   TYPOGRAPHY
+========================= */
 .footer-structure-text {
   font-size: clamp(2.2rem, 14vw, 5rem);
   letter-spacing: -0.045em;
@@ -1952,6 +2134,9 @@ background-color: var(--bg-secondary);
   );
 }
 
+/* =========================
+   INTENT LINE
+========================= */
 .intent-line-wrapper {
   display: flex;
   justify-content: center;
@@ -1970,6 +2155,9 @@ background-color: var(--bg-secondary);
   );
 }
 
+/* =========================
+   IDENTITY
+========================= */
 .footer-identity {
   margin-bottom: 3vw;
 }
@@ -1992,6 +2180,10 @@ background-color: var(--bg-secondary);
 }
 
 
+/* =========================
+   FOOTER NAV (ISOLATED)
+========================= */
+
 .footer-nav {
   margin-top: 3vw;
   margin-bottom: 3vw;
@@ -2004,6 +2196,7 @@ background-color: var(--bg-secondary);
   list-style: none;
   padding: 0;
   margin: 0;
+  /* background-color: red; */
 }
 
 .footer-nav a {
@@ -2025,11 +2218,12 @@ background-color: var(--bg-secondary);
   transition: color 0.35s ease;
 }
 
-
+/* label text */
 .footer-nav .nav-label {
   position: relative;
 }
 
+/* icon */
 .footer-nav i {
   font-size: 1.05rem;
   color: var(--accent);
@@ -2040,6 +2234,7 @@ background-color: var(--bg-secondary);
     transform 0.35s ease;
 }
 
+/* subtle underline (NOT pill) */
 .footer-nav .nav-label::after {
   content: "";
   position: absolute;
@@ -2056,6 +2251,7 @@ background-color: var(--bg-secondary);
   transition: width 0.35s ease;
 }
 
+/* hover state */
 .footer-nav a:hover {
   color: var(--text-primary);
 }
@@ -2070,11 +2266,15 @@ background-color: var(--bg-secondary);
 }
 
 
+/* =========================
+   CLOSURE
+========================= */
 .footer-closure-text {
   font-size: 0.95rem;
   color: var(--text-muted);
   letter-spacing: 0.08em;
   text-transform: uppercase;
+  /* background-color: red; */
 }
 
 .footer-closure-text i {
@@ -2082,6 +2282,9 @@ background-color: var(--bg-secondary);
   font-size: 1.1rem;
 }
 
+/* =========================
+   META
+========================= */
 .footer-meta {
   position: absolute;
   bottom: 2vw;

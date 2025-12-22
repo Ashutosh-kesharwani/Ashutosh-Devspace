@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-  locomotiveSmoothScroll(); 
+  locomotiveSmoothScroll(); // FIRST & ONLY
 
   revealToSpan();
   valueSetters();
@@ -10,11 +10,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
   navScrollAnimation();
   genericRevealWordAnimation();
-  countNumberPoints();
   section6Animation();
   section7Animation();
   initFooterAnimation();
 
+  // heavy stuff later
   cardShow();
   guitarHorizontalStrings();
   guitarVerticalStrings();
@@ -31,6 +31,7 @@ function locomotiveSmoothScroll() {
   gsap.registerPlugin(ScrollTrigger);
 
   const container = document.querySelector("[data-scroll-container]");
+  // console.log(container);
   
   if (!container) {
     console.error(" No data-scroll-container found");
@@ -258,6 +259,7 @@ function startSvgAnimation() {
   const svgTexts = document.querySelectorAll(".stack-heading text");
   if (!svgTexts.length) return;
 
+  // Accessibility: respect reduced motion
   const prefersReducedMotion = window.matchMedia(
     "(prefers-reduced-motion: reduce)"
   ).matches;
@@ -277,7 +279,7 @@ function navScrollAnimation() {
   if (!nav || !triggerSection) return;
 
   gsap.to(nav, {
-    height: "12vh",
+    height: "12vh", // keep for now (visual unchanged)
     backgroundColor: "rgba(20, 20, 20, 0.55)",
     backdropFilter: "blur(10px)",
     boxShadow: "0 8px 30px rgba(0,0,0,0.35)",
@@ -427,56 +429,6 @@ function hideCursor(section, cursor, cursorItems, cursorController) {
   cursorItems.forEach(item => (item.style.opacity = 0));
   section.style.background = "var(--bg-secondary)";
 }
-
-
-function genericRevealWordAnimation() {
-  const words = gsap.utils.toArray(".generic.reveal");
-  if (!words.length) return;
-
-  const prefersReducedMotion = window.matchMedia(
-    "(prefers-reduced-motion: reduce)"
-  ).matches;
-
-  words.forEach((word) => {
-    if (prefersReducedMotion) {
-      gsap.set(word, { opacity: 1, y: 0, scale: 1 });
-      return;
-    }
-
-    gsap.fromTo(
-      word,
-      { opacity: 0, y: 90, scale: 0.9 },
-      {
-        opacity: 1,
-        y: 0,
-        scale: 1,
-        duration: 0.8,
-        ease: "power3.out",
-        scrollTrigger: {
-          trigger: word,          
-          start: "top 85%",
-          scroller: "[data-scroll-container]",
-          once: true,
-          // markers: true
-        }
-      }
-    );
-  });
-
-  // typing trigger (THIS PART WAS FINE)
-  ScrollTrigger.create({
-    trigger: "#section-3",
-    scroller: "[data-scroll-container]",
-    start: "top 75%",
-    once: true,
-    onEnter: () => {
-      if (!document.body.dataset.typingPlayed) {
-        document.body.dataset.typingPlayed = "true";
-        wordTypingEffect();
-      }
-    }
-  });
-}
 function genericRevealWordAnimation() {
   const words = gsap.utils.toArray(".generic.reveal");
   if (!words.length) return;
@@ -507,7 +459,20 @@ function genericRevealWordAnimation() {
     }
   });
 
-
+  // typing trigger (run once safely)
+  ScrollTrigger.create({
+    trigger: "#section-3",
+    scroller: "[data-scroll-container]",
+    start: "top 75%",
+    once: true,
+    onEnter: () => {
+      if (!document.body.dataset.typingPlayed) {
+        document.body.dataset.typingPlayed = "true";
+        wordTypingEffect();
+      }
+    }
+  });
+}
 function wordTypingEffect() {
   const para = document.querySelector("#typing-para");
   if (!para || para.dataset.typed) return;
@@ -518,8 +483,7 @@ function wordTypingEffect() {
     "(prefers-reduced-motion: reduce)"
   ).matches;
 
-  const text = `" Selected projects showcasing real-world problem solving,
-      design thinking, and full-stack engineering. "`;
+  const text = `" Crafting Seamless Interfaces From Concept To Code. "`;
 
   // Reduced motion → instant text
   if (prefersReducedMotion) {
@@ -570,7 +534,7 @@ function wordTypingEffect() {
 
   typeWord();
 }
-
+countNumberPoints();
 function countNumberPoints() {
   const counts = document.querySelectorAll(".count");
   if (!counts.length) return;
@@ -985,7 +949,7 @@ function marqueeAnimation() {
     if (currentTween) currentTween.kill();
 
     if (dets.deltaY > 0) {
-      //  LEFT MOVE
+      // 👉 LEFT MOVE
       currentTween = gsap.to(".decisions-marquee", {
         x: "-200%",
         duration: 3,
@@ -993,6 +957,7 @@ function marqueeAnimation() {
         repeat: -1
       });
 
+      // 🔥 FIXED selector (NEW HTML)
       gsap.to(".decisions-marquee svg", {
         rotate: 180,
         duration: 0.4,
@@ -1000,7 +965,7 @@ function marqueeAnimation() {
       });
 
     } else {
-      //  RIGHT MOVE
+      // 👉 RIGHT MOVE
       currentTween = gsap.to(".decisions-marquee", {
         x: "0%",
         duration: 3,
@@ -1016,6 +981,9 @@ function marqueeAnimation() {
     }
   });
 }
+
+
+
 
 
 function initFooterAnimation() {
