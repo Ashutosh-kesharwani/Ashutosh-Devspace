@@ -579,7 +579,7 @@
   focusable="false"
   aria-hidden="true"
 >
-  <!-- DEFINITIONS -->
+  
   <defs>
     <!-- Gradient -->
     <linearGradient id="neonGrad" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -935,18 +935,41 @@
     </div>
 
     <!-- RIGHT VISUAL (DECORATIVE) -->
-    <div class="decisions-visual" aria-hidden="true">
-      <svg
-        class="decision-compass"
-        viewBox="0 0 400 400"
-        width="320"
-        height="320"
-        focusable="false"
-        aria-hidden="true"
-      >
-        <!-- SVG paths unchanged -->
-      </svg>
-    </div>
+     <div class="decisions-visual">
+          <svg class="decision-compass" viewBox="0 0 400 400" width="320" height="320" fill="none"
+            xmlns="http://www.w3.org/2000/svg">
+            <!-- Outer ring -->
+            <circle cx="200" cy="200" r="160" stroke="rgba(244,245,247,0.4)" stroke-width="1.6" />
+
+            <!-- Inner ring -->
+            <circle cx="200" cy="200" r="120" stroke="rgba(244,245,247,0.3)" stroke-width="1.5" />
+
+            <!-- Cardinal ticks -->
+            <g stroke-linecap="round">
+              <line x1="200" y1="18" x2="200" y2="52" stroke="rgba(244,245,247,0.5)" stroke-width="3.2" />
+              <line x1="200" y1="348" x2="200" y2="382" stroke="rgba(244,245,247,0.2)" stroke-width="1.9" />
+              <line x1="18" y1="200" x2="52" y2="200" stroke="rgba(244,245,247,0.2)" stroke-width="1.9" />
+              <line x1="348" y1="200" x2="382" y2="200" stroke="rgba(244,245,247,0.2)" stroke-width="1.9" />
+            </g>
+
+            <!-- Muted directions -->
+            <g stroke-linecap="round">
+              <line x1="200" y1="200" x2="200" y2="92" stroke="rgba(244,245,247,0.18)" stroke-width="2.4" />
+              <line x1="200" y1="200" x2="285" y2="255" stroke="rgba(244,245,247,0.14)" stroke-width="2.2" />
+              <line x1="200" y1="200" x2="115" y2="255" stroke="rgba(244,245,247,0.14)" stroke-width="2.2" />
+            </g>
+
+            <!-- NEEDLE GROUP (ROTATES) -->
+            <g class="compass-needle" transform-origin="200px 200px">
+              <line x1="200" y1="200" x2="200" y2="58" stroke="#C87452" stroke-width="3.6" stroke-linecap="round" />
+              <circle cx="200" cy="58" r="4.5" fill="#C87452" />
+            </g>
+
+            <!-- Center pivot -->
+            <circle cx="200" cy="200" r="4.2" fill="#F4F5F7" />
+          </svg>
+
+        </div>
   </header>
 
   <!-- DECISIONS LIST -->
