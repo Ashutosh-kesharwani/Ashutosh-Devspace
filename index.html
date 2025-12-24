@@ -20,6 +20,18 @@
   <meta property="og:type" content="website" />
   <meta property="og:image" content="assets/images/og-image.jpg" />
 
+  <!-- Modern browsers -->
+<link rel="icon" type="image/svg+xml" href="assets/favicon/favicon.svg">
+
+<!-- Fallback PNGs -->
+<link rel="icon" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
+<link rel="icon" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
+
+<!-- iOS -->
+<link rel="apple-touch-icon" href="/assets/favicon/apple-touch-icon.png">
+
+
+
   <!-- Performance -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -60,14 +72,58 @@
     <div id="overlay-1"></div>
     <div id="overlay-2"></div>
   </section>
-  <nav class="main-nav" aria-label="Primary Navigation">
-  <ul>
-    <li><a href="#">GitHub</a></li>
-    <li><a href="#">LinkedIn</a></li>
-    <li><a href="#section-5">Case Study</a></li>
-    <li><a href="#final-footer">Contact</a></li>
-  </ul>
-</nav>
+   
+
+  <!-- EXPLORE TRIGGER -->
+<button
+  id="explore-trigger"
+  class="explore-trigger"
+  aria-expanded="false"
+  aria-controls="explore-overlay"
+  aria-label="Open navigation"
+>
+  EXPLORE
+</button>
+
+<!-- EXPLORE OVERLAY NAV -->
+<aside
+  id="explore-overlay"
+  class="explore-overlay"
+  aria-hidden="true"
+  role="dialog"
+  aria-modal="true"
+>
+  <!-- CLOSE BUTTON -->
+  <button
+    class="explore-close"
+    aria-label="Close navigation"
+  >
+    <i class="ri-close-line" aria-hidden="true"></i>
+  </button>
+
+  <!-- NAV -->
+  <nav class="explore-menu" aria-label="Primary navigation">
+    <span class="explore-eyebrow">Navigate</span>
+
+    <a href="https://github.com/yourusername" target="_blank" rel="noopener">
+      GitHub
+    </a>
+
+    <a href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener">
+      LinkedIn
+    </a>
+
+    <a href="#section-5">
+      Case Study
+    </a>
+
+    <a href="#final-footer">
+      Contact
+    </a>
+  </nav>
+</aside>
+
+
 
 
 
@@ -100,6 +156,43 @@
       <p id="developer" class="reveal" aria-hidden="true">DEVELOPER</p>
     </div>
   </header>
+  
+  <!-- Mobile view Content  -->
+  <div class="hero-mobile-extension" aria-hidden="true">
+  <!-- Value proposition -->
+  <p class="hero-tagline">
+    Scalable web products built with clarity, motion & intent.
+  </p>
+
+  <!-- Capability chips -->
+  <div class="hero-chips">
+    <span class="chip">
+      <i class="ri-code-s-slash-line"></i>
+      Full-Stack
+    </span>
+    <span class="chip">
+      <i class="ri-magic-line"></i>
+      Motion UI
+    </span>
+    <span class="chip">
+      <i class="ri-brain-line"></i>
+      ML-Aware
+    </span>
+  </div>
+
+  <!-- Primary CTA -->
+ <div
+  class="hero-cta"
+  role="button"
+  tabindex="0"
+  data-target="#projects"
+>
+  <span class="cta-text">View Work</span>
+  <i class="ri-arrow-right-up-line" aria-hidden="true"></i>
+</div>
+
+</div>
+
 
   <!-- SCROLL INDICATOR -->
   <div id="down-arrow-container">
@@ -141,10 +234,13 @@
       </div>
 
       <div id="about-right" aria-hidden="true">
-        <div class="about-right-img-conatiner"></div>
-        <div class="about-right-img-conatiner"></div>
-        <div class="about-right-img-conatiner"></div>
-      </div>
+  <div class="about-image-stack">
+    <div class="about-right-img-conatiner"></div>
+    <div class="about-right-img-conatiner"></div>
+    <div class="about-right-img-conatiner"></div>
+  </div>
+</div>
+
     </article>
   </div>
 
@@ -1249,12 +1345,14 @@
     <p class="footer-closure-text reveal">
       Design <i class="ri-asterisk"></i> Code
     </p>
-  </div>
 
-  <!-- Meta -->
+    <!-- Meta -->
   <div class="footer-meta">
     © <time datetime="2026">2026</time> · Built with intent, not templates
   </div>
+  </div>
+
+  
 </footer>
 
   </main>
