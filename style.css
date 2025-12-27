@@ -932,7 +932,7 @@ background-color: var(--bg-secondary);
 
   border-radius: 1.5vw;
   background-size: cover;
-  background-position: center;
+  background-position: 50% 5%;
 
   filter: grayscale(100%);
 
@@ -948,18 +948,18 @@ background-color: var(--bg-secondary);
 
 .about-right-img-conatiner:nth-child(1) {
   transform: translate3d(-73%, -66%, 0) rotate(-18deg) scale(0.95);
-  background-image: url("assets/images/about-img-2.avif");
+  background-image: url("assets/images/About-image/about-img-1.png");
 }
 
 
 .about-right-img-conatiner:nth-child(2) {
   
   transform: translate3d(-63%, -60%, 0) rotate(-10deg) scale(0.98);
-  background-image: url("assets/images/about-img-3.avif");
+  background-image: url("assets/images/About-image/about-image-2.png");
 }
 .about-right-img-conatiner:nth-child(3) {
   transform: translate3d(-51%, -50%, 0) rotate(0deg) scale(1);
-  background-image: url("assets/images/about-img-1.avif");
+  background-image: url("assets/images/About-image/about-img-1.png");
 }
 
 .about-right-img-conatiner:hover {
@@ -1274,7 +1274,7 @@ background-color: var(--bg-secondary);
 
 .project-about .pill {
   display: inline-block;
-  width: 30%;
+  width: 10vw;
   padding: 0.6vw 1.4vw;
   border-radius: 100px;
   font-size: 0.9vw;
@@ -1312,12 +1312,30 @@ background-color: var(--bg-secondary);
 
 
 
-.project-button .project-title  {
+.project-button a  {
   font-size: 1.7vw;
   font-weight: 700;
   font-family: "Nothing You Could", cursive;
   transition: letter-spacing 0.5s ease, transform 0.5s ease;
+  text-decoration: none;
+  color: inherit;
 }
+.project-button .arrow {
+  width: 3vw;
+  height: 3vw;
+  border-radius: 50%;
+  border: 2px solid var(--img-icon-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.4s ease, border 0.4s ease, color 0.4s ease;
+}
+.project-button .arrow  i{
+ 
+  transition: background 0.4s ease, border 0.4s ease, color 0.4s ease;
+}
+
+
 
 .projects:hover .project-button .project-title  {
   letter-spacing: 0.17em;
@@ -1329,47 +1347,42 @@ background-color: var(--bg-secondary);
 }
 .projects:hover .project-button  .arrow {
   border-color: var(--bg-main);
+  
+}
+.projects:hover .project-button  .arrow i{
+  color: var(--bg-main);
+  
 }
 
 
 
 
-.project-button .arrow {
-  width: 3vw;
-  height: 3vw;
-  border-radius: 50%;
-  border: 2px solid var(--img-icon-border);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: background 0.4s ease, border 0.4s ease, color 0.4s ease;
+
+
+
+
+
+#work-section-projects .projects img {
+  width: 100%;
+  object-fit: cover;
+  transition: filter cubic-bezier(0.19, 1, 0.22, 1) 2s;
+  pointer-events: none;
+  object-position: center 10%;
 }
-
-
-
-.project-button i {
-  font-size: 1.4vw;
-}
-
-
 #work-section-projects .project-card-1 {
   width: 55%;
   height: 105vh;
   border-radius: 4vw;
 }
+
 #work-section-projects .project-card-2 {
   width: 35%;
   height: 70vh;
   border-radius: 3vw;
 }
 
-#work-section-projects .projects img {
-  width: 105%;
-  object-fit: cover;
-  object-position: center;
-  transition: filter cubic-bezier(0.19, 1, 0.22, 1) 2s;
-  pointer-events: none;
-}
+
+
 
 
 /* ================= CURSOR ROOT ================= */
@@ -1401,7 +1414,8 @@ background-color: var(--bg-secondary);
   display: flex;
   align-items: center;
   gap: 1vw;
-  padding: 0.8vw 1vw;
+  padding: 0.5vw 0vw;
+  /* background-color: red; */
 }
 
 .crow .ccircle {
@@ -2707,7 +2721,7 @@ background-color: var(--bg-secondary);
     perspective: none;
   }
 
-  .about-image-stack {
+  .about-stack {
     position: relative;
     width: 220px;
     height: 200px;
