@@ -728,7 +728,7 @@ function section6Animation() {
       scroller: "[data-scroll-container]",
       start: "top 40%",
       end: "top -50%",
-      scrub: 1,
+      // scrub: 1,
       invalidateOnRefresh: true
     }
   });
