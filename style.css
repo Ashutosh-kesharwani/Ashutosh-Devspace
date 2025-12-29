@@ -948,18 +948,18 @@ background-color: var(--bg-secondary);
 
 .about-right-img-conatiner:nth-child(1) {
   transform: translate3d(-73%, -66%, 0) rotate(-18deg) scale(0.95);
-  background-image: url("assets/images/About-image/about-img-1.png");
+  background-image: url("assets/images/About-image/about-img-1.webp");
 }
 
 
 .about-right-img-conatiner:nth-child(2) {
   
   transform: translate3d(-63%, -60%, 0) rotate(-10deg) scale(0.98);
-  background-image: url("assets/images/About-image/about-image-2.png");
+  background-image: url("assets/images/About-image/about-image-2.webp");
 }
 .about-right-img-conatiner:nth-child(3) {
   transform: translate3d(-51%, -50%, 0) rotate(0deg) scale(1);
-  background-image: url("assets/images/About-image/about-img-1.png");
+  background-image: url("assets/images/About-image/about-img-1.webp");
 }
 
 .about-right-img-conatiner:hover {
