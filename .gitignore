@@ -1,1 +1,11 @@
+
+# Ignore test files
 test.txt
+
+# Ignore experimental HTML files all html files | generally for test html files
+*.html 
+
+test.css
+color-set.md
+semantic.html
+css-notes.md
