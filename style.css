@@ -2420,7 +2420,7 @@ main {
 }
 
 /* LOADER — MOBILE FIX */
-@media (max-width: 768px) {
+@media (max-width: 480px) {
   #loader-first {
     padding: 4vh 4vw;
     justify-content: space-around;
@@ -2464,7 +2464,7 @@ main {
 }
 
 /*NAVBAR — MOBILE FIX */
-@media (max-width: 768px) {
+@media (max-width: 480px) {
   .explore-menu {
     height: auto;
     gap: 1.8rem;
@@ -2518,7 +2518,7 @@ main {
 }
 
 /*INTERACTIUVE HORIZONTAL MEDIA QUERIES*/
-@media (max-width: 768px) {
+@media (max-width: 480px) {
   #section2-line {
     height: 5vh;
     padding: 0 4vw;
@@ -2531,7 +2531,7 @@ main {
 }
 
 /* SECTION-2  PART-1 CSS  Media Queries*/
-@media (max-width: 768px) {
+@media (max-width: 480px) {
   #section-2-part-1 {
     min-height: auto;
     padding: 1vh 6vw 6vh;
@@ -2624,7 +2624,7 @@ main {
 }
 
 /* SECTION-2  PART-2 CSS  Media Queries*/
-@media (max-width: 768px) {
+@media (max-width: 480px) {
   #section-2-part-2 {
     padding-bottom: 5vh;
     height: 160vh;
@@ -2697,7 +2697,7 @@ main {
 }
 
 /* SECTION-3 MEDIA QUERIES  */
-@media (max-width: 768px) {
+@media (max-width: 480px) {
   /* Section spacing */
   #section-3 {
     padding-bottom: 8vh;
@@ -2827,7 +2827,7 @@ main {
 }
 
 /* SECTION-5 : MEDIA QUERIES */
-@media (max-width: 768px) {
+@media (max-width: 480px) {
   /* ===== SECTION SPACING ===== */
   #section-5 {
     padding: 10vh 6vw 8vh;
@@ -2969,7 +2969,7 @@ main {
 }
 
 /* SECTION-6 : MEDIA QUERIES */
-@media (max-width: 768px) {
+@media (max-width: 480px) {
   #section-6 {
     padding: 10vh 6vw 8vh;
   }
@@ -3054,7 +3054,7 @@ main {
   }
 }
 /*SECTION-7 : MEDIA QUERIES */
-@media (max-width: 768px) {
+@media (max-width: 480px) {
   /* SECTION SPACING */
   #section-7 {
     padding: 10vh 6vw 8vh;
@@ -3153,7 +3153,7 @@ main {
 }
 
 /* FOOTER : MEDIA QUERIES */
-@media (max-width: 768px) {
+@media (max-width: 480px) {
   .footer-final {
     padding: 10vh 10vw 0vh 10vw;
     min-height: auto;
