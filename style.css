@@ -2420,7 +2420,7 @@ main {
 }
 
 /* LOADER — MOBILE FIX */
-@media (max-width: 480px) {
+@media (max-width: 520px) {
   #loader-first {
     padding: 4vh 4vw;
     justify-content: space-around;
@@ -2464,7 +2464,7 @@ main {
 }
 
 /*NAVBAR — MOBILE FIX */
-@media (max-width: 480px) {
+@media (max-width: 520px) {
   .explore-menu {
     height: auto;
     gap: 1.8rem;
@@ -2477,7 +2477,7 @@ main {
 }
 
 /*SECTION-1 Media Queries */
-@media (max-width: 480px) {
+@media (max-width: 520px) {
   #section-1 {
     min-height: 90vh;
     padding-top: 14vh;
@@ -2511,14 +2511,14 @@ main {
 }
 
 /*SECTION-1 MOBILE HERO EXTENSION */
-@media (max-width: 480px) {
+@media (max-width: 520px) {
   .hero-mobile-extension {
     display: block;
   }
 }
 
 /*INTERACTIUVE HORIZONTAL MEDIA QUERIES*/
-@media (max-width: 480px) {
+@media (max-width: 520px) {
   #section2-line {
     height: 5vh;
     padding: 0 4vw;
@@ -2531,7 +2531,7 @@ main {
 }
 
 /* SECTION-2  PART-1 CSS  Media Queries*/
-@media (max-width: 480px) {
+@media (max-width: 520px) {
   #section-2-part-1 {
     min-height: auto;
     padding: 1vh 6vw 6vh;
@@ -2629,7 +2629,7 @@ main {
 }
 
 /* SECTION-2  PART-2 CSS  Media Queries*/
-@media (max-width: 480px) {
+@media (max-width: 520px) {
   #section-2-part-2 {
     padding-bottom: 5vh;
     height: 120vh;
@@ -2702,7 +2702,7 @@ main {
 }
 
 /* SECTION-3 MEDIA QUERIES  */
-@media (max-width: 480px) {
+@media (max-width: 520px) {
   /* Section spacing */
   #section-3 {
     padding-bottom: 8vh;
@@ -2831,7 +2831,7 @@ main {
   }
 }
 /* SECTION-4 MEDIA QUERIES  */
-@media (max-width:480px){
+@media (max-width:520px){
   #section-4 .header p{
        font-size: 0.8rem;
     white-space: normal;
@@ -2845,11 +2845,16 @@ main {
     font-weight: 900;
   }
   .card  h3{
-    font-size: 0.7rem;
+    font-size: 0.8rem;
+    font-weight: 700;
+    margin-bottom: 1vh;
+  }
+  .card  p{
+    font-size: 0.8rem;
   }
 }
 /* SECTION-5 : MEDIA QUERIES */
-@media (max-width: 480px) {
+@media (max-width: 520px) {
   #section-5 {
     padding: 10vh 6vw 8vh;
     /* background-color: darkgreen; */
@@ -2990,7 +2995,7 @@ main {
 }
 
 /* SECTION-6 : MEDIA QUERIES */
-@media (max-width: 480px) {
+@media (max-width: 520px) {
   #section-6 {
     padding: 10vh 6vw 8vh;
   }
@@ -3075,7 +3080,7 @@ main {
   }
 }
 /*SECTION-7 : MEDIA QUERIES */
-@media (max-width: 480px) {
+@media (max-width: 520px) {
   /* SECTION SPACING */
   #section-7 {
     padding: 10vh 6vw 8vh;
@@ -3174,7 +3179,7 @@ main {
 }
 
 /* FOOTER : MEDIA QUERIES */
-@media (max-width: 480px) {
+@media (max-width: 520px) {
   .footer-final {
     padding: 10vh 10vw 0vh 10vw;
     min-height: auto;
