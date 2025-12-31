@@ -1,3 +1,5 @@
+
+// Function Calls
 document.addEventListener("DOMContentLoaded", () => {
   locomotiveSmoothScroll(); 
 
@@ -25,7 +27,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
-
+// Locomotive Func 
 function locomotiveSmoothScroll() {
   gsap.registerPlugin(ScrollTrigger);
 
@@ -82,7 +84,7 @@ workBtn.addEventListener("click",()=>{
 
 
 
-
+// Reveal To Span
 function revealToSpan() {
   const reveals = document.querySelectorAll(".reveal");
 
@@ -103,6 +105,8 @@ function revealToSpan() {
     elem.appendChild(parent);
   });
 }
+
+// Value Setters
 function valueSetters() {
   const heroChildren = document.querySelectorAll("#section-1 .child");
   const downArrow = document.querySelector("#down-arrow-container");
@@ -116,6 +120,8 @@ function valueSetters() {
   }
 }
 
+
+// Loading Animation
 function loadingAnimation() {
   const loader = document.querySelector("#loader");
   const loaderInner = document.querySelector("#loader-first");
@@ -201,6 +207,69 @@ function loadingAnimation() {
 }
 
 
+// Nav Animation 
+function initExploreNav() {
+  const btn = document.querySelector("#explore-trigger");
+  const overlay = document.querySelector("#explore-overlay");
+  const closeBtn = document.querySelector(".explore-close");
+  const links = document.querySelectorAll(".explore-menu a");
+
+  if (!btn || !overlay || !links.length) return;
+
+  let isOpen = false;
+
+  const tl = gsap.timeline({
+    paused: true,
+    defaults: { ease: "power3.out" }
+  });
+
+  tl.fromTo(
+    links,
+    { y: 32, opacity: 0 },
+    {
+      y: 0,
+      opacity: 1,
+      stagger: 0.12,
+      duration: 0.6
+    }
+  );
+
+  function openNav() {
+    if (isOpen) return;
+
+    overlay.classList.add("is-open");
+    tl.restart(); // 🔥 THIS FIXES INVISIBLE LINKS
+
+    btn.setAttribute("aria-expanded", "true");
+    overlay.setAttribute("aria-hidden", "false");
+
+    isOpen = true;
+  }
+
+  function closeNav() {
+    if (!isOpen) return;
+
+    overlay.classList.remove("is-open");
+    btn.setAttribute("aria-expanded", "false");
+    overlay.setAttribute("aria-hidden", "true");
+
+    isOpen = false;
+  }
+
+  btn.addEventListener("click", openNav);
+  closeBtn?.addEventListener("click", closeNav);
+
+  links.forEach(link => {
+    link.addEventListener("click", closeNav);
+  });
+
+  window.addEventListener("keydown", e => {
+    if (e.key === "Escape" && isOpen) closeNav();
+  });
+}
+
+
+// Animate Home Page
 function animateHomePage() {
 
   const heroText = document.querySelectorAll("#section-1 .child");
@@ -250,7 +319,7 @@ function animateHomePage() {
 }
 
 
-
+// Start Svg Animation
 function startSvgAnimation() {
   const svgTexts = document.querySelectorAll(".stack-heading text");
   if (!svgTexts.length) return;
@@ -267,6 +336,7 @@ function startSvgAnimation() {
   });
 }
 
+// Guitar Horizontal Strings
 function guitarHorizontalStrings() {
   const zones = document.querySelectorAll(".interactive-horizontal-string");
   if (!zones.length) return;
@@ -318,6 +388,8 @@ function guitarHorizontalStrings() {
     });
   });
 }
+
+// Guitar Vertical Strings
 function guitarVerticalStrings() {
   const zones = document.querySelectorAll(".interactive-vertical-string");
   if (!zones.length) return;
@@ -366,8 +438,125 @@ function guitarVerticalStrings() {
 }
 
 
+// Generic Reveal Word Animation
+function genericRevealWordAnimation() {
+  const words = gsap.utils.toArray(".generic.reveal");
+  if (!words.length) return;
+
+  const prefersReducedMotion = window.matchMedia(
+    "(prefers-reduced-motion: reduce)"
+  ).matches;
+
+  words.forEach((word) => {
+    if (prefersReducedMotion) {
+      gsap.set(word, { opacity: 1, y: 0, scale: 1 });
+      return;
+    }
+
+    gsap.fromTo(
+      word,
+      { opacity: 0, y: 90, scale: 0.9 },
+      {
+        opacity: 1,
+        y: 0,
+        scale: 1,
+        duration: 0.8,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: word,          
+          start: "top 85%",
+          scroller: "[data-scroll-container]",
+          once: true,
+          // markers: true
+        }
+      }
+    );
+  });
+
+  // typing trigger (THIS PART WAS FINE)
+  ScrollTrigger.create({
+    trigger: "#section-3",
+    scroller: "[data-scroll-container]",
+    start: "top 75%",
+    once: true,
+    onEnter: () => {
+      if (!document.body.dataset.typingPlayed) {
+        document.body.dataset.typingPlayed = "true";
+        wordTypingEffect();
+      }
+    }
+  });
+}
 
 
+
+
+// Word Typing Effect
+function wordTypingEffect() {
+  const para = document.querySelector("#typing-para");
+  if (!para || para.dataset.typed) return;
+
+  para.dataset.typed = "true";
+
+  const prefersReducedMotion = window.matchMedia(
+    "(prefers-reduced-motion: reduce)"
+  ).matches;
+
+  const text = `" Selected projects showcasing real-world problem solving,
+      design thinking, and full-stack engineering. "`;
+
+  // Reduced motion → instant text
+  if (prefersReducedMotion) {
+    para.textContent = text;
+    return;
+  }
+
+  const words = text.split(" ");
+  para.textContent = "";
+
+  let wordIndex = 0;
+
+  function typeWord() {
+    if (wordIndex >= words.length) return;
+
+    const wordSpan = document.createElement("span");
+    wordSpan.style.whiteSpace = "nowrap";
+    para.appendChild(wordSpan);
+
+    const letters = words[wordIndex].split("");
+    let letterIndex = 0;
+
+    function typeLetter() {
+      if (letterIndex >= letters.length) {
+        para.appendChild(document.createTextNode(" "));
+        wordIndex++;
+        setTimeout(typeWord, 40);
+        return;
+      }
+
+      const letterSpan = document.createElement("span");
+      letterSpan.className = "typing-letter";
+      letterSpan.textContent = letters[letterIndex];
+      wordSpan.appendChild(letterSpan);
+
+      gsap.fromTo(
+        letterSpan,
+        { opacity: 0, y: 6 },
+        { opacity: 1, y: 0, duration: 0.15, ease: "power2.out" }
+      );
+
+      letterIndex++;
+      setTimeout(typeLetter, 45);
+    }
+
+    typeLetter();
+  }
+
+  typeWord();
+}
+
+
+// Card Show 
 function cardShow() {
   const section = document.querySelector("#section-3");
   const projects = document.querySelectorAll(".projects");
@@ -407,6 +596,8 @@ function cardShow() {
     hideCursor(section, cursor, cursorItems, cursorController);
   });
 }
+
+// Cursor Function
 function createCursorFollower(section, cursor) {
   let mouseX = 0;
   let mouseY = 0;
@@ -502,120 +693,10 @@ function hideCursor(section, cursor, cursorItems, cursorController) {
 }
 
 
-function genericRevealWordAnimation() {
-  const words = gsap.utils.toArray(".generic.reveal");
-  if (!words.length) return;
-
-  const prefersReducedMotion = window.matchMedia(
-    "(prefers-reduced-motion: reduce)"
-  ).matches;
-
-  words.forEach((word) => {
-    if (prefersReducedMotion) {
-      gsap.set(word, { opacity: 1, y: 0, scale: 1 });
-      return;
-    }
-
-    gsap.fromTo(
-      word,
-      { opacity: 0, y: 90, scale: 0.9 },
-      {
-        opacity: 1,
-        y: 0,
-        scale: 1,
-        duration: 0.8,
-        ease: "power3.out",
-        scrollTrigger: {
-          trigger: word,          
-          start: "top 85%",
-          scroller: "[data-scroll-container]",
-          once: true,
-          // markers: true
-        }
-      }
-    );
-  });
-
-  // typing trigger (THIS PART WAS FINE)
-  ScrollTrigger.create({
-    trigger: "#section-3",
-    scroller: "[data-scroll-container]",
-    start: "top 75%",
-    once: true,
-    onEnter: () => {
-      if (!document.body.dataset.typingPlayed) {
-        document.body.dataset.typingPlayed = "true";
-        wordTypingEffect();
-      }
-    }
-  });
-}
 
 
 
-function wordTypingEffect() {
-  const para = document.querySelector("#typing-para");
-  if (!para || para.dataset.typed) return;
-
-  para.dataset.typed = "true";
-
-  const prefersReducedMotion = window.matchMedia(
-    "(prefers-reduced-motion: reduce)"
-  ).matches;
-
-  const text = `" Selected projects showcasing real-world problem solving,
-      design thinking, and full-stack engineering. "`;
-
-  // Reduced motion → instant text
-  if (prefersReducedMotion) {
-    para.textContent = text;
-    return;
-  }
-
-  const words = text.split(" ");
-  para.textContent = "";
-
-  let wordIndex = 0;
-
-  function typeWord() {
-    if (wordIndex >= words.length) return;
-
-    const wordSpan = document.createElement("span");
-    wordSpan.style.whiteSpace = "nowrap";
-    para.appendChild(wordSpan);
-
-    const letters = words[wordIndex].split("");
-    let letterIndex = 0;
-
-    function typeLetter() {
-      if (letterIndex >= letters.length) {
-        para.appendChild(document.createTextNode(" "));
-        wordIndex++;
-        setTimeout(typeWord, 40);
-        return;
-      }
-
-      const letterSpan = document.createElement("span");
-      letterSpan.className = "typing-letter";
-      letterSpan.textContent = letters[letterIndex];
-      wordSpan.appendChild(letterSpan);
-
-      gsap.fromTo(
-        letterSpan,
-        { opacity: 0, y: 6 },
-        { opacity: 1, y: 0, duration: 0.15, ease: "power2.out" }
-      );
-
-      letterIndex++;
-      setTimeout(typeLetter, 45);
-    }
-
-    typeLetter();
-  }
-
-  typeWord();
-}
-
+// Count Number Points 
 function countNumberPoints() {
   const counts = document.querySelectorAll(".count");
   if (!counts.length) return;
@@ -651,6 +732,8 @@ function countNumberPoints() {
     );
   });
 }
+
+
 
 function createStringPhysics({
   updatePath,
@@ -697,6 +780,8 @@ function createStringPhysics({
   };
 }
 
+
+// Section6 Animation
 function section6Animation() {
   const section = document.querySelector("#section-6");
   if (!section) return;
@@ -733,6 +818,8 @@ function section6Animation() {
     }
   });
 }
+
+// Globe Animation
 function particlesGlobeAnimation() {
   const section = document.querySelector("#section-5");
   const globe = section?.querySelector(".cdss-globe");
@@ -767,7 +854,7 @@ function particlesGlobeAnimation() {
 
 
 let caseSwiperInstance = null;
-
+// SwiperCard Animation
 function swiperAnimationOnCards() {
   const swiperEl = document.querySelector(".caseSwiper");
   if (!swiperEl) return;
@@ -799,7 +886,7 @@ function swiperAnimationOnCards() {
   window.addEventListener("resize", setupSwiper);
 }
 
-
+// Particle Float Animation
 function particleFloatingAnimation() {
   const section = document.querySelector("#section-5");
   const container = section?.querySelector(".particles-container");
@@ -886,6 +973,9 @@ ScrollTrigger.create({
 });
 
 }
+
+
+// Section7 Animation
 function section7Animation() {
   const section = document.querySelector("#section-7");
   if (!section) return;
@@ -910,8 +1000,9 @@ function section7Animation() {
     scrollTrigger: {
       trigger: section,
       scroller: "[data-scroll-container]",
-      start: "top 40%",
-      once: true // 🔥 IMPORTANT
+      start: "top 55%",
+      // markers:true,
+      once: true 
     }
   });
 
@@ -934,7 +1025,7 @@ function section7Animation() {
 }
 
 
-
+// Marquee Animation
 function marqueeAnimation() {
   let currentTween;
 
@@ -976,7 +1067,7 @@ function marqueeAnimation() {
   });
 }
 
-
+// Footer Animation
 function initFooterAnimation() {
   const footer = document.querySelector("#final-footer");
   if (!footer) return;
@@ -1041,65 +1132,7 @@ function initFooterAnimation() {
     }, "-=0.3");
   }
 }
-function initExploreNav() {
-  const btn = document.querySelector("#explore-trigger");
-  const overlay = document.querySelector("#explore-overlay");
-  const closeBtn = document.querySelector(".explore-close");
-  const links = document.querySelectorAll(".explore-menu a");
 
-  if (!btn || !overlay || !links.length) return;
-
-  let isOpen = false;
-
-  const tl = gsap.timeline({
-    paused: true,
-    defaults: { ease: "power3.out" }
-  });
-
-  tl.fromTo(
-    links,
-    { y: 32, opacity: 0 },
-    {
-      y: 0,
-      opacity: 1,
-      stagger: 0.12,
-      duration: 0.6
-    }
-  );
-
-  function openNav() {
-    if (isOpen) return;
-
-    overlay.classList.add("is-open");
-    tl.restart(); // 🔥 THIS FIXES INVISIBLE LINKS
-
-    btn.setAttribute("aria-expanded", "true");
-    overlay.setAttribute("aria-hidden", "false");
-
-    isOpen = true;
-  }
-
-  function closeNav() {
-    if (!isOpen) return;
-
-    overlay.classList.remove("is-open");
-    btn.setAttribute("aria-expanded", "false");
-    overlay.setAttribute("aria-hidden", "true");
-
-    isOpen = false;
-  }
-
-  btn.addEventListener("click", openNav);
-  closeBtn?.addEventListener("click", closeNav);
-
-  links.forEach(link => {
-    link.addEventListener("click", closeNav);
-  });
-
-  window.addEventListener("keydown", e => {
-    if (e.key === "Escape" && isOpen) closeNav();
-  });
-}
 
 
 
