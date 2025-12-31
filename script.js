@@ -1135,5 +1135,3 @@ function initFooterAnimation() {
 
 
 
-
-
