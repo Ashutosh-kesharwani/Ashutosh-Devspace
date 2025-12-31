@@ -2479,7 +2479,7 @@ main {
 /*SECTION-1 Media Queries */
 @media (max-width: 480px) {
   #section-1 {
-    min-height: 100vh;
+    min-height: 90vh;
     padding-top: 14vh;
   }
 
@@ -2553,6 +2553,11 @@ main {
     font-size: clamp(1.6rem, 5vw, 2.2rem);
     line-height: 1.25;
     max-width: 100%;
+    
+  }
+  .about-heading span {
+    font-family: "Gilroy", sans-serif !important;
+    font-style: normal !important;
   }
 
   #about-left p {
@@ -2627,7 +2632,7 @@ main {
 @media (max-width: 480px) {
   #section-2-part-2 {
     padding-bottom: 5vh;
-    height: 160vh;
+    height: 120vh;
   }
 
   .header h2 {
@@ -2662,17 +2667,17 @@ main {
     padding: 2rem 1.6rem;
     border-radius: 1.2rem;
     transform: none !important;
-    /* background-color: red; */
   }
 
   .value-item-card .value-index {
-    font-size: 0.9rem;
+    font-size: 1rem;
     margin-bottom: 0.3rem;
   }
 
   .value-item-card h3 {
     font-size: 1.2rem;
     margin-bottom: 0.8rem;
+    color: var(--accent);
   }
 
   /* REMOVE HOVER DEPENDENCY */
@@ -2825,10 +2830,26 @@ main {
     display: none;
   }
 }
+/* SECTION-4 MEDIA QUERIES  */
+@media (max-width:480px){
+  #section-4 .header p{
+       font-size: 0.8rem;
+    white-space: normal;
+    text-align: center;
+    margin-top: 4vh;
+    margin-bottom: 4vh;
 
+  }
+  .card  .phase-label{
+    font-size: 0.6rem;
+    font-weight: 900;
+  }
+  .card  h3{
+    font-size: 0.7rem;
+  }
+}
 /* SECTION-5 : MEDIA QUERIES */
 @media (max-width: 480px) {
-  /* ===== SECTION SPACING ===== */
   #section-5 {
     padding: 10vh 6vw 8vh;
     /* background-color: darkgreen; */
@@ -3040,7 +3061,7 @@ main {
   /* FOOTER */
   .context-footer {
     margin-top: 8vh;
-    padding: 0 2vw;
+    padding: 0 11vw;
     text-align: center;
   }
 
@@ -3185,14 +3206,18 @@ main {
   }
 
   .footer-name {
-    font-size: 1.05rem;
+    font-size: 1.15rem;
     line-height: 1.4;
+  }
+  .footer-name span {
+    font-family: "Gilroy", sans-serif;
   }
 
   .footer-role {
-    font-size: 1.2rem;
+    font-size: 1rem;
     margin-top: 0.4rem;
     letter-spacing: 0.07em;
+    font-family: "Gilroy", sans-serif;
   }
   .footer-nav {
     margin: 3rem 0;
@@ -3214,8 +3239,9 @@ main {
   }
   .footer-meta {
     margin-top: 2rem;
-    font-size: 0.65rem;
-    opacity: 0.65;
+    font-size: 0.75rem;
+    opacity: 0.95;
     text-align: center;
+    margin-bottom: 3rem;
   }
 }
