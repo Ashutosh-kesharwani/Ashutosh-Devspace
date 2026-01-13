@@ -5,12 +5,7 @@ A modern, interactive, and performance-focused **developer portfolio** showcasin
 
 ---
 
-
-
 ## ✨ Highlight
-
-
-
 * ⚡ Smooth scroll-based animations (GSAP)
 * 🎨 Design → Code focused layout
 * 🖱️ Custom cursor interactions
@@ -119,6 +114,7 @@ Inspired by modern design-driven developer portfolios and creative front-end exp
 ---
 
 **If you like this project, consider giving it a ⭐ on GitHub!**
+
 
 
 
